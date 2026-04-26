@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitácora de Entrenamiento</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>📊 Bitácora de Entrenamiento</h1>
+      <p class="subtitle">Dashboard de seguimiento de metas de ejercicio y pasos</p>
+      <div class="last-updated">Última actualización: <span id="updated"></span></div>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number" id="totalDias">0</div>
+        <div class="stat-label">Días registrados</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number verde" id="diasVerdes">0</div>
+        <div class="stat-label">Cumplimiento total</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="diasEjercicio">0</div>
+        <div class="stat-label">Días con ejercicio</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="diasPasos">0</div>
+        <div class="stat-label">Días con 10k+ pasos</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="promedioPasos">0</div>
+        <div class="stat-label">Promedio de pasos</div>
+      </div>
+    </section>
+
+    <section class="charts-section">
+      <div class="chart-container">
+        <h2>Últimos 30 días - Cumplimiento</h2>
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <h2>Distribución por disciplina</h2>
+        <canvas id="pieChart"></canvas>
+      </div>
+    </section>
+
+    <section class="stats-detail">
+      <h2>Análisis por día de la semana</h2>
+      <table class="week-table">
+        <thead>
+          <tr>
+            <th>Día</th>
+            <th>Total registros</th>
+            <th>Con ejercicio</th>
+            <th>Con 10k+ pasos</th>
+            <th>Cumplimiento</th>
+          </tr>
+        </thead>
+        <tbody id="weekTable"></tbody>
+      </table>
+    </section>
+
+    <section class="resumen">
+      <h2>Resumen de estado</h2>
+      <div class="resumen-grid">
+        <div class="resumen-item verde">
+          <span class="count" id="countVerdes">0</span>
+          <span class="label">Objetivos cumplidos</span>
+        </div>
+        <div class="resumen-item amarillo">
+          <span class="count" id="countAmarillos">0</span>
+          <span class="label">Parcialmente cumplidos</span>
+        </div>
+        <div class="resumen-item rojo">
+          <span class="count" id="countRojos">0</span>
+          <span class="label">Incumplidos</span>
+        </div>
+        <div class="resumen-item gris">
+          <span class="count" id="countGrises">0</span>
+          <span class="label">Sin datos</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Dashboard conectado a Notion • Actualizado automáticamente cada noche</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+</html>
