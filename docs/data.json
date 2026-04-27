@@ -1,52 +1,53 @@
 {
-  "actualizado": "2026-04-27T01:10:10.199Z",
+  "actualizado": "2026-04-27T05:05:58.248Z",
   "stats": {
-    "totalDias": 118,
-    "diasEjercicio": 66,
-    "diasPasos": 64,
-    "diasVerdes": 54,
-    "diasAmarillos": 49,
-    "diasRojos": 15,
+    "totalDias": 119,
+    "diasEjercicio": 70,
+    "diasPasos": 66,
+    "diasVerdes": 61,
+    "diasAmarillos": 40,
+    "diasRojos": 18,
     "diasGrises": 0,
-    "promedioPasos": 10285,
-    "pasosTotal": 1131353
+    "diasCumplimiento": 101,
+    "promedioPasos": 9807,
+    "pasosTotal": 1157218
   },
   "distribucionDisciplinas": [
     {
       "nombre": "Descanso",
-      "count": 48,
-      "porcentaje": 73
-    },
-    {
-      "nombre": "Fuerza",
-      "count": 29,
-      "porcentaje": 44
-    },
-    {
-      "nombre": "Natación",
-      "count": 27,
+      "count": 49,
       "porcentaje": 41
     },
     {
-      "nombre": "Bici",
-      "count": 10,
-      "porcentaje": 15
+      "nombre": "Fuerza",
+      "count": 21,
+      "porcentaje": 18
     },
     {
-      "nombre": "Carrera",
-      "count": 10,
-      "porcentaje": 15
+      "nombre": "Natación",
+      "count": 20,
+      "porcentaje": 17
     },
     {
       "nombre": "Mixto",
-      "count": 5,
-      "porcentaje": 8
+      "count": 15,
+      "porcentaje": 13
+    },
+    {
+      "nombre": "Bici",
+      "count": 7,
+      "porcentaje": 6
+    },
+    {
+      "nombre": "Carrera",
+      "count": 7,
+      "porcentaje": 6
     }
   ],
   "ultimos30": [
     {
       "fecha": "2026-03-29",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 10380,
       "disciplinas": [
         "Natación"
@@ -60,8 +61,8 @@
     },
     {
       "fecha": "2026-03-30",
-      "diaSemana": 0,
-      "pasos": 0,
+      "diaSemana": 1,
+      "pasos": 3358,
       "disciplinas": [
         "Descanso"
       ],
@@ -74,8 +75,8 @@
     },
     {
       "fecha": "2026-03-31",
-      "diaSemana": 1,
-      "pasos": 0,
+      "diaSemana": 2,
+      "pasos": 1496,
       "disciplinas": [
         "Descanso"
       ],
@@ -88,7 +89,7 @@
     },
     {
       "fecha": "2026-04-01",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10060,
       "disciplinas": [
         "Fuerza"
@@ -102,7 +103,7 @@
     },
     {
       "fecha": "2026-04-02",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10031,
       "disciplinas": [
         "Fuerza"
@@ -116,7 +117,7 @@
     },
     {
       "fecha": "2026-04-03",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 11741,
       "disciplinas": [
         "Fuerza"
@@ -130,7 +131,7 @@
     },
     {
       "fecha": "2026-04-04",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 10993,
       "disciplinas": [
         "Descanso"
@@ -138,13 +139,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-05",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 10172,
       "disciplinas": [
         "Fuerza"
@@ -158,7 +159,7 @@
     },
     {
       "fecha": "2026-04-06",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 1539,
       "disciplinas": [
         "Descanso"
@@ -172,7 +173,7 @@
     },
     {
       "fecha": "2026-04-07",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9346,
       "disciplinas": [
         "Mixto"
@@ -180,13 +181,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 111,
       "distancia": 13260,
-      "estado": "rojo",
+      "estado": "amarillo",
       "cumplePasos": false,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-08",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 9161,
       "disciplinas": [
         "Mixto"
@@ -194,13 +195,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 95,
       "distancia": 1750,
-      "estado": "rojo",
+      "estado": "amarillo",
       "cumplePasos": false,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-09",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10796,
       "disciplinas": [
         "Descanso"
@@ -208,13 +209,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-10",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 11329,
       "disciplinas": [
         "Descanso"
@@ -228,7 +229,7 @@
     },
     {
       "fecha": "2026-04-11",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 8431,
       "disciplinas": [
         "Descanso"
@@ -236,27 +237,27 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-12",
-      "diaSemana": 6,
-      "pasos": 0,
+      "diaSemana": 0,
+      "pasos": 12379,
       "disciplinas": [
         "Fuerza"
       ],
       "disciplinaPrincipal": "Fuerza",
       "duracion": 75,
       "distancia": 14730,
-      "estado": "amarillo",
-      "cumplePasos": false,
+      "estado": "verde",
+      "cumplePasos": true,
       "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-13",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 5705,
       "disciplinas": [
         "Natación"
@@ -270,7 +271,7 @@
     },
     {
       "fecha": "2026-04-14",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 7175,
       "disciplinas": [
         "Fuerza"
@@ -284,7 +285,7 @@
     },
     {
       "fecha": "2026-04-15",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 6949,
       "disciplinas": [
         "Fuerza"
@@ -298,7 +299,7 @@
     },
     {
       "fecha": "2026-04-16",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10304,
       "disciplinas": [
         "Descanso"
@@ -306,13 +307,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-17",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 14854,
       "disciplinas": [
         "Descanso"
@@ -326,7 +327,7 @@
     },
     {
       "fecha": "2026-04-18",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 10612,
       "disciplinas": [
         "Mixto"
@@ -334,13 +335,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 105,
       "distancia": 13014,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-19",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 11176,
       "disciplinas": [
         "Fuerza"
@@ -354,8 +355,8 @@
     },
     {
       "fecha": "2026-04-20",
-      "diaSemana": 0,
-      "pasos": 0,
+      "diaSemana": 1,
+      "pasos": 8493,
       "disciplinas": [
         "Fuerza"
       ],
@@ -368,7 +369,7 @@
     },
     {
       "fecha": "2026-04-21",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9286,
       "disciplinas": [
         "Mixto"
@@ -376,13 +377,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 120,
       "distancia": 16,
-      "estado": "rojo",
+      "estado": "amarillo",
       "cumplePasos": false,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-22",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 11176,
       "disciplinas": [
         "Fuerza"
@@ -396,7 +397,7 @@
     },
     {
       "fecha": "2026-04-23",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 11518,
       "disciplinas": [
         "Descanso"
@@ -404,13 +405,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-24",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 10271,
       "disciplinas": [
         "Descanso"
@@ -424,8 +425,8 @@
     },
     {
       "fecha": "2026-04-25",
-      "diaSemana": 5,
-      "pasos": 0,
+      "diaSemana": 6,
+      "pasos": 9897,
       "disciplinas": [
         "Natación"
       ],
@@ -438,15 +439,14 @@
     },
     {
       "fecha": "2026-04-26",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 0,
       "disciplinas": [
-        "Fuerza",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
-      "duracion": 164,
-      "distancia": 25,
+      "disciplinaPrincipal": "Mixto",
+      "duracion": 97,
+      "distancia": 4,
       "estado": "amarillo",
       "cumplePasos": false,
       "tieneEjercicio": true
@@ -467,7 +467,7 @@
   "todosLosDias": [
     {
       "fecha": "2025-12-29",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 10551,
       "disciplinas": [
         "Fuerza"
@@ -481,7 +481,7 @@
     },
     {
       "fecha": "2025-12-30",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 10073,
       "disciplinas": [
         "Bici"
@@ -495,7 +495,7 @@
     },
     {
       "fecha": "2025-12-31",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10609,
       "disciplinas": [
         "Carrera"
@@ -509,7 +509,7 @@
     },
     {
       "fecha": "2026-01-01",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 5504,
       "disciplinas": [
         "Descanso"
@@ -523,7 +523,7 @@
     },
     {
       "fecha": "2026-01-02",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 10201,
       "disciplinas": [
         "Descanso"
@@ -537,7 +537,7 @@
     },
     {
       "fecha": "2026-01-03",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 12037,
       "disciplinas": [
         "Bici"
@@ -551,7 +551,7 @@
     },
     {
       "fecha": "2026-01-04",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 12602,
       "disciplinas": [
         "Fuerza"
@@ -565,7 +565,7 @@
     },
     {
       "fecha": "2026-01-05",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 12078,
       "disciplinas": [
         "Carrera"
@@ -579,7 +579,7 @@
     },
     {
       "fecha": "2026-01-06",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 5762,
       "disciplinas": [
         "Bici"
@@ -593,7 +593,7 @@
     },
     {
       "fecha": "2026-01-07",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 6526,
       "disciplinas": [
         "Fuerza"
@@ -607,7 +607,7 @@
     },
     {
       "fecha": "2026-01-08",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 11382,
       "disciplinas": [
         "Descanso"
@@ -615,13 +615,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-09",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 8587,
       "disciplinas": [
         "Descanso"
@@ -629,13 +629,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-10",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 10693,
       "disciplinas": [
         "Natación"
@@ -649,7 +649,7 @@
     },
     {
       "fecha": "2026-01-11",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 15895,
       "disciplinas": [
         "Carrera"
@@ -663,7 +663,7 @@
     },
     {
       "fecha": "2026-01-12",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 3000,
       "disciplinas": [
         "Natación"
@@ -677,7 +677,7 @@
     },
     {
       "fecha": "2026-01-13",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9384,
       "disciplinas": [
         "Bici"
@@ -691,7 +691,7 @@
     },
     {
       "fecha": "2026-01-14",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 9682,
       "disciplinas": [
         "Natación"
@@ -705,7 +705,7 @@
     },
     {
       "fecha": "2026-01-15",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10126,
       "disciplinas": [
         "Descanso"
@@ -713,13 +713,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-16",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 10495,
       "disciplinas": [
         "Descanso"
@@ -733,7 +733,7 @@
     },
     {
       "fecha": "2026-01-17",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 8530,
       "disciplinas": [
         "Descanso"
@@ -741,13 +741,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-18",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 6830,
       "disciplinas": [
         "Descanso"
@@ -761,7 +761,7 @@
     },
     {
       "fecha": "2026-01-19",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 10500,
       "disciplinas": [
         "Natación"
@@ -775,7 +775,7 @@
     },
     {
       "fecha": "2026-01-20",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 7509,
       "disciplinas": [
         "Bici"
@@ -789,7 +789,7 @@
     },
     {
       "fecha": "2026-01-21",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 5809,
       "disciplinas": [
         "Natación"
@@ -803,47 +803,49 @@
     },
     {
       "fecha": "2026-01-22",
-      "diaSemana": 3,
-      "pasos": 0,
+      "diaSemana": 4,
+      "pasos": 11618,
       "disciplinas": [
         "Bici"
       ],
       "disciplinaPrincipal": "Bici",
       "duracion": 50,
       "distancia": 0,
-      "estado": "amarillo",
-      "cumplePasos": false,
+      "estado": "verde",
+      "cumplePasos": true,
       "tieneEjercicio": true
     },
     {
       "fecha": "2026-01-23",
-      "diaSemana": 4,
-      "pasos": 0,
+      "diaSemana": 5,
+      "pasos": 10473,
       "disciplinas": [
         "Fuerza"
       ],
       "disciplinaPrincipal": "Fuerza",
       "duracion": 37,
       "distancia": 0,
-      "estado": "amarillo",
-      "cumplePasos": false,
+      "estado": "verde",
+      "cumplePasos": true,
       "tieneEjercicio": true
     },
     {
       "fecha": "2026-01-24",
       "diaSemana": 6,
-      "pasos": 0,
-      "disciplinas": [],
-      "disciplinaPrincipal": "",
+      "pasos": 10410,
+      "disciplinas": [
+        "Descanso"
+      ],
+      "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "gris",
-      "cumplePasos": false,
+      "estado": "amarillo",
+      "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-25",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 11224,
       "disciplinas": [
         "Carrera"
@@ -857,7 +859,7 @@
     },
     {
       "fecha": "2026-01-26",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 9204,
       "disciplinas": [
         "Natación"
@@ -871,7 +873,7 @@
     },
     {
       "fecha": "2026-01-27",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 10468,
       "disciplinas": [
         "Bici"
@@ -885,7 +887,7 @@
     },
     {
       "fecha": "2026-01-28",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 3650,
       "disciplinas": [
         "Descanso"
@@ -899,7 +901,7 @@
     },
     {
       "fecha": "2026-01-29",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 12325,
       "disciplinas": [
         "Descanso"
@@ -907,13 +909,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-30",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 10131,
       "disciplinas": [
         "Descanso"
@@ -927,7 +929,7 @@
     },
     {
       "fecha": "2026-01-31",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 17161,
       "disciplinas": [
         "Descanso"
@@ -935,13 +937,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-01",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 7763,
       "disciplinas": [
         "Descanso"
@@ -955,7 +957,7 @@
     },
     {
       "fecha": "2026-02-02",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 10007,
       "disciplinas": [
         "Descanso"
@@ -969,13 +971,12 @@
     },
     {
       "fecha": "2026-02-03",
-      "diaSemana": 1,
-      "pasos": 21106,
+      "diaSemana": 2,
+      "pasos": 10553,
       "disciplinas": [
-        "Natación",
-        "Carrera"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 76.5,
       "distancia": 2000,
       "estado": "verde",
@@ -984,7 +985,7 @@
     },
     {
       "fecha": "2026-02-04",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10184,
       "disciplinas": [
         "Natación"
@@ -998,7 +999,7 @@
     },
     {
       "fecha": "2026-02-05",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10204,
       "disciplinas": [
         "Descanso"
@@ -1006,13 +1007,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-06",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 14580,
       "disciplinas": [
         "Descanso"
@@ -1026,13 +1027,12 @@
     },
     {
       "fecha": "2026-02-07",
-      "diaSemana": 5,
-      "pasos": 29060,
+      "diaSemana": 6,
+      "pasos": 14530,
       "disciplinas": [
-        "Bici",
-        "Fuerza"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Bici",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 70,
       "distancia": 0,
       "estado": "verde",
@@ -1041,7 +1041,7 @@
     },
     {
       "fecha": "2026-02-08",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 19883,
       "disciplinas": [
         "Carrera"
@@ -1055,13 +1055,12 @@
     },
     {
       "fecha": "2026-02-09",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 6527,
       "disciplinas": [
-        "Fuerza",
-        "Natación"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 80.5,
       "distancia": 1275,
       "estado": "amarillo",
@@ -1070,7 +1069,7 @@
     },
     {
       "fecha": "2026-02-10",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 6315,
       "disciplinas": [
         "Natación"
@@ -1084,7 +1083,7 @@
     },
     {
       "fecha": "2026-02-11",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 8593,
       "disciplinas": [
         "Natación"
@@ -1098,7 +1097,7 @@
     },
     {
       "fecha": "2026-02-12",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 12804,
       "disciplinas": [
         "Descanso"
@@ -1106,13 +1105,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-13",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 11188,
       "disciplinas": [
         "Descanso"
@@ -1126,7 +1125,7 @@
     },
     {
       "fecha": "2026-02-14",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 7065,
       "disciplinas": [
         "Natación"
@@ -1140,13 +1139,12 @@
     },
     {
       "fecha": "2026-02-15",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 11827,
       "disciplinas": [
-        "Fuerza",
-        "Carrera"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 65.4,
       "distancia": 3.4,
       "estado": "verde",
@@ -1155,13 +1153,12 @@
     },
     {
       "fecha": "2026-02-16",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 4606,
       "disciplinas": [
-        "Natación",
-        "Bici"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 79.1,
       "distancia": 1425,
       "estado": "amarillo",
@@ -1170,13 +1167,12 @@
     },
     {
       "fecha": "2026-02-17",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9349,
       "disciplinas": [
-        "Carrera",
-        "Fuerza"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Carrera",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 77,
       "distancia": 3.9,
       "estado": "amarillo",
@@ -1185,7 +1181,7 @@
     },
     {
       "fecha": "2026-02-18",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 2172,
       "disciplinas": [
         "Descanso"
@@ -1199,7 +1195,7 @@
     },
     {
       "fecha": "2026-02-19",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 13734,
       "disciplinas": [
         "Descanso"
@@ -1207,13 +1203,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-20",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 7912,
       "disciplinas": [
         "Descanso"
@@ -1221,13 +1217,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-21",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 9861,
       "disciplinas": [
         "Natación"
@@ -1241,7 +1237,7 @@
     },
     {
       "fecha": "2026-02-22",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 7987,
       "disciplinas": [
         "Descanso"
@@ -1255,7 +1251,7 @@
     },
     {
       "fecha": "2026-02-23",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 5382,
       "disciplinas": [
         "Natación"
@@ -1269,7 +1265,7 @@
     },
     {
       "fecha": "2026-02-24",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 11022,
       "disciplinas": [
         "Fuerza"
@@ -1283,7 +1279,7 @@
     },
     {
       "fecha": "2026-02-25",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10300,
       "disciplinas": [
         "Carrera"
@@ -1297,7 +1293,7 @@
     },
     {
       "fecha": "2026-02-26",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 15475,
       "disciplinas": [
         "Descanso"
@@ -1305,13 +1301,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-27",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 14535,
       "disciplinas": [
         "Descanso"
@@ -1325,7 +1321,7 @@
     },
     {
       "fecha": "2026-02-28",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 12732,
       "disciplinas": [
         "Natación"
@@ -1339,7 +1335,7 @@
     },
     {
       "fecha": "2026-03-01",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 11961,
       "disciplinas": [
         "Natación"
@@ -1353,7 +1349,7 @@
     },
     {
       "fecha": "2026-03-02",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 8541,
       "disciplinas": [
         "Descanso"
@@ -1367,7 +1363,7 @@
     },
     {
       "fecha": "2026-03-03",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9259,
       "disciplinas": [
         "Fuerza"
@@ -1381,7 +1377,7 @@
     },
     {
       "fecha": "2026-03-04",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10092,
       "disciplinas": [
         "Carrera"
@@ -1395,7 +1391,7 @@
     },
     {
       "fecha": "2026-03-05",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 11954,
       "disciplinas": [
         "Descanso"
@@ -1403,13 +1399,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-06",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 21548,
       "disciplinas": [
         "Descanso"
@@ -1423,7 +1419,7 @@
     },
     {
       "fecha": "2026-03-07",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 5090,
       "disciplinas": [
         "Descanso"
@@ -1431,13 +1427,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-08",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 5637,
       "disciplinas": [
         "Descanso"
@@ -1451,28 +1447,26 @@
     },
     {
       "fecha": "2026-03-09",
-      "diaSemana": 0,
-      "pasos": 14624,
+      "diaSemana": 1,
+      "pasos": 7312,
       "disciplinas": [
-        "Natación",
-        "Fuerza"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 80,
       "distancia": 1600,
-      "estado": "verde",
-      "cumplePasos": true,
+      "estado": "amarillo",
+      "cumplePasos": false,
       "tieneEjercicio": true
     },
     {
       "fecha": "2026-03-10",
-      "diaSemana": 1,
-      "pasos": 9554,
+      "diaSemana": 2,
+      "pasos": 4777,
       "disciplinas": [
-        "Bici",
-        "Natación"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Bici",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 82,
       "distancia": 1550,
       "estado": "amarillo",
@@ -1481,22 +1475,21 @@
     },
     {
       "fecha": "2026-03-11",
-      "diaSemana": 2,
-      "pasos": 10174,
+      "diaSemana": 3,
+      "pasos": 5087,
       "disciplinas": [
-        "Fuerza",
-        "Natación"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 82,
       "distancia": 1400,
-      "estado": "verde",
-      "cumplePasos": true,
+      "estado": "amarillo",
+      "cumplePasos": false,
       "tieneEjercicio": true
     },
     {
       "fecha": "2026-03-12",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 13366,
       "disciplinas": [
         "Descanso"
@@ -1504,13 +1497,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-13",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 12465,
       "disciplinas": [
         "Descanso"
@@ -1524,7 +1517,7 @@
     },
     {
       "fecha": "2026-03-14",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 8936,
       "disciplinas": [
         "Natación"
@@ -1538,7 +1531,7 @@
     },
     {
       "fecha": "2026-03-15",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 12418,
       "disciplinas": [
         "Fuerza"
@@ -1552,7 +1545,7 @@
     },
     {
       "fecha": "2026-03-16",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 10639,
       "disciplinas": [
         "Fuerza"
@@ -1566,7 +1559,7 @@
     },
     {
       "fecha": "2026-03-17",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 10221,
       "disciplinas": [
         "Fuerza"
@@ -1580,7 +1573,7 @@
     },
     {
       "fecha": "2026-03-18",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 9780,
       "disciplinas": [
         "Natación"
@@ -1594,7 +1587,7 @@
     },
     {
       "fecha": "2026-03-19",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10687,
       "disciplinas": [
         "Descanso"
@@ -1602,13 +1595,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-20",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 19118,
       "disciplinas": [
         "Descanso"
@@ -1622,7 +1615,7 @@
     },
     {
       "fecha": "2026-03-21",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 19856,
       "disciplinas": [
         "Descanso"
@@ -1630,13 +1623,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-22",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 9367,
       "disciplinas": [
         "Fuerza"
@@ -1650,13 +1643,12 @@
     },
     {
       "fecha": "2026-03-23",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 8328,
       "disciplinas": [
-        "Fuerza",
-        "Natación"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 90,
       "distancia": 11610,
       "estado": "amarillo",
@@ -1665,7 +1657,7 @@
     },
     {
       "fecha": "2026-03-24",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 2287,
       "disciplinas": [
         "Descanso"
@@ -1679,7 +1671,7 @@
     },
     {
       "fecha": "2026-03-25",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 7901,
       "disciplinas": [
         "Fuerza"
@@ -1693,7 +1685,7 @@
     },
     {
       "fecha": "2026-03-26",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 12757,
       "disciplinas": [
         "Descanso"
@@ -1701,13 +1693,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-27",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 6159,
       "disciplinas": [
         "Descanso"
@@ -1715,13 +1707,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-28",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 4928,
       "disciplinas": [
         "Natación"
@@ -1735,7 +1727,7 @@
     },
     {
       "fecha": "2026-03-29",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 10380,
       "disciplinas": [
         "Natación"
@@ -1749,8 +1741,8 @@
     },
     {
       "fecha": "2026-03-30",
-      "diaSemana": 0,
-      "pasos": 0,
+      "diaSemana": 1,
+      "pasos": 3358,
       "disciplinas": [
         "Descanso"
       ],
@@ -1763,8 +1755,8 @@
     },
     {
       "fecha": "2026-03-31",
-      "diaSemana": 1,
-      "pasos": 0,
+      "diaSemana": 2,
+      "pasos": 1496,
       "disciplinas": [
         "Descanso"
       ],
@@ -1777,7 +1769,7 @@
     },
     {
       "fecha": "2026-04-01",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10060,
       "disciplinas": [
         "Fuerza"
@@ -1791,7 +1783,7 @@
     },
     {
       "fecha": "2026-04-02",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10031,
       "disciplinas": [
         "Fuerza"
@@ -1805,7 +1797,7 @@
     },
     {
       "fecha": "2026-04-03",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 11741,
       "disciplinas": [
         "Fuerza"
@@ -1819,7 +1811,7 @@
     },
     {
       "fecha": "2026-04-04",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 10993,
       "disciplinas": [
         "Descanso"
@@ -1827,13 +1819,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-05",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 10172,
       "disciplinas": [
         "Fuerza"
@@ -1847,7 +1839,7 @@
     },
     {
       "fecha": "2026-04-06",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 1539,
       "disciplinas": [
         "Descanso"
@@ -1861,7 +1853,7 @@
     },
     {
       "fecha": "2026-04-07",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9346,
       "disciplinas": [
         "Mixto"
@@ -1869,13 +1861,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 111,
       "distancia": 13260,
-      "estado": "rojo",
+      "estado": "amarillo",
       "cumplePasos": false,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-08",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 9161,
       "disciplinas": [
         "Mixto"
@@ -1883,13 +1875,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 95,
       "distancia": 1750,
-      "estado": "rojo",
+      "estado": "amarillo",
       "cumplePasos": false,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-09",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10796,
       "disciplinas": [
         "Descanso"
@@ -1897,13 +1889,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-10",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 11329,
       "disciplinas": [
         "Descanso"
@@ -1917,7 +1909,7 @@
     },
     {
       "fecha": "2026-04-11",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 8431,
       "disciplinas": [
         "Descanso"
@@ -1925,27 +1917,27 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-12",
-      "diaSemana": 6,
-      "pasos": 0,
+      "diaSemana": 0,
+      "pasos": 12379,
       "disciplinas": [
         "Fuerza"
       ],
       "disciplinaPrincipal": "Fuerza",
       "duracion": 75,
       "distancia": 14730,
-      "estado": "amarillo",
-      "cumplePasos": false,
+      "estado": "verde",
+      "cumplePasos": true,
       "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-13",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 5705,
       "disciplinas": [
         "Natación"
@@ -1959,7 +1951,7 @@
     },
     {
       "fecha": "2026-04-14",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 7175,
       "disciplinas": [
         "Fuerza"
@@ -1973,7 +1965,7 @@
     },
     {
       "fecha": "2026-04-15",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 6949,
       "disciplinas": [
         "Fuerza"
@@ -1987,7 +1979,7 @@
     },
     {
       "fecha": "2026-04-16",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10304,
       "disciplinas": [
         "Descanso"
@@ -1995,13 +1987,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-17",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 14854,
       "disciplinas": [
         "Descanso"
@@ -2015,7 +2007,7 @@
     },
     {
       "fecha": "2026-04-18",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 10612,
       "disciplinas": [
         "Mixto"
@@ -2023,13 +2015,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 105,
       "distancia": 13014,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-19",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 11176,
       "disciplinas": [
         "Fuerza"
@@ -2043,8 +2035,8 @@
     },
     {
       "fecha": "2026-04-20",
-      "diaSemana": 0,
-      "pasos": 0,
+      "diaSemana": 1,
+      "pasos": 8493,
       "disciplinas": [
         "Fuerza"
       ],
@@ -2057,7 +2049,7 @@
     },
     {
       "fecha": "2026-04-21",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9286,
       "disciplinas": [
         "Mixto"
@@ -2065,13 +2057,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 120,
       "distancia": 16,
-      "estado": "rojo",
+      "estado": "amarillo",
       "cumplePasos": false,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-22",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 11176,
       "disciplinas": [
         "Fuerza"
@@ -2085,7 +2077,7 @@
     },
     {
       "fecha": "2026-04-23",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 11518,
       "disciplinas": [
         "Descanso"
@@ -2093,13 +2085,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-24",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 10271,
       "disciplinas": [
         "Descanso"
@@ -2113,8 +2105,8 @@
     },
     {
       "fecha": "2026-04-25",
-      "diaSemana": 5,
-      "pasos": 0,
+      "diaSemana": 6,
+      "pasos": 9897,
       "disciplinas": [
         "Natación"
       ],
@@ -2127,68 +2119,67 @@
     },
     {
       "fecha": "2026-04-26",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 0,
       "disciplinas": [
-        "Fuerza",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
-      "duracion": 164,
-      "distancia": 25,
+      "disciplinaPrincipal": "Mixto",
+      "duracion": 97,
+      "distancia": 4,
       "estado": "amarillo",
       "cumplePasos": false,
       "tieneEjercicio": true
     }
   ],
   "porDiaSemana": {
-    "Dom": {
-      "ejercicio": 13,
-      "pasos": 6,
-      "verdes": 5,
-      "total": 17
-    },
     "Lun": {
       "ejercicio": 13,
+      "pasos": 5,
+      "verdes": 4,
+      "total": 17
+    },
+    "Mar": {
+      "ejercicio": 15,
       "pasos": 5,
       "verdes": 5,
       "total": 17
     },
-    "Mar": {
-      "ejercicio": 14,
-      "pasos": 7,
-      "verdes": 7,
-      "total": 17
-    },
     "Mié": {
-      "ejercicio": 2,
-      "pasos": 15,
-      "verdes": 1,
+      "ejercicio": 15,
+      "pasos": 6,
+      "verdes": 6,
       "total": 17
     },
     "Jue": {
       "ejercicio": 2,
-      "pasos": 13,
+      "pasos": 16,
       "verdes": 16,
       "total": 17
     },
     "Vie": {
-      "ejercicio": 9,
-      "pasos": 8,
-      "verdes": 10,
-      "total": 16
+      "ejercicio": 2,
+      "pasos": 14,
+      "verdes": 14,
+      "total": 17
     },
     "Sáb": {
+      "ejercicio": 10,
+      "pasos": 9,
+      "verdes": 5,
+      "total": 17
+    },
+    "Dom": {
       "ejercicio": 13,
-      "pasos": 10,
-      "verdes": 10,
+      "pasos": 11,
+      "verdes": 11,
       "total": 17
     }
   },
   "todosDatos": [
     {
       "fecha": "2025-12-29",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 10551,
       "disciplinas": [
         "Fuerza"
@@ -2202,7 +2193,7 @@
     },
     {
       "fecha": "2025-12-30",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 10073,
       "disciplinas": [
         "Bici"
@@ -2216,7 +2207,7 @@
     },
     {
       "fecha": "2025-12-31",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10609,
       "disciplinas": [
         "Carrera"
@@ -2230,7 +2221,7 @@
     },
     {
       "fecha": "2026-01-01",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 5504,
       "disciplinas": [
         "Descanso"
@@ -2244,7 +2235,7 @@
     },
     {
       "fecha": "2026-01-02",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 10201,
       "disciplinas": [
         "Descanso"
@@ -2258,7 +2249,7 @@
     },
     {
       "fecha": "2026-01-03",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 12037,
       "disciplinas": [
         "Bici"
@@ -2272,7 +2263,7 @@
     },
     {
       "fecha": "2026-01-04",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 12602,
       "disciplinas": [
         "Fuerza"
@@ -2286,7 +2277,7 @@
     },
     {
       "fecha": "2026-01-05",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 12078,
       "disciplinas": [
         "Carrera"
@@ -2300,7 +2291,7 @@
     },
     {
       "fecha": "2026-01-06",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 5762,
       "disciplinas": [
         "Bici"
@@ -2314,7 +2305,7 @@
     },
     {
       "fecha": "2026-01-07",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 6526,
       "disciplinas": [
         "Fuerza"
@@ -2328,7 +2319,7 @@
     },
     {
       "fecha": "2026-01-08",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 11382,
       "disciplinas": [
         "Descanso"
@@ -2336,13 +2327,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-09",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 8587,
       "disciplinas": [
         "Descanso"
@@ -2350,13 +2341,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-10",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 10693,
       "disciplinas": [
         "Natación"
@@ -2370,7 +2361,7 @@
     },
     {
       "fecha": "2026-01-11",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 15895,
       "disciplinas": [
         "Carrera"
@@ -2384,7 +2375,7 @@
     },
     {
       "fecha": "2026-01-12",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 3000,
       "disciplinas": [
         "Natación"
@@ -2398,7 +2389,7 @@
     },
     {
       "fecha": "2026-01-13",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9384,
       "disciplinas": [
         "Bici"
@@ -2412,7 +2403,7 @@
     },
     {
       "fecha": "2026-01-14",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 9682,
       "disciplinas": [
         "Natación"
@@ -2426,7 +2417,7 @@
     },
     {
       "fecha": "2026-01-15",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10126,
       "disciplinas": [
         "Descanso"
@@ -2434,13 +2425,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-16",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 10495,
       "disciplinas": [
         "Descanso"
@@ -2454,7 +2445,7 @@
     },
     {
       "fecha": "2026-01-17",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 8530,
       "disciplinas": [
         "Descanso"
@@ -2462,13 +2453,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-18",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 6830,
       "disciplinas": [
         "Descanso"
@@ -2482,7 +2473,7 @@
     },
     {
       "fecha": "2026-01-19",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 10500,
       "disciplinas": [
         "Natación"
@@ -2496,7 +2487,7 @@
     },
     {
       "fecha": "2026-01-20",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 7509,
       "disciplinas": [
         "Bici"
@@ -2510,7 +2501,7 @@
     },
     {
       "fecha": "2026-01-21",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 5809,
       "disciplinas": [
         "Natación"
@@ -2524,35 +2515,49 @@
     },
     {
       "fecha": "2026-01-22",
-      "diaSemana": 3,
-      "pasos": 0,
+      "diaSemana": 4,
+      "pasos": 11618,
       "disciplinas": [
         "Bici"
       ],
       "disciplinaPrincipal": "Bici",
       "duracion": 50,
       "distancia": 0,
-      "estado": "amarillo",
-      "cumplePasos": false,
+      "estado": "verde",
+      "cumplePasos": true,
       "tieneEjercicio": true
     },
     {
       "fecha": "2026-01-23",
-      "diaSemana": 4,
-      "pasos": 0,
+      "diaSemana": 5,
+      "pasos": 10473,
       "disciplinas": [
         "Fuerza"
       ],
       "disciplinaPrincipal": "Fuerza",
       "duracion": 37,
       "distancia": 0,
-      "estado": "amarillo",
-      "cumplePasos": false,
+      "estado": "verde",
+      "cumplePasos": true,
       "tieneEjercicio": true
     },
     {
-      "fecha": "2026-01-25",
+      "fecha": "2026-01-24",
       "diaSemana": 6,
+      "pasos": 10410,
+      "disciplinas": [
+        "Descanso"
+      ],
+      "disciplinaPrincipal": "Descanso",
+      "duracion": 0,
+      "distancia": 0,
+      "estado": "amarillo",
+      "cumplePasos": true,
+      "tieneEjercicio": false
+    },
+    {
+      "fecha": "2026-01-25",
+      "diaSemana": 0,
       "pasos": 11224,
       "disciplinas": [
         "Carrera"
@@ -2566,7 +2571,7 @@
     },
     {
       "fecha": "2026-01-26",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 9204,
       "disciplinas": [
         "Natación"
@@ -2580,7 +2585,7 @@
     },
     {
       "fecha": "2026-01-27",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 10468,
       "disciplinas": [
         "Bici"
@@ -2594,7 +2599,7 @@
     },
     {
       "fecha": "2026-01-28",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 3650,
       "disciplinas": [
         "Descanso"
@@ -2608,7 +2613,7 @@
     },
     {
       "fecha": "2026-01-29",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 12325,
       "disciplinas": [
         "Descanso"
@@ -2616,13 +2621,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-01-30",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 10131,
       "disciplinas": [
         "Descanso"
@@ -2636,7 +2641,7 @@
     },
     {
       "fecha": "2026-01-31",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 17161,
       "disciplinas": [
         "Descanso"
@@ -2644,13 +2649,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-01",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 7763,
       "disciplinas": [
         "Descanso"
@@ -2664,7 +2669,7 @@
     },
     {
       "fecha": "2026-02-02",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 10007,
       "disciplinas": [
         "Descanso"
@@ -2678,13 +2683,12 @@
     },
     {
       "fecha": "2026-02-03",
-      "diaSemana": 1,
-      "pasos": 21106,
+      "diaSemana": 2,
+      "pasos": 10553,
       "disciplinas": [
-        "Natación",
-        "Carrera"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 76.5,
       "distancia": 2000,
       "estado": "verde",
@@ -2693,7 +2697,7 @@
     },
     {
       "fecha": "2026-02-04",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10184,
       "disciplinas": [
         "Natación"
@@ -2707,7 +2711,7 @@
     },
     {
       "fecha": "2026-02-05",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10204,
       "disciplinas": [
         "Descanso"
@@ -2715,13 +2719,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-06",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 14580,
       "disciplinas": [
         "Descanso"
@@ -2735,13 +2739,12 @@
     },
     {
       "fecha": "2026-02-07",
-      "diaSemana": 5,
-      "pasos": 29060,
+      "diaSemana": 6,
+      "pasos": 14530,
       "disciplinas": [
-        "Bici",
-        "Fuerza"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Bici",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 70,
       "distancia": 0,
       "estado": "verde",
@@ -2750,7 +2753,7 @@
     },
     {
       "fecha": "2026-02-08",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 19883,
       "disciplinas": [
         "Carrera"
@@ -2764,13 +2767,12 @@
     },
     {
       "fecha": "2026-02-09",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 6527,
       "disciplinas": [
-        "Fuerza",
-        "Natación"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 80.5,
       "distancia": 1275,
       "estado": "amarillo",
@@ -2779,7 +2781,7 @@
     },
     {
       "fecha": "2026-02-10",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 6315,
       "disciplinas": [
         "Natación"
@@ -2793,7 +2795,7 @@
     },
     {
       "fecha": "2026-02-11",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 8593,
       "disciplinas": [
         "Natación"
@@ -2807,7 +2809,7 @@
     },
     {
       "fecha": "2026-02-12",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 12804,
       "disciplinas": [
         "Descanso"
@@ -2815,13 +2817,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-13",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 11188,
       "disciplinas": [
         "Descanso"
@@ -2835,7 +2837,7 @@
     },
     {
       "fecha": "2026-02-14",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 7065,
       "disciplinas": [
         "Natación"
@@ -2849,13 +2851,12 @@
     },
     {
       "fecha": "2026-02-15",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 11827,
       "disciplinas": [
-        "Fuerza",
-        "Carrera"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 65.4,
       "distancia": 3.4,
       "estado": "verde",
@@ -2864,13 +2865,12 @@
     },
     {
       "fecha": "2026-02-16",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 4606,
       "disciplinas": [
-        "Natación",
-        "Bici"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 79.1,
       "distancia": 1425,
       "estado": "amarillo",
@@ -2879,13 +2879,12 @@
     },
     {
       "fecha": "2026-02-17",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9349,
       "disciplinas": [
-        "Carrera",
-        "Fuerza"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Carrera",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 77,
       "distancia": 3.9,
       "estado": "amarillo",
@@ -2894,7 +2893,7 @@
     },
     {
       "fecha": "2026-02-18",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 2172,
       "disciplinas": [
         "Descanso"
@@ -2908,7 +2907,7 @@
     },
     {
       "fecha": "2026-02-19",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 13734,
       "disciplinas": [
         "Descanso"
@@ -2916,13 +2915,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-20",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 7912,
       "disciplinas": [
         "Descanso"
@@ -2930,13 +2929,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-21",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 9861,
       "disciplinas": [
         "Natación"
@@ -2950,7 +2949,7 @@
     },
     {
       "fecha": "2026-02-22",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 7987,
       "disciplinas": [
         "Descanso"
@@ -2964,7 +2963,7 @@
     },
     {
       "fecha": "2026-02-23",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 5382,
       "disciplinas": [
         "Natación"
@@ -2978,7 +2977,7 @@
     },
     {
       "fecha": "2026-02-24",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 11022,
       "disciplinas": [
         "Fuerza"
@@ -2992,7 +2991,7 @@
     },
     {
       "fecha": "2026-02-25",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10300,
       "disciplinas": [
         "Carrera"
@@ -3006,7 +3005,7 @@
     },
     {
       "fecha": "2026-02-26",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 15475,
       "disciplinas": [
         "Descanso"
@@ -3014,13 +3013,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-27",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 14535,
       "disciplinas": [
         "Descanso"
@@ -3034,7 +3033,7 @@
     },
     {
       "fecha": "2026-02-28",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 12732,
       "disciplinas": [
         "Natación"
@@ -3048,7 +3047,7 @@
     },
     {
       "fecha": "2026-03-01",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 11961,
       "disciplinas": [
         "Natación"
@@ -3062,7 +3061,7 @@
     },
     {
       "fecha": "2026-03-02",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 8541,
       "disciplinas": [
         "Descanso"
@@ -3076,7 +3075,7 @@
     },
     {
       "fecha": "2026-03-03",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9259,
       "disciplinas": [
         "Fuerza"
@@ -3090,7 +3089,7 @@
     },
     {
       "fecha": "2026-03-04",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10092,
       "disciplinas": [
         "Carrera"
@@ -3104,7 +3103,7 @@
     },
     {
       "fecha": "2026-03-05",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 11954,
       "disciplinas": [
         "Descanso"
@@ -3112,13 +3111,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-06",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 21548,
       "disciplinas": [
         "Descanso"
@@ -3132,7 +3131,7 @@
     },
     {
       "fecha": "2026-03-07",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 5090,
       "disciplinas": [
         "Descanso"
@@ -3140,13 +3139,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-08",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 5637,
       "disciplinas": [
         "Descanso"
@@ -3160,28 +3159,26 @@
     },
     {
       "fecha": "2026-03-09",
-      "diaSemana": 0,
-      "pasos": 14624,
+      "diaSemana": 1,
+      "pasos": 7312,
       "disciplinas": [
-        "Natación",
-        "Fuerza"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 80,
       "distancia": 1600,
-      "estado": "verde",
-      "cumplePasos": true,
+      "estado": "amarillo",
+      "cumplePasos": false,
       "tieneEjercicio": true
     },
     {
       "fecha": "2026-03-10",
-      "diaSemana": 1,
-      "pasos": 9554,
+      "diaSemana": 2,
+      "pasos": 4777,
       "disciplinas": [
-        "Bici",
-        "Natación"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Bici",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 82,
       "distancia": 1550,
       "estado": "amarillo",
@@ -3190,22 +3187,21 @@
     },
     {
       "fecha": "2026-03-11",
-      "diaSemana": 2,
-      "pasos": 10174,
+      "diaSemana": 3,
+      "pasos": 5087,
       "disciplinas": [
-        "Fuerza",
-        "Natación"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 82,
       "distancia": 1400,
-      "estado": "verde",
-      "cumplePasos": true,
+      "estado": "amarillo",
+      "cumplePasos": false,
       "tieneEjercicio": true
     },
     {
       "fecha": "2026-03-12",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 13366,
       "disciplinas": [
         "Descanso"
@@ -3213,13 +3209,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-13",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 12465,
       "disciplinas": [
         "Descanso"
@@ -3233,7 +3229,7 @@
     },
     {
       "fecha": "2026-03-14",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 8936,
       "disciplinas": [
         "Natación"
@@ -3247,7 +3243,7 @@
     },
     {
       "fecha": "2026-03-15",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 12418,
       "disciplinas": [
         "Fuerza"
@@ -3261,7 +3257,7 @@
     },
     {
       "fecha": "2026-03-16",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 10639,
       "disciplinas": [
         "Fuerza"
@@ -3275,7 +3271,7 @@
     },
     {
       "fecha": "2026-03-17",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 10221,
       "disciplinas": [
         "Fuerza"
@@ -3289,7 +3285,7 @@
     },
     {
       "fecha": "2026-03-18",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 9780,
       "disciplinas": [
         "Natación"
@@ -3303,7 +3299,7 @@
     },
     {
       "fecha": "2026-03-19",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10687,
       "disciplinas": [
         "Descanso"
@@ -3311,13 +3307,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-20",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 19118,
       "disciplinas": [
         "Descanso"
@@ -3331,7 +3327,7 @@
     },
     {
       "fecha": "2026-03-21",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 19856,
       "disciplinas": [
         "Descanso"
@@ -3339,13 +3335,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-22",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 9367,
       "disciplinas": [
         "Fuerza"
@@ -3359,13 +3355,12 @@
     },
     {
       "fecha": "2026-03-23",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 8328,
       "disciplinas": [
-        "Fuerza",
-        "Natación"
+        "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "Mixto",
       "duracion": 90,
       "distancia": 11610,
       "estado": "amarillo",
@@ -3374,7 +3369,7 @@
     },
     {
       "fecha": "2026-03-24",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 2287,
       "disciplinas": [
         "Descanso"
@@ -3388,7 +3383,7 @@
     },
     {
       "fecha": "2026-03-25",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 7901,
       "disciplinas": [
         "Fuerza"
@@ -3402,7 +3397,7 @@
     },
     {
       "fecha": "2026-03-26",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 12757,
       "disciplinas": [
         "Descanso"
@@ -3410,13 +3405,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-27",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 6159,
       "disciplinas": [
         "Descanso"
@@ -3424,13 +3419,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-28",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 4928,
       "disciplinas": [
         "Natación"
@@ -3444,7 +3439,7 @@
     },
     {
       "fecha": "2026-03-29",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 10380,
       "disciplinas": [
         "Natación"
@@ -3458,8 +3453,8 @@
     },
     {
       "fecha": "2026-03-30",
-      "diaSemana": 0,
-      "pasos": 0,
+      "diaSemana": 1,
+      "pasos": 3358,
       "disciplinas": [
         "Descanso"
       ],
@@ -3472,8 +3467,8 @@
     },
     {
       "fecha": "2026-03-31",
-      "diaSemana": 1,
-      "pasos": 0,
+      "diaSemana": 2,
+      "pasos": 1496,
       "disciplinas": [
         "Descanso"
       ],
@@ -3486,7 +3481,7 @@
     },
     {
       "fecha": "2026-04-01",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 10060,
       "disciplinas": [
         "Fuerza"
@@ -3500,7 +3495,7 @@
     },
     {
       "fecha": "2026-04-02",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10031,
       "disciplinas": [
         "Fuerza"
@@ -3514,7 +3509,7 @@
     },
     {
       "fecha": "2026-04-03",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 11741,
       "disciplinas": [
         "Fuerza"
@@ -3528,7 +3523,7 @@
     },
     {
       "fecha": "2026-04-04",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 10993,
       "disciplinas": [
         "Descanso"
@@ -3536,13 +3531,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-05",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 10172,
       "disciplinas": [
         "Fuerza"
@@ -3556,7 +3551,7 @@
     },
     {
       "fecha": "2026-04-06",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 1539,
       "disciplinas": [
         "Descanso"
@@ -3570,7 +3565,7 @@
     },
     {
       "fecha": "2026-04-07",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9346,
       "disciplinas": [
         "Mixto"
@@ -3578,13 +3573,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 111,
       "distancia": 13260,
-      "estado": "rojo",
+      "estado": "amarillo",
       "cumplePasos": false,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-08",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 9161,
       "disciplinas": [
         "Mixto"
@@ -3592,13 +3587,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 95,
       "distancia": 1750,
-      "estado": "rojo",
+      "estado": "amarillo",
       "cumplePasos": false,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-09",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10796,
       "disciplinas": [
         "Descanso"
@@ -3606,13 +3601,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-10",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 11329,
       "disciplinas": [
         "Descanso"
@@ -3626,7 +3621,7 @@
     },
     {
       "fecha": "2026-04-11",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 8431,
       "disciplinas": [
         "Descanso"
@@ -3634,27 +3629,27 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "rojo",
       "cumplePasos": false,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-12",
-      "diaSemana": 6,
-      "pasos": 0,
+      "diaSemana": 0,
+      "pasos": 12379,
       "disciplinas": [
         "Fuerza"
       ],
       "disciplinaPrincipal": "Fuerza",
       "duracion": 75,
       "distancia": 14730,
-      "estado": "amarillo",
-      "cumplePasos": false,
+      "estado": "verde",
+      "cumplePasos": true,
       "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-13",
-      "diaSemana": 0,
+      "diaSemana": 1,
       "pasos": 5705,
       "disciplinas": [
         "Natación"
@@ -3668,7 +3663,7 @@
     },
     {
       "fecha": "2026-04-14",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 7175,
       "disciplinas": [
         "Fuerza"
@@ -3682,7 +3677,7 @@
     },
     {
       "fecha": "2026-04-15",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 6949,
       "disciplinas": [
         "Fuerza"
@@ -3696,7 +3691,7 @@
     },
     {
       "fecha": "2026-04-16",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 10304,
       "disciplinas": [
         "Descanso"
@@ -3704,13 +3699,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-17",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 14854,
       "disciplinas": [
         "Descanso"
@@ -3724,7 +3719,7 @@
     },
     {
       "fecha": "2026-04-18",
-      "diaSemana": 5,
+      "diaSemana": 6,
       "pasos": 10612,
       "disciplinas": [
         "Mixto"
@@ -3732,13 +3727,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 105,
       "distancia": 13014,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-19",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 11176,
       "disciplinas": [
         "Fuerza"
@@ -3752,8 +3747,8 @@
     },
     {
       "fecha": "2026-04-20",
-      "diaSemana": 0,
-      "pasos": 0,
+      "diaSemana": 1,
+      "pasos": 8493,
       "disciplinas": [
         "Fuerza"
       ],
@@ -3766,7 +3761,7 @@
     },
     {
       "fecha": "2026-04-21",
-      "diaSemana": 1,
+      "diaSemana": 2,
       "pasos": 9286,
       "disciplinas": [
         "Mixto"
@@ -3774,13 +3769,13 @@
       "disciplinaPrincipal": "Mixto",
       "duracion": 120,
       "distancia": 16,
-      "estado": "rojo",
+      "estado": "amarillo",
       "cumplePasos": false,
-      "tieneEjercicio": false
+      "tieneEjercicio": true
     },
     {
       "fecha": "2026-04-22",
-      "diaSemana": 2,
+      "diaSemana": 3,
       "pasos": 11176,
       "disciplinas": [
         "Fuerza"
@@ -3794,7 +3789,7 @@
     },
     {
       "fecha": "2026-04-23",
-      "diaSemana": 3,
+      "diaSemana": 4,
       "pasos": 11518,
       "disciplinas": [
         "Descanso"
@@ -3802,13 +3797,13 @@
       "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "verde",
       "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-24",
-      "diaSemana": 4,
+      "diaSemana": 5,
       "pasos": 10271,
       "disciplinas": [
         "Descanso"
@@ -3822,8 +3817,8 @@
     },
     {
       "fecha": "2026-04-25",
-      "diaSemana": 5,
-      "pasos": 0,
+      "diaSemana": 6,
+      "pasos": 9897,
       "disciplinas": [
         "Natación"
       ],
@@ -3836,18 +3831,1158 @@
     },
     {
       "fecha": "2026-04-26",
-      "diaSemana": 6,
+      "diaSemana": 0,
       "pasos": 0,
       "disciplinas": [
-        "Fuerza",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Fuerza",
-      "duracion": 164,
-      "distancia": 25,
+      "disciplinaPrincipal": "Mixto",
+      "duracion": 97,
+      "distancia": 4,
       "estado": "amarillo",
       "cumplePasos": false,
       "tieneEjercicio": true
+    }
+  ],
+  "semanas": [
+    {
+      "inicio": "2025-12-29",
+      "fin": "2026-01-04",
+      "esSemanaActual": false,
+      "sesionesFuerza": 2,
+      "sesionesCardio": 3,
+      "diasPasos10k": 6,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2025-12-29",
+          "diaSemana": 1,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 10551,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2025-12-30",
+          "diaSemana": 2,
+          "estado": "verde",
+          "disciplinaPrincipal": "Bici",
+          "pasos": 10073,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2025-12-31",
+          "diaSemana": 3,
+          "estado": "verde",
+          "disciplinaPrincipal": "Carrera",
+          "pasos": 10609,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-01",
+          "diaSemana": 4,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 5504,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-02",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10201,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-03",
+          "diaSemana": 6,
+          "estado": "verde",
+          "disciplinaPrincipal": "Bici",
+          "pasos": 12037,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-04",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 12602,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-01-05",
+      "fin": "2026-01-11",
+      "esSemanaActual": false,
+      "sesionesFuerza": 1,
+      "sesionesCardio": 4,
+      "diasPasos10k": 4,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-01-05",
+          "diaSemana": 1,
+          "estado": "verde",
+          "disciplinaPrincipal": "Carrera",
+          "pasos": 12078,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-06",
+          "diaSemana": 2,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Bici",
+          "pasos": 5762,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-07",
+          "diaSemana": 3,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 6526,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-08",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 11382,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-09",
+          "diaSemana": 5,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 8587,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-10",
+          "diaSemana": 6,
+          "estado": "verde",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 10693,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-11",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Carrera",
+          "pasos": 15895,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-01-12",
+      "fin": "2026-01-18",
+      "esSemanaActual": false,
+      "sesionesFuerza": 0,
+      "sesionesCardio": 3,
+      "diasPasos10k": 2,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-01-12",
+          "diaSemana": 1,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 3000,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-13",
+          "diaSemana": 2,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Bici",
+          "pasos": 9384,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-14",
+          "diaSemana": 3,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 9682,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-15",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10126,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-16",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10495,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-17",
+          "diaSemana": 6,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 8530,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-18",
+          "diaSemana": 0,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 6830,
+          "cumplePasos": false
+        }
+      ]
+    },
+    {
+      "inicio": "2026-01-19",
+      "fin": "2026-01-25",
+      "esSemanaActual": false,
+      "sesionesFuerza": 1,
+      "sesionesCardio": 5,
+      "diasPasos10k": 5,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-01-19",
+          "diaSemana": 1,
+          "estado": "verde",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 10500,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-20",
+          "diaSemana": 2,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Bici",
+          "pasos": 7509,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-21",
+          "diaSemana": 3,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 5809,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-22",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Bici",
+          "pasos": 11618,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-23",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 10473,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-24",
+          "diaSemana": 6,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10410,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-25",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Carrera",
+          "pasos": 11224,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-01-26",
+      "fin": "2026-02-01",
+      "esSemanaActual": false,
+      "sesionesFuerza": 0,
+      "sesionesCardio": 2,
+      "diasPasos10k": 4,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-01-26",
+          "diaSemana": 1,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 9204,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-27",
+          "diaSemana": 2,
+          "estado": "verde",
+          "disciplinaPrincipal": "Bici",
+          "pasos": 10468,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-28",
+          "diaSemana": 3,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 3650,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-01-29",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 12325,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-30",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10131,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-01-31",
+          "diaSemana": 6,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 17161,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-01",
+          "diaSemana": 0,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 7763,
+          "cumplePasos": false
+        }
+      ]
+    },
+    {
+      "inicio": "2026-02-02",
+      "fin": "2026-02-08",
+      "esSemanaActual": false,
+      "sesionesFuerza": 2,
+      "sesionesCardio": 4,
+      "diasPasos10k": 7,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-02-02",
+          "diaSemana": 1,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10007,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-03",
+          "diaSemana": 2,
+          "estado": "verde",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 10553,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-04",
+          "diaSemana": 3,
+          "estado": "verde",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 10184,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-05",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10204,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-06",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 14580,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-07",
+          "diaSemana": 6,
+          "estado": "verde",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 14530,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-08",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Carrera",
+          "pasos": 19883,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-02-09",
+      "fin": "2026-02-15",
+      "esSemanaActual": false,
+      "sesionesFuerza": 2,
+      "sesionesCardio": 5,
+      "diasPasos10k": 3,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-02-09",
+          "diaSemana": 1,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 6527,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-02-10",
+          "diaSemana": 2,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 6315,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-02-11",
+          "diaSemana": 3,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 8593,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-02-12",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 12804,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-13",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 11188,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-14",
+          "diaSemana": 6,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 7065,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-02-15",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 11827,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-02-16",
+      "fin": "2026-02-22",
+      "esSemanaActual": false,
+      "sesionesFuerza": 2,
+      "sesionesCardio": 3,
+      "diasPasos10k": 1,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-02-16",
+          "diaSemana": 1,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 4606,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-02-17",
+          "diaSemana": 2,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 9349,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-02-18",
+          "diaSemana": 3,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 2172,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-02-19",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 13734,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-20",
+          "diaSemana": 5,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 7912,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-02-21",
+          "diaSemana": 6,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 9861,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-02-22",
+          "diaSemana": 0,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 7987,
+          "cumplePasos": false
+        }
+      ]
+    },
+    {
+      "inicio": "2026-02-23",
+      "fin": "2026-03-01",
+      "esSemanaActual": false,
+      "sesionesFuerza": 1,
+      "sesionesCardio": 4,
+      "diasPasos10k": 6,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-02-23",
+          "diaSemana": 1,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 5382,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-02-24",
+          "diaSemana": 2,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 11022,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-25",
+          "diaSemana": 3,
+          "estado": "verde",
+          "disciplinaPrincipal": "Carrera",
+          "pasos": 10300,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-26",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 15475,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-27",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 14535,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-02-28",
+          "diaSemana": 6,
+          "estado": "verde",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 12732,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-01",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 11961,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-03-02",
+      "fin": "2026-03-08",
+      "esSemanaActual": false,
+      "sesionesFuerza": 1,
+      "sesionesCardio": 1,
+      "diasPasos10k": 3,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-03-02",
+          "diaSemana": 1,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 8541,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-03",
+          "diaSemana": 2,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 9259,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-04",
+          "diaSemana": 3,
+          "estado": "verde",
+          "disciplinaPrincipal": "Carrera",
+          "pasos": 10092,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-05",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 11954,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-06",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 21548,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-07",
+          "diaSemana": 6,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 5090,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-08",
+          "diaSemana": 0,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 5637,
+          "cumplePasos": false
+        }
+      ]
+    },
+    {
+      "inicio": "2026-03-09",
+      "fin": "2026-03-15",
+      "esSemanaActual": false,
+      "sesionesFuerza": 4,
+      "sesionesCardio": 4,
+      "diasPasos10k": 3,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-03-09",
+          "diaSemana": 1,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 7312,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-10",
+          "diaSemana": 2,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 4777,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-11",
+          "diaSemana": 3,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 5087,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-12",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 13366,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-13",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 12465,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-14",
+          "diaSemana": 6,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 8936,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-15",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 12418,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-03-16",
+      "fin": "2026-03-22",
+      "esSemanaActual": false,
+      "sesionesFuerza": 3,
+      "sesionesCardio": 1,
+      "diasPasos10k": 5,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-03-16",
+          "diaSemana": 1,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 10639,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-17",
+          "diaSemana": 2,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 10221,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-18",
+          "diaSemana": 3,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 9780,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-19",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10687,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-20",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 19118,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-21",
+          "diaSemana": 6,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 19856,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-22",
+          "diaSemana": 0,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 9367,
+          "cumplePasos": false
+        }
+      ]
+    },
+    {
+      "inicio": "2026-03-23",
+      "fin": "2026-03-29",
+      "esSemanaActual": false,
+      "sesionesFuerza": 2,
+      "sesionesCardio": 3,
+      "diasPasos10k": 2,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-03-23",
+          "diaSemana": 1,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 8328,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-24",
+          "diaSemana": 2,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 2287,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-25",
+          "diaSemana": 3,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 7901,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-26",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 12757,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-03-27",
+          "diaSemana": 5,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 6159,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-28",
+          "diaSemana": 6,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 4928,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-29",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 10380,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-03-30",
+      "fin": "2026-04-05",
+      "esSemanaActual": false,
+      "sesionesFuerza": 4,
+      "sesionesCardio": 0,
+      "diasPasos10k": 5,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-03-30",
+          "diaSemana": 1,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 3358,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-03-31",
+          "diaSemana": 2,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 1496,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-01",
+          "diaSemana": 3,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 10060,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-02",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 10031,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-03",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 11741,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-04",
+          "diaSemana": 6,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10993,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-05",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 10172,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-04-06",
+      "fin": "2026-04-12",
+      "esSemanaActual": false,
+      "sesionesFuerza": 3,
+      "sesionesCardio": 2,
+      "diasPasos10k": 3,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-04-06",
+          "diaSemana": 1,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 1539,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-07",
+          "diaSemana": 2,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 9346,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-08",
+          "diaSemana": 3,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 9161,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-09",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10796,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-10",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 11329,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-11",
+          "diaSemana": 6,
+          "estado": "rojo",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 8431,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-12",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 12379,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-04-13",
+      "fin": "2026-04-19",
+      "esSemanaActual": false,
+      "sesionesFuerza": 4,
+      "sesionesCardio": 2,
+      "diasPasos10k": 4,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-04-13",
+          "diaSemana": 1,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 5705,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-14",
+          "diaSemana": 2,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 7175,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-15",
+          "diaSemana": 3,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 6949,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-16",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10304,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-17",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 14854,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-18",
+          "diaSemana": 6,
+          "estado": "verde",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 10612,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-19",
+          "diaSemana": 0,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 11176,
+          "cumplePasos": true
+        }
+      ]
+    },
+    {
+      "inicio": "2026-04-20",
+      "fin": "2026-04-26",
+      "esSemanaActual": true,
+      "sesionesFuerza": 4,
+      "sesionesCardio": 3,
+      "diasPasos10k": 3,
+      "totalDias": 7,
+      "diasResumen": [
+        {
+          "fecha": "2026-04-20",
+          "diaSemana": 1,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 8493,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-21",
+          "diaSemana": 2,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 9286,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-22",
+          "diaSemana": 3,
+          "estado": "verde",
+          "disciplinaPrincipal": "Fuerza",
+          "pasos": 11176,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-23",
+          "diaSemana": 4,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 11518,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-24",
+          "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10271,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-04-25",
+          "diaSemana": 6,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Natación",
+          "pasos": 9897,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-04-26",
+          "diaSemana": 0,
+          "estado": "amarillo",
+          "disciplinaPrincipal": "Mixto",
+          "pasos": 0,
+          "cumplePasos": false
+        }
+      ]
     }
   ]
 }

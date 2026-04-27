@@ -41,16 +41,13 @@ function renderDashboard() {
 
   // Estadísticas principales
   document.getElementById('totalDias').textContent = stats.totalDias;
-  document.getElementById('diasVerdes').textContent = `${stats.diasVerdes}/${stats.totalDias}`;
+  document.getElementById('diasCumplimiento').textContent = `${stats.diasCumplimiento}/${stats.totalDias}`;
   document.getElementById('diasEjercicio').textContent = stats.diasEjercicio;
   document.getElementById('diasPasos').textContent = stats.diasPasos;
-  document.getElementById('promedioPasos').textContent = stats.promedioPasos.toLocaleString();
+  document.getElementById('promedioPasos').textContent = stats.promedioPasos.toLocaleString('es-MX');
 
-  // Resumen de colores
-  document.getElementById('countVerdes').textContent = stats.diasVerdes;
-  document.getElementById('countAmarillos').textContent = stats.diasAmarillos;
-  document.getElementById('countRojos').textContent = stats.diasRojos;
-  document.getElementById('countGrises').textContent = stats.diasGrises;
+  // Resumen semanal
+  renderWeeklySummary();
 
   // Tabla de días de la semana
   renderWeekTable();
@@ -68,23 +65,215 @@ function renderWeekTable() {
 
   diasNombre.forEach((dia, idx) => {
     const stats = porDiaSemana[dia.substring(0, 3)] || { total: 0, ejercicio: 0, pasos: 0, verdes: 0 };
-    const cumplimiento = stats.total > 0 ? Math.round((stats.verdes / stats.total) * 100) : 0;
+    
+    const pctEjercicio = stats.total > 0 ? Math.round((stats.ejercicio / stats.total) * 100) : 0;
+    const pctPasos = stats.total > 0 ? Math.round((stats.pasos / stats.total) * 100) : 0;
 
     const row = document.createElement('tr');
     row.innerHTML = `
       <td><strong>${dia}</strong></td>
       <td>${stats.total}</td>
-      <td>${stats.ejercicio}</td>
-      <td>${stats.pasos}</td>
-      <td>${cumplimiento}%</td>
+      <td>${stats.ejercicio} (${pctEjercicio}%)</td>
+      <td>${stats.pasos} (${pctPasos}%)</td>
     `;
     tbody.appendChild(row);
   });
 }
 
+function renderWeeklySummary() {
+  const container = document.getElementById('weeklySummary');
+  if (!container || !dashboardData.semanas) return;
+
+  const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const DIAS_LABEL = ['L','M','X','J','V','S','D'];
+  const COLOR_ESTADO = {
+    verde:    '#34d399',
+    amarillo: '#fb923c',
+    rojo:     '#f87171',
+    gris:     '#1e293b',
+  };
+
+  const hoyStr = new Date().toISOString().split('T')[0];
+
+  // Render newest week first
+  const semanas = [...dashboardData.semanas].reverse();
+
+  container.innerHTML = semanas.map(semana => {
+    const inicio = new Date(semana.inicio + 'T00:00:00');
+    const fin    = new Date(semana.fin    + 'T00:00:00');
+    const fmtD   = d => `${d.getDate()} ${MESES[d.getMonth()]}`;
+    const label  = `${fmtD(inicio)} – ${fmtD(fin)} ${fin.getFullYear()}`;
+
+    const cumpleFuerza = semana.sesionesFuerza >= 5;
+    const cumpleCardio = semana.sesionesCardio >= 3;
+    const cumplePasos  = semana.diasPasos10k  >= 7;
+    const metasOk      = cumpleFuerza && cumpleCardio && cumplePasos;
+    const metasCero    = semana.sesionesFuerza === 0 && semana.sesionesCardio === 0 && semana.diasPasos10k === 0;
+
+    let statusLabel, statusClass;
+    if (semana.esSemanaActual) {
+      statusLabel = 'En curso'; statusClass = 'status-encurso';
+    } else if (metasOk) {
+      statusLabel = 'Cumplida'; statusClass = 'status-cumplida';
+    } else if (metasCero) {
+      statusLabel = 'Fallida';  statusClass = 'status-fallida';
+    } else {
+      statusLabel = 'Parcial';  statusClass = 'status-parcial';
+    }
+
+    function bar(value, goal, cls, title) {
+      const pct = Math.min(100, Math.round((value / goal) * 100));
+      const met = value >= goal;
+      return `
+        <div class="progress-row">
+          <span class="progress-label">${title}</span>
+          <div class="progress-bar"><div class="progress-fill ${cls}" style="width:${pct}%"></div></div>
+          <span class="progress-value ${met ? 'met' : ''}">${value}/${goal}</span>
+        </div>`;
+    }
+
+    // Day dots — compute position from date offset relative to week start
+    const diasMap = {};
+    semana.diasResumen.forEach(d => {
+      const diff = Math.round((new Date(d.fecha + 'T00:00:00') - inicio) / 86400000);
+      if (diff >= 0 && diff < 7) diasMap[diff] = d;
+    });
+
+    const dots = DIAS_LABEL.map((lbl, i) => {
+      const slotDate = new Date(inicio);
+      slotDate.setDate(slotDate.getDate() + i);
+      const slotStr = slotDate.toISOString().split('T')[0];
+      const dia = diasMap[i];
+
+      let bg, border = '';
+      if (dia && dia.estado !== 'gris') {
+        bg = COLOR_ESTADO[dia.estado] || COLOR_ESTADO.gris;
+      } else if (slotStr > hoyStr) {
+        bg = 'transparent'; border = 'border:1px solid rgba(255,255,255,0.1);';
+      } else {
+        bg = COLOR_ESTADO.gris;
+      }
+
+      const tip = dia && dia.disciplinaPrincipal
+        ? `${slotStr} · ${dia.disciplinaPrincipal} · ${(dia.pasos||0).toLocaleString('es-MX')} pasos`
+        : slotStr;
+
+      return `<div class="day-dot"><div class="day-dot-color" style="background:${bg};${border}" title="${tip}"></div><span class="day-dot-label">${lbl}</span></div>`;
+    }).join('');
+
+    return `
+      <div class="week-card${semana.esSemanaActual ? ' week-card--current' : ''}">
+        <div class="week-card-header">
+          <span class="week-range">${label}</span>
+          <span class="week-status ${statusClass}">${statusLabel}</span>
+        </div>
+        <div class="week-card-body">
+          ${bar(semana.sesionesFuerza, 5, 'fill-fuerza', 'Fuerza')}
+          ${bar(semana.sesionesCardio, 3, 'fill-cardio', 'Cardio')}
+          ${bar(semana.diasPasos10k,  7, 'fill-pasos',  'Pasos 10k')}
+        </div>
+        <div class="week-dots">${dots}</div>
+      </div>`;
+  }).join('');
+}
+
 function renderCharts() {
   renderHeatmap();
   renderPieChart();
+  renderTrendChart();
+}
+
+function renderTrendChart() {
+  const ctx = document.getElementById('trendChart');
+  if (!ctx || !dashboardData.todosDatos) return;
+  
+  const todosLosDatos = dashboardData.todosDatos;
+  const labels = todosLosDatos.map(d => {
+    const date = new Date(d.fecha + 'T00:00:00');
+    return date.toLocaleDateString('es-MX', { day: 'numeric', month: 'short' });
+  });
+  const data = todosLosDatos.map(d => d.pasos);
+
+  new Chart(ctx.getContext('2d'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Pasos diarios',
+          data,
+          borderColor: '#00d4ff',
+          backgroundColor: 'rgba(0, 212, 255, 0.05)',
+          fill: true,
+          tension: 0.2,
+          pointRadius: todosLosDatos.length > 60 ? 1 : 3,
+          pointHoverRadius: 6,
+          borderWidth: 2,
+          pointBackgroundColor: '#00d4ff',
+        },
+        {
+          label: 'Meta (10k)',
+          data: Array(labels.length).fill(10000),
+          borderColor: 'rgba(52, 211, 153, 0.4)',
+          borderDash: [5, 5],
+          fill: false,
+          pointRadius: 0,
+          borderWidth: 1.5,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: { 
+            color: '#9ca3af',
+            boxWidth: 20,
+            font: { size: 11 }
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(15, 23, 42, 0.9)',
+          padding: 12,
+          callbacks: {
+            label: function(context) {
+              const val = context.parsed.y;
+              return `${context.dataset.label}: ${val ? val.toLocaleString('es-MX') : 0}`;
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          grid: { color: 'rgba(255, 255, 255, 0.05)' },
+          ticks: { 
+            color: '#64748b',
+            callback: function(value) {
+              return value >= 1000 ? (value / 1000) + 'k' : value;
+            }
+          }
+        },
+        x: {
+          grid: { display: false },
+          ticks: { 
+            color: '#64748b',
+            maxRotation: 45,
+            minRotation: 45,
+            autoSkip: true,
+            maxTicksLimit: 15
+          }
+        }
+      }
+    }
+  });
 }
 
 function renderHeatmap() {
@@ -101,11 +290,13 @@ function renderHeatmap() {
   const estadoLabel = { verde: 'Verde', amarillo: 'Naranja', rojo: 'Rojo', gris: 'Sin datos', futuro: 'Próximamente' };
   const MONTHS = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
 
-  // Generar todos los días del 2026
   const hoy = new Date();
-  const year = 2026;
-  const startYear = new Date(`${year}-01-01T00:00:00`);
-  const endYear = new Date(`${year}-12-31T23:59:59`);
+  
+  // Iniciar exactamente el 29 de diciembre de 2025
+  const startYear = new Date('2025-12-29T00:00:00');
+  // Terminar al final del 2026
+  const endYear = new Date(2026, 11, 31, 23, 59, 59);
+  
   const diasMap = Object.fromEntries(dashboardData.todosLosDias.map(d => [d.fecha, d]));
   
   const diasCompletos = [];
@@ -225,7 +416,7 @@ function renderPieChart() {
   const ctx = document.getElementById('pieChart').getContext('2d');
 
   const disciplinas = dashboardData.distribucionDisciplinas;
-  const labels = disciplinas.map(d => `${d.nombre} (${d.porcentaje}%)`);
+  const labels = disciplinas.map(d => `${d.nombre}: ${d.count} (${d.porcentaje}%)`);
   const data = disciplinas.map(d => d.count);
 
   const colores = [
@@ -273,7 +464,7 @@ function renderPieChart() {
           padding: 12,
           callbacks: {
             label: function(context) {
-              return `${context.label}: ${context.parsed.y} sesiones`;
+              return `${context.label}: ${context.parsed} sesiones`;
             },
           },
         },
