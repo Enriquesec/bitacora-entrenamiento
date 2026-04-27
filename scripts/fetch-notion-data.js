@@ -47,24 +47,27 @@ async function fetchData() {
   try {
     console.log('Fetching data from Notion...');
 
-    const response = await notion.databases.query({
-      database_id: databaseId,
-      sorts: [
-        {
-          property: 'Fecha',
-          direction: 'descending',
-        },
-      ],
-    });
+    const allResults = [];
+    let cursor = undefined;
+    do {
+      const response = await notion.databases.query({
+        database_id: databaseId,
+        sorts: [{ property: 'Fecha', direction: 'descending' }],
+        page_size: 100,
+        ...(cursor ? { start_cursor: cursor } : {}),
+      });
+      allResults.push(...response.results);
+      cursor = response.has_more ? response.next_cursor : undefined;
+    } while (cursor);
 
-    const registros = response.results.map(page => {
+    const registros = allResults.map(page => {
       const props = page.properties;
 
       const fecha = props.Fecha?.date?.start;
       const pasos = props.Pasos?.number || 0;
-      const disciplina = props.Disciplina?.select?.name || '';
-      const duracion = props.Duración?.number || 0;
-      const distancia = props['Distancia / Volumen']?.number || 0;
+      const disciplina = props.Disciplina?.title?.[0]?.plain_text || '';
+      const duracion = props['Duración (min)']?.number || 0;
+      const distancia = parseFloat(props['Distancia / Volumen']?.rich_text?.[0]?.plain_text || '0') || 0;
       const tipo = props.Tipo?.select?.name || '';
 
       return {
@@ -120,7 +123,7 @@ async function fetchData() {
           distancia: Math.round(dia.distancia * 10) / 10,
           estado,
           cumplePasos: dia.pasos >= PASOS_OBJETIVO,
-          tieneEjercicio: dia.disciplinas.length > 0,
+          tieneEjercicio: DISCIPLINAS_ENTRENAMIENTO.some(d => disciplinaPrincipal?.includes(d)),
         };
       });
 
@@ -134,7 +137,8 @@ async function fetchData() {
       diasRojos: datos.filter(d => d.estado === 'rojo').length,
       diasGrises: datos.filter(d => d.estado === 'gris').length,
       promedioPasos: Math.round(
-        datos.reduce((sum, d) => sum + d.pasos, 0) / datos.length
+        datos.filter(d => d.pasos > 0).reduce((sum, d) => sum + d.pasos, 0) /
+        datos.filter(d => d.pasos > 0).length
       ),
       pasosTotal: datos.reduce((sum, d) => sum + d.pasos, 0),
     };
@@ -155,8 +159,33 @@ async function fetchData() {
       }))
       .sort((a, b) => b.count - a.count);
 
-    // Últimos 30 días
-    const ultimos30 = datos.slice(-30);
+    const porFechaMap = Object.fromEntries(datos.map(d => [d.fecha, d]));
+    const hoy = new Date();
+
+    // Últimos 30 días calendario
+    const ultimos30 = [];
+    for (let i = 29; i >= 0; i--) {
+      const fecha = new Date(hoy);
+      fecha.setDate(hoy.getDate() - i);
+      const fechaStr = fecha.toISOString().split('T')[0];
+      ultimos30.push(porFechaMap[fechaStr] || {
+        fecha: fechaStr, diaSemana: fecha.getDay(), pasos: 0,
+        disciplinas: [], disciplinaPrincipal: '', duracion: 0,
+        distancia: 0, estado: 'gris', cumplePasos: false, tieneEjercicio: false,
+      });
+    }
+
+    // Todos los días desde el primer registro hasta hoy
+    const inicio = new Date(datos[0].fecha + 'T00:00:00');
+    const todosLosDias = [];
+    for (let d = new Date(inicio); d <= hoy; d.setDate(d.getDate() + 1)) {
+      const fechaStr = d.toISOString().split('T')[0];
+      todosLosDias.push(porFechaMap[fechaStr] || {
+        fecha: fechaStr, diaSemana: d.getDay(), pasos: 0,
+        disciplinas: [], disciplinaPrincipal: '', duracion: 0,
+        distancia: 0, estado: 'gris', cumplePasos: false, tieneEjercicio: false,
+      });
+    }
 
     // Análisis por día de semana
     const diasNombre = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
@@ -164,11 +193,12 @@ async function fetchData() {
     datos.forEach(d => {
       const dia = diasNombre[d.diaSemana];
       if (!porDiaSemana[dia]) {
-        porDiaSemana[dia] = { ejercicio: 0, pasos: 0, total: 0 };
+        porDiaSemana[dia] = { ejercicio: 0, pasos: 0, verdes: 0, total: 0 };
       }
       porDiaSemana[dia].total++;
       if (d.tieneEjercicio) porDiaSemana[dia].ejercicio++;
       if (d.cumplePasos) porDiaSemana[dia].pasos++;
+      if (d.estado === 'verde') porDiaSemana[dia].verdes++;
     });
 
     const salida = {
@@ -176,6 +206,7 @@ async function fetchData() {
       stats,
       distribucionDisciplinas,
       ultimos30,
+      todosLosDias,
       porDiaSemana,
       todosDatos: datos,
     };

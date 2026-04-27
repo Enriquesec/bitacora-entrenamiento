@@ -40,8 +40,26 @@
 
     <section class="charts-section">
       <div class="chart-container">
-        <h2>Últimos 30 días - Cumplimiento</h2>
-        <canvas id="barChart"></canvas>
+        <h2>Historial de entrenamiento</h2>
+        <div id="heatmap"></div>
+        <div class="chart-legend">
+          <div class="legend-item">
+            <span class="legend-dot verde"></span>
+            <span>Verde — Ejercicio + pasos &gt;10k <em>(Jue/Vie: solo pasos &gt;10k)</em></span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot naranja"></span>
+            <span>Naranja — Solo ejercicio o solo pasos</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot rojo"></span>
+            <span>Rojo — Ni ejercicio ni pasos</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot gris"></span>
+            <span>Gris — Sin registro</span>
+          </div>
+        </div>
       </div>
 
       <div class="chart-container">
