@@ -88,7 +88,6 @@ function renderCharts() {
 }
 
 function renderHeatmap() {
-  const dias = dashboardData.todosLosDias;
   const container = document.getElementById('heatmap');
   container.innerHTML = '';
 
@@ -97,16 +96,38 @@ function renderHeatmap() {
     amarillo: '#fb923c',
     rojo:    '#f87171',
     gris:    '#1e293b',
+    futuro:  'transparent'
   };
-  const estadoLabel = { verde: 'Verde', amarillo: 'Naranja', rojo: 'Rojo', gris: 'Sin datos' };
-  const CELL = 13;
-  const GAP  = 3;
+  const estadoLabel = { verde: 'Verde', amarillo: 'Naranja', rojo: 'Rojo', gris: 'Sin datos', futuro: 'Próximamente' };
   const MONTHS = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
 
+  // Generar todos los días del 2026
+  const hoy = new Date();
+  const year = 2026;
+  const startYear = new Date(`${year}-01-01T00:00:00`);
+  const endYear = new Date(`${year}-12-31T23:59:59`);
+  const diasMap = Object.fromEntries(dashboardData.todosLosDias.map(d => [d.fecha, d]));
+  
+  const diasCompletos = [];
+  for (let d = new Date(startYear); d <= endYear; d.setDate(d.getDate() + 1)) {
+    const fStr = d.toISOString().split('T')[0];
+    if (diasMap[fStr]) {
+      // Si el día está en el mapa pero es después de hoy, forzamos estado futuro
+      const dia = {...diasMap[fStr]};
+      if (d > hoy) dia.estado = 'futuro';
+      diasCompletos.push(dia);
+    } else {
+      diasCompletos.push({
+        fecha: fStr,
+        estado: d > hoy ? 'futuro' : 'gris',
+        pasos: 0, disciplinas: [], duracion: 0
+      });
+    }
+  }
+
   // Pad start so first day aligns to its day-of-week (Mon = row 0)
-  const firstDate = new Date(dias[0].fecha + 'T00:00:00');
-  const startPad  = (firstDate.getDay() + 6) % 7;
-  const cells     = [...Array(startPad).fill(null), ...dias];
+  const startPad  = (startYear.getDay() + 6) % 7;
+  const cells     = [...Array(startPad).fill(null), ...diasCompletos];
   const totalWeeks = Math.ceil(cells.length / 7);
 
   // ── Month labels ──────────────────────────────────────────
@@ -120,7 +141,10 @@ function renderHeatmap() {
       const c = cells[w * 7 + r];
       if (c) {
         const m = new Date(c.fecha + 'T00:00:00').getMonth();
-        if (m !== lastMonth) { span.textContent = MONTHS[m]; lastMonth = m; }
+        if (m !== lastMonth) { 
+          span.textContent = MONTHS[m]; 
+          lastMonth = m; 
+        }
         break;
       }
     }
@@ -156,16 +180,22 @@ function renderHeatmap() {
     cell.className = 'heatmap-cell';
 
     if (dia) {
+      if (dia.estado === 'futuro') {
+        cell.classList.add('futuro');
+      }
+      
       const color = colorMap[dia.estado];
       cell.style.background = color;
-      if (dia.estado !== 'gris') {
+      
+      if (dia.estado !== 'gris' && dia.estado !== 'futuro') {
         cell.style.boxShadow = `0 0 5px ${color}55`;
       }
+
       cell.addEventListener('mouseenter', e => {
         tip.innerHTML =
           `<div class="tt-date">${dia.fecha}</div>` +
           `<div class="tt-row">Estado: <strong>${estadoLabel[dia.estado]}</strong></div>` +
-          (dia.pasos ? `<div class="tt-row">Pasos: <strong>${dia.pasos.toLocaleString()}</strong></div>` : '') +
+          (dia.pasos > 0 ? `<div class="tt-row">Pasos: <strong>${dia.pasos.toLocaleString()}</strong></div>` : '') +
           (dia.disciplinaPrincipal ? `<div class="tt-row">Disciplina: <strong>${dia.disciplinaPrincipal}</strong></div>` : '') +
           (dia.duracion ? `<div class="tt-row">Duración: <strong>${dia.duracion} min</strong></div>` : '');
         tip.classList.add('visible');
