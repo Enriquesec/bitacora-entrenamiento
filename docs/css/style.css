@@ -219,6 +219,13 @@ body {
   color: #4b5563;
 }
 
+.racha-metric-pct {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75em;
+  color: #6b7280;
+  margin-left: auto;
+}
+
 .racha-metric-label {
   font-size: 0.72em;
   color: #6b7280;

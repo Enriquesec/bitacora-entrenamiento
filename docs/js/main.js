@@ -80,6 +80,7 @@ function renderRachas() {
           <div class="racha-metric-top">
             <span class="racha-metric-value ${cls}">${valor}</span>
             <span class="racha-metric-total">/${dias}</span>
+            <span class="racha-metric-pct">${pct}%</span>
           </div>
           <div class="racha-metric-label">${label}</div>
           <div class="racha-bar">
