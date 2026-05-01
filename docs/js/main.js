@@ -46,6 +46,9 @@ function renderDashboard() {
   document.getElementById('diasPasos').textContent = stats.diasPasos;
   document.getElementById('promedioPasos').textContent = stats.promedioPasos.toLocaleString('es-MX');
 
+  // Racha reciente
+  renderRachas();
+
   // Resumen semanal
   renderWeeklySummary();
 
@@ -54,6 +57,48 @@ function renderDashboard() {
 
   // Gráficos
   renderCharts();
+}
+
+function renderRachas() {
+  const container = document.getElementById('rachaCards');
+  if (!container || !dashboardData.rachas) return;
+
+  const ventanas = [
+    dashboardData.rachas.d7,
+    dashboardData.rachas.d15,
+    dashboardData.rachas.d30,
+  ];
+
+  container.innerHTML = ventanas.map(v => {
+    const pctPasos  = Math.round((v.pasos  / v.dias) * 100);
+    const pctFuerza = Math.round((v.fuerza / v.dias) * 100);
+    const pctCardio = Math.round((v.cardio / v.dias) * 100);
+
+    function metrica(valor, dias, pct, cls, label) {
+      return `
+        <div class="racha-metric">
+          <div class="racha-metric-top">
+            <span class="racha-metric-value ${cls}">${valor}</span>
+            <span class="racha-metric-total">/${dias}</span>
+            <span class="racha-metric-pct">${pct}%</span>
+          </div>
+          <div class="racha-metric-label">${label}</div>
+          <div class="racha-bar">
+            <div class="racha-fill ${cls}" style="width:${pct}%"></div>
+          </div>
+        </div>`;
+    }
+
+    return `
+      <div class="racha-card">
+        <div class="racha-card-title">${v.dias} días</div>
+        <div class="racha-metrics">
+          ${metrica(v.pasos,  v.dias, pctPasos,  'fill-pasos',  'Pasos 10k')}
+          ${metrica(v.fuerza, v.dias, pctFuerza, 'fill-fuerza', 'Fuerza')}
+          ${metrica(v.cardio, v.dias, pctCardio, 'fill-cardio', 'Cardio')}
+        </div>
+      </div>`;
+  }).join('');
 }
 
 function renderWeekTable() {

@@ -208,6 +208,29 @@ async function fetchData() {
 
     const hoyStr = hoy.toISOString().split('T')[0];
 
+    function calcVentana(n) {
+      const corte = new Date(hoy);
+      corte.setDate(hoy.getDate() - (n - 1));
+      const corteStr = corte.toISOString().split('T')[0];
+      const ventana = todosLosDias.filter(d => d.fecha >= corteStr && d.fecha <= hoyStr);
+      return {
+        dias: n,
+        pasos: ventana.filter(d => d.cumplePasos).length,
+        fuerza: ventana.filter(d =>
+          d.disciplinas.includes('Fuerza') || d.disciplinas.includes('Mixto')
+        ).length,
+        cardio: ventana.filter(d =>
+          d.disciplinas.some(disc => CARDIO_DISC.includes(disc)) || d.disciplinas.includes('Mixto')
+        ).length,
+      };
+    }
+
+    const rachas = {
+      d7:  calcVentana(7),
+      d15: calcVentana(15),
+      d30: calcVentana(30),
+    };
+
     const semanas = Object.values(semanaMap)
       .sort((a, b) => a.inicio.localeCompare(b.inicio))
       .map(({ inicio, dias }) => {
@@ -263,6 +286,7 @@ async function fetchData() {
     const salida = {
       actualizado: new Date().toISOString(),
       stats,
+      rachas,
       distribucionDisciplinas,
       ultimos30,
       todosLosDias,
