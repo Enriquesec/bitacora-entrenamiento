@@ -13,7 +13,6 @@ const databaseId = process.env.NOTION_DATABASE_ID;
 const PASOS_OBJETIVO = 10000;
 const DISCIPLINAS_ENTRENAMIENTO = ['Natación', 'Fuerza', 'Bici', 'Carrera', 'Mixto'];
 const DISCIPLINAS_DESCANSO = ['Descanso'];
-const DISCIPLINAS_SIN_ENTRENAR = ['Sin entrenamiento'];
 
 // Días de obligatorio descanso
 const DIAS_DESCANSO = [4, 5]; // jueves (4) y viernes (5)
