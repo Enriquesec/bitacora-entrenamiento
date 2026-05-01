@@ -1,0 +1,19 @@
+{
+  "name": "Bitácora de Entrenamiento",
+  "short_name": "Bitácora",
+  "description": "Dashboard de seguimiento de metas de ejercicio y pasos",
+  "start_url": "/bitacora-entrenamiento/",
+  "scope": "/bitacora-entrenamiento/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0d1117",
+  "theme_color": "#00bcd4",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
