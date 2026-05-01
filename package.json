@@ -5,9 +5,17 @@
   "main": "scripts/fetch-notion-data.js",
   "scripts": {
     "fetch-data": "node scripts/fetch-notion-data.js",
-    "dev": "http-server docs -c-1 -o"
+    "dev": "http-server docs -c-1 -o",
+    "lint": "eslint scripts/ docs/js/",
+    "lint:fix": "eslint scripts/ docs/js/ --fix",
+    "format": "prettier --write scripts/ docs/js/ eslint.config.js"
   },
-  "keywords": ["notion", "dashboard", "fitness", "training"],
+  "keywords": [
+    "notion",
+    "dashboard",
+    "fitness",
+    "training"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -15,6 +23,11 @@
     "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "http-server": "^14.1.1",
+    "prettier": "^3.8.3"
   }
 }
