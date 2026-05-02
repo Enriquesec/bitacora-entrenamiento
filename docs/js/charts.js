@@ -17,28 +17,26 @@ function renderTrendChart() {
     return date.toLocaleDateString('es-MX', { day: 'numeric', month: 'short' });
   });
   const data = todosLosDatos.map(d => d.pasos);
+  const colores = data.map(v => v >= 10000 ? 'rgba(0, 212, 255, 0.75)' : 'rgba(248, 113, 113, 0.7)');
 
   new Chart(ctx.getContext('2d'), {
-    type: 'line',
+    type: 'bar',
     data: {
       labels,
       datasets: [
         {
           label: 'Pasos diarios',
           data,
-          borderColor: '#00d4ff',
-          backgroundColor: 'rgba(0, 212, 255, 0.05)',
-          fill: true,
-          tension: 0.2,
-          pointRadius: todosLosDatos.length > 60 ? 1 : 3,
-          pointHoverRadius: 6,
-          borderWidth: 2,
-          pointBackgroundColor: '#00d4ff',
+          backgroundColor: colores,
+          borderColor: colores,
+          borderWidth: 0,
+          borderRadius: 2,
         },
         {
+          type: 'line',
           label: 'Meta (10k)',
           data: Array(labels.length).fill(10000),
-          borderColor: 'rgba(52, 211, 153, 0.4)',
+          borderColor: 'rgba(52, 211, 153, 0.5)',
           borderDash: [5, 5],
           fill: false,
           pointRadius: 0,
