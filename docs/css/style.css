@@ -511,10 +511,9 @@ canvas {
   flex-shrink: 0;
 }
 
-.legend-dot.verde  { background: #26a641; }
-.legend-dot.naranja { background: #fb923c; }
-.legend-dot.rojo   { background: #f87171; }
-.legend-dot.gris   { background: #374151; border: 1px solid rgba(255,255,255,0.15); }
+.legend-dot.verde      { background: #26a641; }
+.legend-dot.verde-bajo { background: #006d32; }
+.legend-dot.gris       { background: #374151; border: 1px solid rgba(255,255,255,0.15); }
 
 /* ── WEEKLY SUMMARY ── */
 .weekly-summary-section {

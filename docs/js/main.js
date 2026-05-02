@@ -153,7 +153,7 @@ function renderWeeklySummary() {
   const MESES_CORTO  = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
   const DIAS_LABEL   = ['L','M','X','J','V','S','D'];
   const CARDIO_DISC  = ['Natación', 'Carrera', 'Bici'];
-  const COLOR_ESTADO = { verde: '#26a641', amarillo: '#fb923c', rojo: '#f87171', gris: '#1e293b' };
+  const COLOR_ESTADO = { verde: '#26a641', amarillo: '#006d32', rojo: '#1e293b', gris: '#1e293b' };
 
   const hoy = new Date();
   const hoyStr      = hoy.toISOString().split('T')[0];
