@@ -147,42 +147,58 @@ function renderWeeklySummary() {
   const container = document.getElementById('weeklySummary');
   if (!container || !dashboardData.semanas) return;
 
-  const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-  const DIAS_LABEL = ['L','M','X','J','V','S','D'];
-  const COLOR_ESTADO = {
-    verde:    '#34d399',
-    amarillo: '#fb923c',
-    rojo:     '#f87171',
-    gris:     '#1e293b',
-  };
+  const MESES_NOMBRE = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const MESES_CORTO  = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const DIAS_LABEL   = ['L','M','X','J','V','S','D'];
+  const CARDIO_DISC  = ['Natación', 'Carrera', 'Bici'];
+  const COLOR_ESTADO = { verde: '#34d399', amarillo: '#fb923c', rojo: '#f87171', gris: '#1e293b' };
 
-  const hoyStr = new Date().toISOString().split('T')[0];
+  const hoy = new Date();
+  const hoyStr      = hoy.toISOString().split('T')[0];
+  const mesActual   = hoy.getFullYear() + '-' + String(hoy.getMonth() + 1).padStart(2, '0');
+  const inicioMes   = mesActual + '-01';
+  const finMes      = new Date(hoy.getFullYear(), hoy.getMonth() + 1, 0).toISOString().split('T')[0];
 
-  // Render newest week first
-  const semanas = [...dashboardData.semanas].reverse();
+  // Solo semanas del mes actual, de más nueva a más antigua
+  const semanasDelMes = [...dashboardData.semanas]
+    .filter(s => s.fin >= inicioMes && s.inicio <= finMes)
+    .reverse();
 
-  container.innerHTML = semanas.map(semana => {
+  // Agrupar días pasados por mes
+  const porMes = {};
+  (dashboardData.todosDatos || []).forEach(dia => {
+    const mes = dia.fecha.substring(0, 7);
+    if (mes >= mesActual) return;
+    if (!porMes[mes]) porMes[mes] = [];
+    porMes[mes].push(dia);
+  });
+
+  const mesesPasados = Object.keys(porMes).sort().reverse().map(mesKey => {
+    const dias = porMes[mesKey];
+    const [y, m] = mesKey.split('-');
+    return {
+      label:        `${MESES_NOMBRE[parseInt(m) - 1]} ${y}`,
+      diasFuerza:   dias.filter(d => d.disciplinas.includes('Fuerza')   || d.disciplinas.includes('Mixto')).length,
+      diasNatacion: dias.filter(d => d.disciplinas.some(disc => CARDIO_DISC.includes(disc)) || d.disciplinas.includes('Mixto')).length,
+      diasPasos:    dias.filter(d => d.cumplePasos).length,
+    };
+  });
+
+  // ── Tarjeta semanal ───────────────────────────────────────
+  function weekCard(semana) {
     const inicio = new Date(semana.inicio + 'T00:00:00');
     const fin    = new Date(semana.fin    + 'T00:00:00');
-    const fmtD   = d => `${d.getDate()} ${MESES[d.getMonth()]}`;
+    const fmtD   = d => `${d.getDate()} ${MESES_CORTO[d.getMonth()]}`;
     const label  = `${fmtD(inicio)} – ${fmtD(fin)} ${fin.getFullYear()}`;
 
-    const cumpleFuerza = semana.sesionesFuerza >= 5;
-    const cumpleCardio = semana.sesionesCardio >= 3;
-    const cumplePasos  = semana.diasPasos10k  >= 7;
-    const metasOk      = cumpleFuerza && cumpleCardio && cumplePasos;
-    const metasCero    = semana.sesionesFuerza === 0 && semana.sesionesCardio === 0 && semana.diasPasos10k === 0;
+    const metasOk   = semana.sesionesFuerza >= 5 && semana.sesionesCardio >= 3 && semana.diasPasos10k >= 7;
+    const metasCero = semana.sesionesFuerza === 0 && semana.sesionesCardio === 0 && semana.diasPasos10k === 0;
 
     let statusLabel, statusClass;
-    if (semana.esSemanaActual) {
-      statusLabel = 'En curso'; statusClass = 'status-encurso';
-    } else if (metasOk) {
-      statusLabel = 'Cumplida'; statusClass = 'status-cumplida';
-    } else if (metasCero) {
-      statusLabel = 'Fallida';  statusClass = 'status-fallida';
-    } else {
-      statusLabel = 'Parcial';  statusClass = 'status-parcial';
-    }
+    if (semana.esSemanaActual)  { statusLabel = 'En curso'; statusClass = 'status-encurso'; }
+    else if (metasOk)           { statusLabel = 'Cumplida'; statusClass = 'status-cumplida'; }
+    else if (metasCero)         { statusLabel = 'Fallida';  statusClass = 'status-fallida'; }
+    else                        { statusLabel = 'Parcial';  statusClass = 'status-parcial'; }
 
     function bar(value, goal, cls, title) {
       const pct = Math.min(100, Math.round((value / goal) * 100));
@@ -195,7 +211,6 @@ function renderWeeklySummary() {
         </div>`;
     }
 
-    // Day dots — compute position from date offset relative to week start
     const diasMap = {};
     semana.diasResumen.forEach(d => {
       const diff = Math.round((new Date(d.fecha + 'T00:00:00') - inicio) / 86400000);
@@ -218,7 +233,7 @@ function renderWeeklySummary() {
       }
 
       const tip = dia && dia.disciplinaPrincipal
-        ? `${slotStr} · ${dia.disciplinaPrincipal} · ${(dia.pasos||0).toLocaleString('es-MX')} pasos`
+        ? `${slotStr} · ${dia.disciplinaPrincipal} · ${(dia.pasos || 0).toLocaleString('es-MX')} pasos`
         : slotStr;
 
       return `<div class="day-dot"><div class="day-dot-color" style="background:${bg};${border}" title="${tip}"></div><span class="day-dot-label">${lbl}</span></div>`;
@@ -237,7 +252,39 @@ function renderWeeklySummary() {
         </div>
         <div class="week-dots">${dots}</div>
       </div>`;
-  }).join('');
+  }
+
+  // ── Tarjeta mensual ───────────────────────────────────────
+  function monthCard(mes) {
+    return `
+      <div class="month-card">
+        <div class="month-card-title">${mes.label}</div>
+        <div class="month-stats">
+          <div class="month-stat">
+            <span class="month-stat-value fill-fuerza">${mes.diasFuerza}</span>
+            <span class="month-stat-label">Fuerza</span>
+          </div>
+          <div class="month-stat">
+            <span class="month-stat-value fill-cardio">${mes.diasNatacion}</span>
+            <span class="month-stat-label">Natación</span>
+          </div>
+          <div class="month-stat">
+            <span class="month-stat-value fill-pasos">${mes.diasPasos}</span>
+            <span class="month-stat-label">Pasos 10k</span>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  const weeklyHTML  = semanasDelMes.map(weekCard).join('');
+  const monthlyHTML = mesesPasados.length
+    ? `<div class="monthly-section">
+        <div class="monthly-section-title">Meses anteriores</div>
+        <div class="monthly-grid">${mesesPasados.map(monthCard).join('')}</div>
+       </div>`
+    : '';
+
+  container.innerHTML = weeklyHTML + monthlyHTML;
 }
 
 function computeInsights() {
