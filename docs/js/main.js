@@ -66,13 +66,26 @@ function renderDashboard() {
 
 function renderRachas() {
   const container = document.getElementById('rachaCards');
-  if (!container || !dashboardData.rachas) return;
+  if (!container || !dashboardData.todosDatos) return;
 
-  const ventanas = [
-    dashboardData.rachas.d7,
-    dashboardData.rachas.d15,
-    dashboardData.rachas.d30,
-  ];
+  const CARDIO = ['Natación', 'Carrera', 'Bici'];
+  const hoy = new Date().toISOString().split('T')[0];
+  const datos = dashboardData.todosDatos;
+
+  function calcVentana(n) {
+    const corte = new Date();
+    corte.setDate(corte.getDate() - (n - 1));
+    const corteStr = corte.toISOString().split('T')[0];
+    const ventana = datos.filter(d => d.fecha >= corteStr && d.fecha <= hoy);
+    return {
+      dias: n,
+      pasos:  ventana.filter(d => d.cumplePasos).length,
+      fuerza: ventana.filter(d => d.disciplinas.includes('Fuerza') || d.disciplinas.includes('Mixto')).length,
+      cardio: ventana.filter(d => d.disciplinas.some(disc => CARDIO.includes(disc)) || d.disciplinas.includes('Mixto')).length,
+    };
+  }
+
+  const ventanas = [calcVentana(7), calcVentana(15), calcVentana(30)];
 
   container.innerHTML = ventanas.map(v => {
     const pctPasos  = Math.round((v.pasos  / v.dias) * 100);
