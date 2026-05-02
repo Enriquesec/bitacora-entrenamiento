@@ -52,11 +52,17 @@ function renderTrendChart() {
         legend: {
           display: true,
           position: 'top',
-          labels: { color: '#9ca3af', boxWidth: 20, font: { size: 11 } },
+          labels: {
+            color: '#9ca3af',
+            boxWidth: 20,
+            font: { size: 11 },
+            filter: item => item.datasetIndex === 0,
+          },
         },
         tooltip: {
           backgroundColor: 'rgba(15, 23, 42, 0.9)',
           padding: 12,
+          filter: item => item.datasetIndex === 0,
           callbacks: {
             label(context) {
               const val = context.parsed.y;
@@ -90,7 +96,7 @@ function renderHeatmap() {
   container.innerHTML = '';
 
   const colorMap = {
-    verde: '#34d399',
+    verde: '#26a641',
     amarillo: '#fb923c',
     rojo: '#f87171',
     gris: '#1e293b',

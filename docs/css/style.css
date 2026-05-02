@@ -113,7 +113,7 @@ body {
 }
 
 .stat-number.verde {
-  color: #34d399;
+  color: #26a641;
 }
 
 .stat-number.amarillo {
@@ -511,7 +511,7 @@ canvas {
   flex-shrink: 0;
 }
 
-.legend-dot.verde  { background: #34d399; }
+.legend-dot.verde  { background: #26a641; }
 .legend-dot.naranja { background: #fb923c; }
 .legend-dot.rojo   { background: #f87171; }
 .legend-dot.gris   { background: #374151; border: 1px solid rgba(255,255,255,0.15); }
@@ -734,6 +734,24 @@ canvas {
 .month-card:hover {
   border-color: rgba(167, 139, 250, 0.2);
   transform: translateY(-2px);
+}
+
+.month-card--record {
+  border-color: rgba(38, 166, 65, 0.4);
+  box-shadow: 0 0 16px rgba(38, 166, 65, 0.1);
+}
+
+.month-record-badge {
+  font-size: 0.6em;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 20px;
+  background: rgba(38, 166, 65, 0.15);
+  color: #26a641;
+  border: 1px solid rgba(38, 166, 65, 0.3);
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  margin-left: 6px;
 }
 
 .month-card-title {
