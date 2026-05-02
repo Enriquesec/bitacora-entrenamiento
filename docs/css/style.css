@@ -701,6 +701,84 @@ canvas {
   font-family: 'Roboto Mono', monospace;
 }
 
+/* ── MONTHLY CARDS ── */
+.monthly-section {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.monthly-section-title {
+  font-size: 0.72em;
+  font-weight: 700;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.monthly-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.month-card {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 14px 16px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.month-card:hover {
+  border-color: rgba(167, 139, 250, 0.2);
+  transform: translateY(-2px);
+}
+
+.month-card-title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.78em;
+  font-weight: 700;
+  color: #9ca3af;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.month-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.month-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.month-stat-value {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.4em;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.month-stat-value.fill-fuerza { color: #a78bfa; }
+.month-stat-value.fill-cardio { color: #00d4ff; }
+.month-stat-value.fill-pasos  { color: #34d399; }
+
+.month-stat-label {
+  font-size: 0.65em;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
 /* ── WEEK TABLE ── */
 .stats-detail {
   background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(17, 24, 39, 0.8));
