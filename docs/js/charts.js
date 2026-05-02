@@ -17,7 +17,11 @@ function renderTrendChart() {
     return date.toLocaleDateString('es-MX', { day: 'numeric', month: 'short' });
   });
   const data = todosLosDatos.map(d => d.pasos);
-  const colores = data.map(v => v >= 10000 ? 'rgba(0, 212, 255, 0.75)' : 'rgba(248, 113, 113, 0.7)');
+  const maxPasos = Math.max(...data);
+  const colores = data.map(v => {
+    if (v === maxPasos && v > 0) return '#26a641';
+    return v >= 10000 ? 'rgba(0, 212, 255, 0.75)' : 'rgba(248, 113, 113, 0.7)';
+  });
 
   new Chart(ctx.getContext('2d'), {
     type: 'bar',
@@ -96,11 +100,11 @@ function renderHeatmap() {
   container.innerHTML = '';
 
   const colorMap = {
-    verde: '#26a641',
-    amarillo: '#fb923c',
-    rojo: '#f87171',
-    gris: '#1e293b',
-    futuro: 'transparent',
+    verde:    '#26a641',
+    amarillo: '#006d32',
+    rojo:     '#1e293b',
+    gris:     '#1e293b',
+    futuro:   'transparent',
   };
   const estadoLabel = { verde: 'Verde', amarillo: 'Naranja', rojo: 'Rojo', gris: 'Sin datos', futuro: 'Próximamente' };
   const MONTHS = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
@@ -183,7 +187,7 @@ function renderHeatmap() {
 
       const color = colorMap[dia.estado];
       cell.style.background = color;
-      if (dia.estado !== 'gris' && dia.estado !== 'futuro') {
+      if (dia.estado === 'verde' || dia.estado === 'amarillo') {
         cell.style.boxShadow = `0 0 5px ${color}55`;
       }
 
