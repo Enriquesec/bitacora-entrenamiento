@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-05-01T14:57:52.995Z",
+  "actualizado": "2026-05-02T02:28:12.065Z",
   "stats": {
     "totalDias": 123,
     "diasEjercicio": 73,
@@ -11,6 +11,26 @@
     "diasCumplimiento": 105,
     "promedioPasos": 9837,
     "pasosTotal": 1209919
+  },
+  "rachas": {
+    "d7": {
+      "dias": 7,
+      "pasos": 3,
+      "fuerza": 4,
+      "cardio": 3
+    },
+    "d15": {
+      "dias": 15,
+      "pasos": 8,
+      "fuerza": 9,
+      "cardio": 6
+    },
+    "d30": {
+      "dias": 30,
+      "pasos": 16,
+      "fuerza": 16,
+      "cardio": 9
+    }
   },
   "distribucionDisciplinas": [
     {
@@ -45,20 +65,6 @@
     }
   ],
   "ultimos30": [
-    {
-      "fecha": "2026-04-02",
-      "diaSemana": 4,
-      "pasos": 10031,
-      "disciplinas": [
-        "Fuerza"
-      ],
-      "disciplinaPrincipal": "Fuerza",
-      "duracion": 50,
-      "distancia": 9426,
-      "estado": "verde",
-      "cumplePasos": true,
-      "tieneEjercicio": true
-    },
     {
       "fecha": "2026-04-03",
       "diaSemana": 5,
@@ -454,6 +460,18 @@
     {
       "fecha": "2026-05-01",
       "diaSemana": 5,
+      "pasos": 0,
+      "disciplinas": [],
+      "disciplinaPrincipal": "",
+      "duracion": 0,
+      "distancia": 0,
+      "estado": "gris",
+      "cumplePasos": false,
+      "tieneEjercicio": false
+    },
+    {
+      "fecha": "2026-05-02",
+      "diaSemana": 6,
       "pasos": 0,
       "disciplinas": [],
       "disciplinaPrincipal": "",
@@ -2198,6 +2216,18 @@
       "estado": "gris",
       "cumplePasos": false,
       "tieneEjercicio": false
+    },
+    {
+      "fecha": "2026-05-02",
+      "diaSemana": 6,
+      "pasos": 0,
+      "disciplinas": [],
+      "disciplinaPrincipal": "",
+      "duracion": 0,
+      "distancia": 0,
+      "estado": "gris",
+      "cumplePasos": false,
+      "tieneEjercicio": false
     }
   ],
   "porDiaSemana": {
@@ -3391,7 +3421,7 @@
       "sesionesFuerza": 3,
       "sesionesCardio": 2,
       "diasPasos10k": 2,
-      "totalDias": 5,
+      "totalDias": 6,
       "diasResumen": [
         {
           "fecha": "2026-04-27",
@@ -3428,6 +3458,14 @@
         {
           "fecha": "2026-05-01",
           "diaSemana": 5,
+          "estado": "gris",
+          "disciplinaPrincipal": "",
+          "pasos": 0,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-05-02",
+          "diaSemana": 6,
           "estado": "gris",
           "disciplinaPrincipal": "",
           "pasos": 0,
