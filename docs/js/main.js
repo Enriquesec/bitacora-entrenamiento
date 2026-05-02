@@ -42,11 +42,13 @@ function renderDashboard() {
   document.getElementById('updated').textContent = new Date(dashboardData.actualizado).toLocaleString('es-ES');
 
   // Estadísticas principales
+  const recordPasos = Math.max(...dashboardData.todosDatos.map(d => d.pasos));
   document.getElementById('totalDias').textContent = stats.totalDias;
   document.getElementById('diasCumplimiento').textContent = `${stats.diasCumplimiento}/${stats.totalDias}`;
   document.getElementById('diasEjercicio').textContent = stats.diasEjercicio;
   document.getElementById('diasPasos').textContent = stats.diasPasos;
   document.getElementById('promedioPasos').textContent = stats.promedioPasos.toLocaleString('es-MX');
+  document.getElementById('recordPasos').textContent = recordPasos.toLocaleString('es-MX');
 
   // Insights automáticos
   renderInsights();
@@ -151,7 +153,7 @@ function renderWeeklySummary() {
   const MESES_CORTO  = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
   const DIAS_LABEL   = ['L','M','X','J','V','S','D'];
   const CARDIO_DISC  = ['Natación', 'Carrera', 'Bici'];
-  const COLOR_ESTADO = { verde: '#34d399', amarillo: '#fb923c', rojo: '#f87171', gris: '#1e293b' };
+  const COLOR_ESTADO = { verde: '#26a641', amarillo: '#fb923c', rojo: '#f87171', gris: '#1e293b' };
 
   const hoy = new Date();
   const hoyStr      = hoy.toISOString().split('T')[0];
@@ -254,11 +256,20 @@ function renderWeeklySummary() {
       </div>`;
   }
 
-  // ── Tarjeta mensual ───────────────────────────────────────
+  // Mes con mayor actividad total
+  const maxScore = mesesPasados.length
+    ? Math.max(...mesesPasados.map(m => m.diasFuerza + m.diasNatacion + m.diasPasos))
+    : 0;
+
   function monthCard(mes) {
+    const score = mes.diasFuerza + mes.diasNatacion + mes.diasPasos;
+    const esRecord = score === maxScore && maxScore > 0;
     return `
-      <div class="month-card">
-        <div class="month-card-title">${mes.label}</div>
+      <div class="month-card${esRecord ? ' month-card--record' : ''}">
+        <div class="month-card-title">
+          ${mes.label}
+          ${esRecord ? '<span class="month-record-badge">Récord</span>' : ''}
+        </div>
         <div class="month-stats">
           <div class="month-stat">
             <span class="month-stat-value fill-fuerza">${mes.diasFuerza}</span>
