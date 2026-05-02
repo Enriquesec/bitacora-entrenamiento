@@ -208,7 +208,7 @@ function renderHeatmap() {
 
 function renderPieChart() {
   const ctx = document.getElementById('pieChart').getContext('2d');
-  const disciplinas = dashboardData.distribucionDisciplinas;
+  const disciplinas = dashboardData.distribucionDisciplinas.filter(d => d.nombre !== 'Descanso');
   const labels = disciplinas.map(d => `${d.nombre}: ${d.count} (${d.porcentaje}%)`);
   const data = disciplinas.map(d => d.count);
   const colores = ['#00d4ff', '#34d399', '#a78bfa', '#fbbf24', '#f87171', '#fb923c'];
