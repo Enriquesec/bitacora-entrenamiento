@@ -1,92 +1,84 @@
 {
-  "actualizado": "2026-05-02T02:28:12.065Z",
+  "actualizado": "2026-05-03T02:36:45.121Z",
   "stats": {
-    "totalDias": 123,
-    "diasEjercicio": 73,
-    "diasPasos": 69,
-    "diasVerdes": 64,
-    "diasAmarillos": 41,
-    "diasRojos": 18,
+    "totalDias": 124,
+    "diasEjercicio": 37,
+    "diasPasos": 70,
+    "diasVerdes": 49,
+    "diasAmarillos": 38,
+    "diasRojos": 37,
     "diasGrises": 0,
-    "diasCumplimiento": 105,
-    "promedioPasos": 9837,
-    "pasosTotal": 1209919
+    "diasCumplimiento": 87,
+    "promedioPasos": 9844,
+    "pasosTotal": 1220600
   },
   "rachas": {
     "d7": {
       "dias": 7,
       "pasos": 3,
-      "fuerza": 4,
-      "cardio": 3
+      "fuerza": 3,
+      "cardio": 2
     },
     "d15": {
       "dias": 15,
       "pasos": 8,
-      "fuerza": 9,
-      "cardio": 6
+      "fuerza": 8,
+      "cardio": 5
     },
     "d30": {
       "dias": 30,
       "pasos": 16,
-      "fuerza": 16,
+      "fuerza": 15,
       "cardio": 9
     }
   },
   "distribucionDisciplinas": [
     {
+      "nombre": "😴 Sueño",
+      "count": 58,
+      "porcentaje": 32
+    },
+    {
       "nombre": "Descanso",
-      "count": 50,
-      "porcentaje": 41
+      "count": 51,
+      "porcentaje": 28
     },
     {
       "nombre": "Fuerza",
       "count": 22,
-      "porcentaje": 18
+      "porcentaje": 12
     },
     {
       "nombre": "Natación",
       "count": 20,
-      "porcentaje": 16
+      "porcentaje": 11
     },
     {
       "nombre": "Mixto",
       "count": 17,
-      "porcentaje": 14
+      "porcentaje": 9
     },
     {
       "nombre": "Bici",
       "count": 7,
-      "porcentaje": 6
+      "porcentaje": 4
     },
     {
       "nombre": "Carrera",
       "count": 7,
-      "porcentaje": 6
+      "porcentaje": 4
     }
   ],
   "ultimos30": [
-    {
-      "fecha": "2026-04-03",
-      "diaSemana": 5,
-      "pasos": 11741,
-      "disciplinas": [
-        "Fuerza"
-      ],
-      "disciplinaPrincipal": "Fuerza",
-      "duracion": 40,
-      "distancia": 8940,
-      "estado": "verde",
-      "cumplePasos": true,
-      "tieneEjercicio": true
-    },
     {
       "fecha": "2026-04-04",
       "diaSemana": 6,
       "pasos": 10993,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "amarillo",
@@ -98,23 +90,25 @@
       "diaSemana": 0,
       "pasos": 10172,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 45,
       "distancia": 8748,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-06",
       "diaSemana": 1,
       "pasos": 1539,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -126,14 +120,15 @@
       "diaSemana": 2,
       "pasos": 9346,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 111,
       "distancia": 13260,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-08",
@@ -154,9 +149,10 @@
       "diaSemana": 4,
       "pasos": 10796,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -182,9 +178,10 @@
       "diaSemana": 6,
       "pasos": 8431,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -196,42 +193,45 @@
       "diaSemana": 0,
       "pasos": 12379,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 75,
       "distancia": 14730,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-13",
       "diaSemana": 1,
       "pasos": 5705,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 50,
       "distancia": 1875,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-14",
       "diaSemana": 2,
       "pasos": 7175,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 51,
       "distancia": 10318,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-15",
@@ -252,9 +252,10 @@
       "diaSemana": 4,
       "pasos": 10304,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -280,56 +281,60 @@
       "diaSemana": 6,
       "pasos": 10612,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 105,
       "distancia": 13014,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-19",
       "diaSemana": 0,
       "pasos": 11176,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 62,
       "distancia": 18645,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-20",
       "diaSemana": 1,
       "pasos": 8493,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 54,
       "distancia": 12,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-21",
       "diaSemana": 2,
       "pasos": 9286,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 120,
       "distancia": 16,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-22",
@@ -350,9 +355,10 @@
       "diaSemana": 4,
       "pasos": 11518,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -364,9 +370,10 @@
       "diaSemana": 5,
       "pasos": 10271,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -378,14 +385,15 @@
       "diaSemana": 6,
       "pasos": 9897,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 44,
       "distancia": 1,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-26",
@@ -406,28 +414,30 @@
       "diaSemana": 1,
       "pasos": 10172,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 62,
       "distancia": 13,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-28",
       "diaSemana": 2,
       "pasos": 9539,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 115,
       "distancia": 1,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-29",
@@ -460,6 +470,20 @@
     {
       "fecha": "2026-05-01",
       "diaSemana": 5,
+      "pasos": 10681,
+      "disciplinas": [
+        "Descanso"
+      ],
+      "disciplinaPrincipal": "Descanso",
+      "duracion": 0,
+      "distancia": 0,
+      "estado": "verde",
+      "cumplePasos": true,
+      "tieneEjercicio": false
+    },
+    {
+      "fecha": "2026-05-02",
+      "diaSemana": 6,
       "pasos": 0,
       "disciplinas": [],
       "disciplinaPrincipal": "",
@@ -470,8 +494,8 @@
       "tieneEjercicio": false
     },
     {
-      "fecha": "2026-05-02",
-      "diaSemana": 6,
+      "fecha": "2026-05-03",
+      "diaSemana": 0,
       "pasos": 0,
       "disciplinas": [],
       "disciplinaPrincipal": "",
@@ -1020,9 +1044,10 @@
       "diaSemana": 4,
       "pasos": 10204,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -1048,56 +1073,60 @@
       "diaSemana": 6,
       "pasos": 14530,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 70,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-08",
       "diaSemana": 0,
       "pasos": 19883,
       "disciplinas": [
+        "😴 Sueño",
         "Carrera"
       ],
-      "disciplinaPrincipal": "Carrera",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 30,
       "distancia": 3.6,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-09",
       "diaSemana": 1,
       "pasos": 6527,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 80.5,
       "distancia": 1275,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-10",
       "diaSemana": 2,
       "pasos": 6315,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 41.3,
       "distancia": 1575,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-11",
@@ -1118,9 +1147,10 @@
       "diaSemana": 4,
       "pasos": 12804,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -1146,56 +1176,60 @@
       "diaSemana": 6,
       "pasos": 7065,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 104,
       "distancia": 4350,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-15",
       "diaSemana": 0,
       "pasos": 11827,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 65.4,
       "distancia": 3.4,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-16",
       "diaSemana": 1,
       "pasos": 4606,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 79.1,
       "distancia": 1425,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-17",
       "diaSemana": 2,
       "pasos": 9349,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 77,
       "distancia": 3.9,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-18",
@@ -1216,9 +1250,10 @@
       "diaSemana": 4,
       "pasos": 13734,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -1244,23 +1279,25 @@
       "diaSemana": 6,
       "pasos": 9861,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 104,
       "distancia": 4,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-22",
       "diaSemana": 0,
       "pasos": 7987,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -1286,37 +1323,40 @@
       "diaSemana": 2,
       "pasos": 11022,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 45,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-25",
       "diaSemana": 3,
       "pasos": 10300,
       "disciplinas": [
+        "😴 Sueño",
         "Carrera"
       ],
-      "disciplinaPrincipal": "Carrera",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 30,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-26",
       "diaSemana": 4,
       "pasos": 15475,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -1328,9 +1368,10 @@
       "diaSemana": 5,
       "pasos": 14535,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -1356,23 +1397,25 @@
       "diaSemana": 0,
       "pasos": 11961,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 117,
       "distancia": 5380,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-02",
       "diaSemana": 1,
       "pasos": 8541,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -1398,23 +1441,25 @@
       "diaSemana": 3,
       "pasos": 10092,
       "disciplinas": [
+        "😴 Sueño",
         "Carrera"
       ],
-      "disciplinaPrincipal": "Carrera",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 35,
       "distancia": 4.2,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-05",
       "diaSemana": 4,
       "pasos": 11954,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -1426,9 +1471,10 @@
       "diaSemana": 5,
       "pasos": 21548,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -1440,9 +1486,10 @@
       "diaSemana": 6,
       "pasos": 5090,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -1468,51 +1515,55 @@
       "diaSemana": 1,
       "pasos": 7312,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 80,
       "distancia": 1600,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-10",
       "diaSemana": 2,
       "pasos": 4777,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 82,
       "distancia": 1550,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-11",
       "diaSemana": 3,
       "pasos": 5087,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 82,
       "distancia": 1400,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-12",
       "diaSemana": 4,
       "pasos": 13366,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -1538,56 +1589,60 @@
       "diaSemana": 6,
       "pasos": 8936,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 103,
       "distancia": 4400,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-15",
       "diaSemana": 0,
       "pasos": 12418,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 55,
       "distancia": 6540,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-16",
       "diaSemana": 1,
       "pasos": 10639,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 54,
       "distancia": 7656,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-17",
       "diaSemana": 2,
       "pasos": 10221,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 55,
       "distancia": 13047,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-18",
@@ -1636,9 +1691,10 @@
       "diaSemana": 6,
       "pasos": 19856,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "amarillo",
@@ -1650,14 +1706,15 @@
       "diaSemana": 0,
       "pasos": 9367,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 45,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-23",
@@ -1678,9 +1735,10 @@
       "diaSemana": 2,
       "pasos": 2287,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -1692,23 +1750,25 @@
       "diaSemana": 3,
       "pasos": 7901,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 50,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-26",
       "diaSemana": 4,
       "pasos": 12757,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -1762,9 +1822,10 @@
       "diaSemana": 1,
       "pasos": 3358,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -1790,14 +1851,15 @@
       "diaSemana": 3,
       "pasos": 10060,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 45,
       "distancia": 9732,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-02",
@@ -1818,23 +1880,25 @@
       "diaSemana": 5,
       "pasos": 11741,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 40,
       "distancia": 8940,
       "estado": "verde",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-04",
       "diaSemana": 6,
       "pasos": 10993,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "amarillo",
@@ -1846,23 +1910,25 @@
       "diaSemana": 0,
       "pasos": 10172,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 45,
       "distancia": 8748,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-06",
       "diaSemana": 1,
       "pasos": 1539,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -1874,14 +1940,15 @@
       "diaSemana": 2,
       "pasos": 9346,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 111,
       "distancia": 13260,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-08",
@@ -1902,9 +1969,10 @@
       "diaSemana": 4,
       "pasos": 10796,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -1930,9 +1998,10 @@
       "diaSemana": 6,
       "pasos": 8431,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -1944,42 +2013,45 @@
       "diaSemana": 0,
       "pasos": 12379,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 75,
       "distancia": 14730,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-13",
       "diaSemana": 1,
       "pasos": 5705,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 50,
       "distancia": 1875,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-14",
       "diaSemana": 2,
       "pasos": 7175,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 51,
       "distancia": 10318,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-15",
@@ -2000,9 +2072,10 @@
       "diaSemana": 4,
       "pasos": 10304,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -2028,56 +2101,60 @@
       "diaSemana": 6,
       "pasos": 10612,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 105,
       "distancia": 13014,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-19",
       "diaSemana": 0,
       "pasos": 11176,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 62,
       "distancia": 18645,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-20",
       "diaSemana": 1,
       "pasos": 8493,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 54,
       "distancia": 12,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-21",
       "diaSemana": 2,
       "pasos": 9286,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 120,
       "distancia": 16,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-22",
@@ -2098,9 +2175,10 @@
       "diaSemana": 4,
       "pasos": 11518,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -2112,9 +2190,10 @@
       "diaSemana": 5,
       "pasos": 10271,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -2126,14 +2205,15 @@
       "diaSemana": 6,
       "pasos": 9897,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 44,
       "distancia": 1,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-26",
@@ -2154,28 +2234,30 @@
       "diaSemana": 1,
       "pasos": 10172,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 62,
       "distancia": 13,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-28",
       "diaSemana": 2,
       "pasos": 9539,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 115,
       "distancia": 1,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-29",
@@ -2208,13 +2290,15 @@
     {
       "fecha": "2026-05-01",
       "diaSemana": 5,
-      "pasos": 0,
-      "disciplinas": [],
-      "disciplinaPrincipal": "",
+      "pasos": 10681,
+      "disciplinas": [
+        "Descanso"
+      ],
+      "disciplinaPrincipal": "Descanso",
       "duracion": 0,
       "distancia": 0,
-      "estado": "gris",
-      "cumplePasos": false,
+      "estado": "verde",
+      "cumplePasos": true,
       "tieneEjercicio": false
     },
     {
@@ -2228,25 +2312,37 @@
       "estado": "gris",
       "cumplePasos": false,
       "tieneEjercicio": false
+    },
+    {
+      "fecha": "2026-05-03",
+      "diaSemana": 0,
+      "pasos": 0,
+      "disciplinas": [],
+      "disciplinaPrincipal": "",
+      "duracion": 0,
+      "distancia": 0,
+      "estado": "gris",
+      "cumplePasos": false,
+      "tieneEjercicio": false
     }
   ],
   "porDiaSemana": {
     "Lun": {
-      "ejercicio": 14,
+      "ejercicio": 7,
       "pasos": 6,
-      "verdes": 5,
+      "verdes": 3,
       "total": 18
     },
     "Mar": {
-      "ejercicio": 16,
+      "ejercicio": 7,
       "pasos": 5,
-      "verdes": 5,
+      "verdes": 3,
       "total": 18
     },
     "Mié": {
-      "ejercicio": 16,
+      "ejercicio": 11,
       "pasos": 6,
-      "verdes": 6,
+      "verdes": 3,
       "total": 18
     },
     "Jue": {
@@ -2256,21 +2352,21 @@
       "total": 18
     },
     "Vie": {
-      "ejercicio": 2,
-      "pasos": 14,
-      "verdes": 14,
-      "total": 17
+      "ejercicio": 1,
+      "pasos": 15,
+      "verdes": 15,
+      "total": 18
     },
     "Sáb": {
-      "ejercicio": 10,
+      "ejercicio": 4,
       "pasos": 9,
-      "verdes": 5,
+      "verdes": 3,
       "total": 17
     },
     "Dom": {
-      "ejercicio": 13,
+      "ejercicio": 5,
       "pasos": 12,
-      "verdes": 12,
+      "verdes": 5,
       "total": 17
     }
   },
@@ -2647,7 +2743,7 @@
           "fecha": "2026-02-05",
           "diaSemana": 4,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10204,
           "cumplePasos": true
         },
@@ -2662,16 +2758,16 @@
         {
           "fecha": "2026-02-07",
           "diaSemana": 6,
-          "estado": "verde",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 14530,
           "cumplePasos": true
         },
         {
           "fecha": "2026-02-08",
           "diaSemana": 0,
-          "estado": "verde",
-          "disciplinaPrincipal": "Carrera",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 19883,
           "cumplePasos": true
         }
@@ -2689,16 +2785,16 @@
         {
           "fecha": "2026-02-09",
           "diaSemana": 1,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 6527,
           "cumplePasos": false
         },
         {
           "fecha": "2026-02-10",
           "diaSemana": 2,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Natación",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 6315,
           "cumplePasos": false
         },
@@ -2714,7 +2810,7 @@
           "fecha": "2026-02-12",
           "diaSemana": 4,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 12804,
           "cumplePasos": true
         },
@@ -2729,16 +2825,16 @@
         {
           "fecha": "2026-02-14",
           "diaSemana": 6,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Natación",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 7065,
           "cumplePasos": false
         },
         {
           "fecha": "2026-02-15",
           "diaSemana": 0,
-          "estado": "verde",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 11827,
           "cumplePasos": true
         }
@@ -2756,16 +2852,16 @@
         {
           "fecha": "2026-02-16",
           "diaSemana": 1,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 4606,
           "cumplePasos": false
         },
         {
           "fecha": "2026-02-17",
           "diaSemana": 2,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 9349,
           "cumplePasos": false
         },
@@ -2781,7 +2877,7 @@
           "fecha": "2026-02-19",
           "diaSemana": 4,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 13734,
           "cumplePasos": true
         },
@@ -2796,8 +2892,8 @@
         {
           "fecha": "2026-02-21",
           "diaSemana": 6,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Natación",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 9861,
           "cumplePasos": false
         },
@@ -2805,7 +2901,7 @@
           "fecha": "2026-02-22",
           "diaSemana": 0,
           "estado": "rojo",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 7987,
           "cumplePasos": false
         }
@@ -2831,16 +2927,16 @@
         {
           "fecha": "2026-02-24",
           "diaSemana": 2,
-          "estado": "verde",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 11022,
           "cumplePasos": true
         },
         {
           "fecha": "2026-02-25",
           "diaSemana": 3,
-          "estado": "verde",
-          "disciplinaPrincipal": "Carrera",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10300,
           "cumplePasos": true
         },
@@ -2848,7 +2944,7 @@
           "fecha": "2026-02-26",
           "diaSemana": 4,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 15475,
           "cumplePasos": true
         },
@@ -2856,7 +2952,7 @@
           "fecha": "2026-02-27",
           "diaSemana": 5,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 14535,
           "cumplePasos": true
         },
@@ -2871,8 +2967,8 @@
         {
           "fecha": "2026-03-01",
           "diaSemana": 0,
-          "estado": "verde",
-          "disciplinaPrincipal": "Natación",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 11961,
           "cumplePasos": true
         }
@@ -2891,7 +2987,7 @@
           "fecha": "2026-03-02",
           "diaSemana": 1,
           "estado": "rojo",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 8541,
           "cumplePasos": false
         },
@@ -2906,8 +3002,8 @@
         {
           "fecha": "2026-03-04",
           "diaSemana": 3,
-          "estado": "verde",
-          "disciplinaPrincipal": "Carrera",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10092,
           "cumplePasos": true
         },
@@ -2915,7 +3011,7 @@
           "fecha": "2026-03-05",
           "diaSemana": 4,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 11954,
           "cumplePasos": true
         },
@@ -2923,7 +3019,7 @@
           "fecha": "2026-03-06",
           "diaSemana": 5,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 21548,
           "cumplePasos": true
         },
@@ -2931,7 +3027,7 @@
           "fecha": "2026-03-07",
           "diaSemana": 6,
           "estado": "rojo",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 5090,
           "cumplePasos": false
         },
@@ -2957,24 +3053,24 @@
         {
           "fecha": "2026-03-09",
           "diaSemana": 1,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 7312,
           "cumplePasos": false
         },
         {
           "fecha": "2026-03-10",
           "diaSemana": 2,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 4777,
           "cumplePasos": false
         },
         {
           "fecha": "2026-03-11",
           "diaSemana": 3,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 5087,
           "cumplePasos": false
         },
@@ -2982,7 +3078,7 @@
           "fecha": "2026-03-12",
           "diaSemana": 4,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 13366,
           "cumplePasos": true
         },
@@ -2997,16 +3093,16 @@
         {
           "fecha": "2026-03-14",
           "diaSemana": 6,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Natación",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 8936,
           "cumplePasos": false
         },
         {
           "fecha": "2026-03-15",
           "diaSemana": 0,
-          "estado": "verde",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 12418,
           "cumplePasos": true
         }
@@ -3024,16 +3120,16 @@
         {
           "fecha": "2026-03-16",
           "diaSemana": 1,
-          "estado": "verde",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10639,
           "cumplePasos": true
         },
         {
           "fecha": "2026-03-17",
           "diaSemana": 2,
-          "estado": "verde",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10221,
           "cumplePasos": true
         },
@@ -3065,15 +3161,15 @@
           "fecha": "2026-03-21",
           "diaSemana": 6,
           "estado": "amarillo",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 19856,
           "cumplePasos": true
         },
         {
           "fecha": "2026-03-22",
           "diaSemana": 0,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 9367,
           "cumplePasos": false
         }
@@ -3100,15 +3196,15 @@
           "fecha": "2026-03-24",
           "diaSemana": 2,
           "estado": "rojo",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 2287,
           "cumplePasos": false
         },
         {
           "fecha": "2026-03-25",
           "diaSemana": 3,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 7901,
           "cumplePasos": false
         },
@@ -3116,7 +3212,7 @@
           "fecha": "2026-03-26",
           "diaSemana": 4,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 12757,
           "cumplePasos": true
         },
@@ -3159,7 +3255,7 @@
           "fecha": "2026-03-30",
           "diaSemana": 1,
           "estado": "rojo",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 3358,
           "cumplePasos": false
         },
@@ -3174,8 +3270,8 @@
         {
           "fecha": "2026-04-01",
           "diaSemana": 3,
-          "estado": "verde",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10060,
           "cumplePasos": true
         },
@@ -3191,7 +3287,7 @@
           "fecha": "2026-04-03",
           "diaSemana": 5,
           "estado": "verde",
-          "disciplinaPrincipal": "Fuerza",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 11741,
           "cumplePasos": true
         },
@@ -3199,15 +3295,15 @@
           "fecha": "2026-04-04",
           "diaSemana": 6,
           "estado": "amarillo",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10993,
           "cumplePasos": true
         },
         {
           "fecha": "2026-04-05",
           "diaSemana": 0,
-          "estado": "verde",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10172,
           "cumplePasos": true
         }
@@ -3226,15 +3322,15 @@
           "fecha": "2026-04-06",
           "diaSemana": 1,
           "estado": "rojo",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 1539,
           "cumplePasos": false
         },
         {
           "fecha": "2026-04-07",
           "diaSemana": 2,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 9346,
           "cumplePasos": false
         },
@@ -3250,7 +3346,7 @@
           "fecha": "2026-04-09",
           "diaSemana": 4,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10796,
           "cumplePasos": true
         },
@@ -3266,15 +3362,15 @@
           "fecha": "2026-04-11",
           "diaSemana": 6,
           "estado": "rojo",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 8431,
           "cumplePasos": false
         },
         {
           "fecha": "2026-04-12",
           "diaSemana": 0,
-          "estado": "verde",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 12379,
           "cumplePasos": true
         }
@@ -3292,16 +3388,16 @@
         {
           "fecha": "2026-04-13",
           "diaSemana": 1,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Natación",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 5705,
           "cumplePasos": false
         },
         {
           "fecha": "2026-04-14",
           "diaSemana": 2,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 7175,
           "cumplePasos": false
         },
@@ -3317,7 +3413,7 @@
           "fecha": "2026-04-16",
           "diaSemana": 4,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10304,
           "cumplePasos": true
         },
@@ -3332,16 +3428,16 @@
         {
           "fecha": "2026-04-18",
           "diaSemana": 6,
-          "estado": "verde",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10612,
           "cumplePasos": true
         },
         {
           "fecha": "2026-04-19",
           "diaSemana": 0,
-          "estado": "verde",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 11176,
           "cumplePasos": true
         }
@@ -3359,16 +3455,16 @@
         {
           "fecha": "2026-04-20",
           "diaSemana": 1,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 8493,
           "cumplePasos": false
         },
         {
           "fecha": "2026-04-21",
           "diaSemana": 2,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 9286,
           "cumplePasos": false
         },
@@ -3384,7 +3480,7 @@
           "fecha": "2026-04-23",
           "diaSemana": 4,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 11518,
           "cumplePasos": true
         },
@@ -3392,15 +3488,15 @@
           "fecha": "2026-04-24",
           "diaSemana": 5,
           "estado": "verde",
-          "disciplinaPrincipal": "Descanso",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10271,
           "cumplePasos": true
         },
         {
           "fecha": "2026-04-25",
           "diaSemana": 6,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Natación",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 9897,
           "cumplePasos": false
         },
@@ -3420,22 +3516,22 @@
       "esSemanaActual": true,
       "sesionesFuerza": 3,
       "sesionesCardio": 2,
-      "diasPasos10k": 2,
-      "totalDias": 6,
+      "diasPasos10k": 3,
+      "totalDias": 7,
       "diasResumen": [
         {
           "fecha": "2026-04-27",
           "diaSemana": 1,
-          "estado": "verde",
-          "disciplinaPrincipal": "Fuerza",
+          "estado": "amarillo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 10172,
           "cumplePasos": true
         },
         {
           "fecha": "2026-04-28",
           "diaSemana": 2,
-          "estado": "amarillo",
-          "disciplinaPrincipal": "Mixto",
+          "estado": "rojo",
+          "disciplinaPrincipal": "😴 Sueño",
           "pasos": 9539,
           "cumplePasos": false
         },
@@ -3458,14 +3554,22 @@
         {
           "fecha": "2026-05-01",
           "diaSemana": 5,
+          "estado": "verde",
+          "disciplinaPrincipal": "Descanso",
+          "pasos": 10681,
+          "cumplePasos": true
+        },
+        {
+          "fecha": "2026-05-02",
+          "diaSemana": 6,
           "estado": "gris",
           "disciplinaPrincipal": "",
           "pasos": 0,
           "cumplePasos": false
         },
         {
-          "fecha": "2026-05-02",
-          "diaSemana": 6,
+          "fecha": "2026-05-03",
+          "diaSemana": 0,
           "estado": "gris",
           "disciplinaPrincipal": "",
           "pasos": 0,
@@ -4012,9 +4116,10 @@
       "diaSemana": 4,
       "pasos": 10204,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -4040,56 +4145,60 @@
       "diaSemana": 6,
       "pasos": 14530,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 70,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-08",
       "diaSemana": 0,
       "pasos": 19883,
       "disciplinas": [
+        "😴 Sueño",
         "Carrera"
       ],
-      "disciplinaPrincipal": "Carrera",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 30,
       "distancia": 3.6,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-09",
       "diaSemana": 1,
       "pasos": 6527,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 80.5,
       "distancia": 1275,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-10",
       "diaSemana": 2,
       "pasos": 6315,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 41.3,
       "distancia": 1575,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-11",
@@ -4110,9 +4219,10 @@
       "diaSemana": 4,
       "pasos": 12804,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -4138,56 +4248,60 @@
       "diaSemana": 6,
       "pasos": 7065,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 104,
       "distancia": 4350,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-15",
       "diaSemana": 0,
       "pasos": 11827,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 65.4,
       "distancia": 3.4,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-16",
       "diaSemana": 1,
       "pasos": 4606,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 79.1,
       "distancia": 1425,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-17",
       "diaSemana": 2,
       "pasos": 9349,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 77,
       "distancia": 3.9,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-18",
@@ -4208,9 +4322,10 @@
       "diaSemana": 4,
       "pasos": 13734,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -4236,23 +4351,25 @@
       "diaSemana": 6,
       "pasos": 9861,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 104,
       "distancia": 4,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-22",
       "diaSemana": 0,
       "pasos": 7987,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -4278,37 +4395,40 @@
       "diaSemana": 2,
       "pasos": 11022,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 45,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-25",
       "diaSemana": 3,
       "pasos": 10300,
       "disciplinas": [
+        "😴 Sueño",
         "Carrera"
       ],
-      "disciplinaPrincipal": "Carrera",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 30,
       "distancia": 0,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-02-26",
       "diaSemana": 4,
       "pasos": 15475,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -4320,9 +4440,10 @@
       "diaSemana": 5,
       "pasos": 14535,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -4348,23 +4469,25 @@
       "diaSemana": 0,
       "pasos": 11961,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 117,
       "distancia": 5380,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-02",
       "diaSemana": 1,
       "pasos": 8541,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -4390,23 +4513,25 @@
       "diaSemana": 3,
       "pasos": 10092,
       "disciplinas": [
+        "😴 Sueño",
         "Carrera"
       ],
-      "disciplinaPrincipal": "Carrera",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 35,
       "distancia": 4.2,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-05",
       "diaSemana": 4,
       "pasos": 11954,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -4418,9 +4543,10 @@
       "diaSemana": 5,
       "pasos": 21548,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -4432,9 +4558,10 @@
       "diaSemana": 6,
       "pasos": 5090,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -4460,51 +4587,55 @@
       "diaSemana": 1,
       "pasos": 7312,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 80,
       "distancia": 1600,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-10",
       "diaSemana": 2,
       "pasos": 4777,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 82,
       "distancia": 1550,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-11",
       "diaSemana": 3,
       "pasos": 5087,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 82,
       "distancia": 1400,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-12",
       "diaSemana": 4,
       "pasos": 13366,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -4530,56 +4661,60 @@
       "diaSemana": 6,
       "pasos": 8936,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 103,
       "distancia": 4400,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-15",
       "diaSemana": 0,
       "pasos": 12418,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 55,
       "distancia": 6540,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-16",
       "diaSemana": 1,
       "pasos": 10639,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 54,
       "distancia": 7656,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-17",
       "diaSemana": 2,
       "pasos": 10221,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 55,
       "distancia": 13047,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-18",
@@ -4628,9 +4763,10 @@
       "diaSemana": 6,
       "pasos": 19856,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "amarillo",
@@ -4642,14 +4778,15 @@
       "diaSemana": 0,
       "pasos": 9367,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 45,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-23",
@@ -4670,9 +4807,10 @@
       "diaSemana": 2,
       "pasos": 2287,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -4684,23 +4822,25 @@
       "diaSemana": 3,
       "pasos": 7901,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 50,
       "distancia": 0,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-03-26",
       "diaSemana": 4,
       "pasos": 12757,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -4754,9 +4894,10 @@
       "diaSemana": 1,
       "pasos": 3358,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -4782,14 +4923,15 @@
       "diaSemana": 3,
       "pasos": 10060,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 45,
       "distancia": 9732,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-02",
@@ -4810,23 +4952,25 @@
       "diaSemana": 5,
       "pasos": 11741,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 40,
       "distancia": 8940,
       "estado": "verde",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-04",
       "diaSemana": 6,
       "pasos": 10993,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "amarillo",
@@ -4838,23 +4982,25 @@
       "diaSemana": 0,
       "pasos": 10172,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 45,
       "distancia": 8748,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-06",
       "diaSemana": 1,
       "pasos": 1539,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -4866,14 +5012,15 @@
       "diaSemana": 2,
       "pasos": 9346,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 111,
       "distancia": 13260,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-08",
@@ -4894,9 +5041,10 @@
       "diaSemana": 4,
       "pasos": 10796,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -4922,9 +5070,10 @@
       "diaSemana": 6,
       "pasos": 8431,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "rojo",
@@ -4936,42 +5085,45 @@
       "diaSemana": 0,
       "pasos": 12379,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 75,
       "distancia": 14730,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-13",
       "diaSemana": 1,
       "pasos": 5705,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 50,
       "distancia": 1875,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-14",
       "diaSemana": 2,
       "pasos": 7175,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 51,
       "distancia": 10318,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-15",
@@ -4992,9 +5144,10 @@
       "diaSemana": 4,
       "pasos": 10304,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -5020,56 +5173,60 @@
       "diaSemana": 6,
       "pasos": 10612,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 105,
       "distancia": 13014,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-19",
       "diaSemana": 0,
       "pasos": 11176,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 62,
       "distancia": 18645,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-20",
       "diaSemana": 1,
       "pasos": 8493,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 54,
       "distancia": 12,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-21",
       "diaSemana": 2,
       "pasos": 9286,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 120,
       "distancia": 16,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-22",
@@ -5090,9 +5247,10 @@
       "diaSemana": 4,
       "pasos": 11518,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -5104,9 +5262,10 @@
       "diaSemana": 5,
       "pasos": 10271,
       "disciplinas": [
+        "😴 Sueño",
         "Descanso"
       ],
-      "disciplinaPrincipal": "Descanso",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 0,
       "distancia": 0,
       "estado": "verde",
@@ -5118,14 +5277,15 @@
       "diaSemana": 6,
       "pasos": 9897,
       "disciplinas": [
+        "😴 Sueño",
         "Natación"
       ],
-      "disciplinaPrincipal": "Natación",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 44,
       "distancia": 1,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-26",
@@ -5146,28 +5306,30 @@
       "diaSemana": 1,
       "pasos": 10172,
       "disciplinas": [
+        "😴 Sueño",
         "Fuerza"
       ],
-      "disciplinaPrincipal": "Fuerza",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 62,
       "distancia": 13,
-      "estado": "verde",
+      "estado": "amarillo",
       "cumplePasos": true,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-28",
       "diaSemana": 2,
       "pasos": 9539,
       "disciplinas": [
+        "😴 Sueño",
         "Mixto"
       ],
-      "disciplinaPrincipal": "Mixto",
+      "disciplinaPrincipal": "😴 Sueño",
       "duracion": 115,
       "distancia": 1,
-      "estado": "amarillo",
+      "estado": "rojo",
       "cumplePasos": false,
-      "tieneEjercicio": true
+      "tieneEjercicio": false
     },
     {
       "fecha": "2026-04-29",
@@ -5187,6 +5349,20 @@
       "fecha": "2026-04-30",
       "diaSemana": 4,
       "pasos": 10566,
+      "disciplinas": [
+        "Descanso"
+      ],
+      "disciplinaPrincipal": "Descanso",
+      "duracion": 0,
+      "distancia": 0,
+      "estado": "verde",
+      "cumplePasos": true,
+      "tieneEjercicio": false
+    },
+    {
+      "fecha": "2026-05-01",
+      "diaSemana": 5,
+      "pasos": 10681,
       "disciplinas": [
         "Descanso"
       ],
