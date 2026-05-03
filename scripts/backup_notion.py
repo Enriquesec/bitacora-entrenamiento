@@ -3,7 +3,7 @@ import json
 import csv
 import requests
 from datetime import datetime
-from google.oauth2.credentials import Credentials
+from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
@@ -59,7 +59,9 @@ def save_csv(records):
 
 
 def upload_to_drive(filename):
-    creds   = Credentials.from_authorized_user_info(json.loads(os.environ['GOOGLE_CREDENTIALS']), SCOPES)
+    creds   = service_account.Credentials.from_service_account_info(
+        json.loads(os.environ['GOOGLE_CREDENTIALS']), scopes=SCOPES,
+    )
     service = build('drive', 'v3', credentials=creds)
 
     q       = "name='Respaldos Notion' and mimeType='application/vnd.google-apps.folder' and trashed=false"
