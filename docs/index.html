@@ -11,112 +11,163 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <h1>📊 Bitácora de Entrenamiento</h1>
-      <p class="subtitle">Dashboard de seguimiento de metas de ejercicio y pasos</p>
-      <div class="period-legend">Periodo: 29 de diciembre 2025 al 25 de abril 2026</div>
-      <div class="last-updated">Última actualización: <span id="updated"></span></div>
-    </header>
+  <div class="page-layout">
 
-    <section class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-number" id="totalDias">0</div>
-        <div class="stat-label">Días registrados</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number verde" id="diasCumplimiento">0</div>
-        <div class="stat-label">Cumplimiento total</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" id="diasEjercicio">0</div>
-        <div class="stat-label">Días con ejercicio</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" id="diasPasos">0</div>
-        <div class="stat-label">Días con 10k+ pasos</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" id="promedioPasos">0</div>
-        <div class="stat-label">Promedio de pasos</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number verde" id="recordPasos">0</div>
-        <div class="stat-label">Récord de pasos</div>
-      </div>
-    </section>
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-logo">📊</div>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="#kpis" class="sidebar-link active">
+            <span class="sl-icon">📊</span>
+            <span class="sl-label">KPIs</span>
+          </a>
+        </li>
+        <li>
+          <a href="#insights" class="sidebar-link">
+            <span class="sl-icon">💡</span>
+            <span class="sl-label">Insights</span>
+          </a>
+        </li>
+        <li>
+          <a href="#racha" class="sidebar-link">
+            <span class="sl-icon">🔥</span>
+            <span class="sl-label">Racha</span>
+          </a>
+        </li>
+        <li>
+          <a href="#graficas" class="sidebar-link">
+            <span class="sl-icon">📈</span>
+            <span class="sl-label">Gráficas</span>
+          </a>
+        </li>
+        <li>
+          <a href="#semanas" class="sidebar-link">
+            <span class="sl-icon">📅</span>
+            <span class="sl-label">Semanas</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-    <section class="insights-section">
-      <h2>Insights</h2>
-      <div class="insights-grid" id="insightsGrid"></div>
-    </section>
+    <div class="container">
+      <header class="header">
+        <h1>📊 Bitácora de Entrenamiento</h1>
+        <p class="subtitle">Dashboard de seguimiento de metas de ejercicio y pasos</p>
+        <div class="period-legend">Periodo: 29 de diciembre 2025 al 25 de abril 2026</div>
+        <div class="last-updated">Última actualización: <span id="updated"></span></div>
+      </header>
 
-    <section class="racha-section">
-      <h2>Racha reciente</h2>
-      <div class="racha-cards" id="rachaCards"></div>
-    </section>
+      <section id="kpis" class="stats-grid">
+        <div class="stat-card stat-card--cyan">
+          <span class="stat-card-icon">📅</span>
+          <div class="stat-number" id="totalDias">0</div>
+          <div class="stat-label">Días registrados</div>
+        </div>
+        <div class="stat-card stat-card--green">
+          <span class="stat-card-icon">✅</span>
+          <div class="stat-number verde" id="diasCumplimiento">0</div>
+          <div class="stat-label">Cumplimiento total</div>
+        </div>
+        <div class="stat-card stat-card--purple">
+          <span class="stat-card-icon">🏋️</span>
+          <div class="stat-number" id="diasEjercicio">0</div>
+          <div class="stat-label">Días con ejercicio</div>
+        </div>
+        <div class="stat-card stat-card--teal">
+          <span class="stat-card-icon">👟</span>
+          <div class="stat-number" id="diasPasos">0</div>
+          <div class="stat-label">Días con 10k+ pasos</div>
+        </div>
+        <div class="stat-card stat-card--cyan">
+          <span class="stat-card-icon">📊</span>
+          <div class="stat-number" id="promedioPasos">0</div>
+          <div class="stat-label">Promedio de pasos</div>
+        </div>
+        <div class="stat-card stat-card--gold">
+          <span class="stat-card-icon">🏆</span>
+          <div class="stat-number verde" id="recordPasos">0</div>
+          <div class="stat-label">Récord de pasos</div>
+        </div>
+      </section>
 
-    <section class="charts-section">
-      <div class="chart-container">
-        <h2>Distribución por disciplina</h2>
-        <canvas id="pieChart"></canvas>
-      </div>
+      <section id="insights" class="insights-section">
+        <h2>Insights</h2>
+        <div class="insights-grid" id="insightsGrid"></div>
+      </section>
 
-      <div class="chart-container">
-        <h2>Historial de entrenamiento</h2>
-        <div id="heatmap"></div>
-        <div class="chart-legend">
-          <div class="legend-item">
-            <span class="legend-dot verde"></span>
-            <span>Entrenamiento y pasos 10k <em>(Jue/Vie: solo pasos 10k)</em></span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-dot verde-bajo"></span>
-            <span>Solo entrenamiento o solo pasos</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-dot gris"></span>
-            <span>Sin metas / Sin registro</span>
+      <section id="racha" class="racha-section">
+        <h2>Racha reciente</h2>
+        <div class="racha-cards" id="rachaCards"></div>
+      </section>
+
+      <section id="graficas" class="charts-section">
+        <div class="chart-container full-width">
+          <h2>Distribución por disciplina</h2>
+          <div class="pie-row">
+            <canvas id="pieChart"></canvas>
+            <div class="pie-side">
+              <h3 class="side-chart-title">Actividad por día de semana</h3>
+              <canvas id="dayChart"></canvas>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="chart-container">
-        <h2>Tendencia de pasos (Historial completo)</h2>
-        <canvas id="trendChart"></canvas>
-      </div>
-
-      <div class="chart-container full-width">
-        <h2>Análisis por día de la semana</h2>
-        <table class="week-table">
-          <thead>
-            <tr>
-              <th>Día</th>
-              <th>Total registros</th>
-              <th>Con ejercicio</th>
-              <th>Con 10k+ pasos</th>
-            </tr>
-          </thead>
-          <tbody id="weekTable"></tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="weekly-summary-section">
-      <div class="weekly-header">
-        <h2>Resumen Semanal</h2>
-        <div class="weekly-goals-legend">
-          <span class="wgl-item wgl-fuerza">5 sesiones fuerza</span>
-          <span class="wgl-item wgl-cardio">3 sesiones cardio</span>
-          <span class="wgl-item wgl-pasos">10k pasos/día</span>
+        <div class="chart-container">
+          <h2>Historial de entrenamiento</h2>
+          <div id="heatmap"></div>
+          <div class="chart-legend">
+            <div class="legend-item">
+              <span class="legend-dot verde"></span>
+              <span>Entrenamiento y pasos 10k <em>(Jue/Vie: solo pasos 10k)</em></span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot verde-bajo"></span>
+              <span>Solo entrenamiento o solo pasos</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot gris"></span>
+              <span>Sin metas / Sin registro</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div id="weeklySummary" class="weekly-grid"></div>
-    </section>
 
-<footer class="footer">
-      <p>Dashboard conectado a Notion • Actualizado automáticamente cada noche</p>
-    </footer>
+        <div class="chart-container">
+          <h2>Tendencia de pasos (Historial completo)</h2>
+          <canvas id="trendChart"></canvas>
+        </div>
+
+        <div class="chart-container full-width">
+          <h2>Análisis por día de la semana</h2>
+          <table class="week-table">
+            <thead>
+              <tr>
+                <th>Día</th>
+                <th>Total registros</th>
+                <th>Con ejercicio</th>
+                <th>Con 10k+ pasos</th>
+              </tr>
+            </thead>
+            <tbody id="weekTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="semanas" class="weekly-summary-section">
+        <div class="weekly-header">
+          <h2>Resumen Semanal</h2>
+          <div class="weekly-goals-legend">
+            <span class="wgl-item wgl-fuerza">5 sesiones fuerza</span>
+            <span class="wgl-item wgl-cardio">3 sesiones cardio</span>
+            <span class="wgl-item wgl-pasos">10k pasos/día</span>
+          </div>
+        </div>
+        <div id="weeklySummary" class="weekly-grid"></div>
+      </section>
+
+      <footer class="footer">
+        <p>Dashboard conectado a Notion • Actualizado automáticamente cada noche</p>
+      </footer>
+    </div>
   </div>
 
   <script src="js/main.js"></script>

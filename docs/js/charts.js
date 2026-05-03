@@ -1,10 +1,11 @@
 /* global dashboardData */
-/* exported renderCharts, renderHeatmap, renderPieChart, renderTrendChart */
+/* exported renderCharts, renderHeatmap, renderPieChart, renderTrendChart, renderDayChart */
 
 function renderCharts() {
   renderHeatmap();
   renderPieChart();
   renderTrendChart();
+  renderDayChart();
 }
 
 function renderTrendChart() {
@@ -214,6 +215,75 @@ function renderHeatmap() {
   gridRow.appendChild(grid);
   container.appendChild(monthRow);
   container.appendChild(gridRow);
+}
+
+function renderDayChart() {
+  const ctx = document.getElementById('dayChart');
+  if (!ctx || !dashboardData.porDiaSemana) return;
+
+  const diasLabel = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
+  const diasKey   = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
+  const pds = dashboardData.porDiaSemana;
+
+  const ejercicioData = diasKey.map(k => (pds[k] || {}).ejercicio || 0);
+  const pasosData     = diasKey.map(k => (pds[k] || {}).pasos    || 0);
+
+  new Chart(ctx.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: diasLabel,
+      datasets: [
+        {
+          label: 'Con ejercicio',
+          data: ejercicioData,
+          backgroundColor: 'rgba(167, 139, 250, 0.65)',
+          borderColor: '#a78bfa',
+          borderWidth: 1,
+          borderRadius: 4,
+        },
+        {
+          label: '10k+ pasos',
+          data: pasosData,
+          backgroundColor: 'rgba(52, 211, 153, 0.6)',
+          borderColor: '#34d399',
+          borderWidth: 1,
+          borderRadius: 4,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            color: '#9ca3af',
+            boxWidth: 10,
+            font: { size: 11 },
+            usePointStyle: true,
+          },
+        },
+        tooltip: {
+          backgroundColor: 'rgba(15, 23, 42, 0.9)',
+          padding: 10,
+          titleColor: '#e2e8f0',
+          bodyColor: '#9ca3af',
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          grid: { color: 'rgba(255, 255, 255, 0.05)' },
+          ticks: { color: '#64748b', font: { size: 10 } },
+        },
+        x: {
+          grid: { display: false },
+          ticks: { color: '#64748b', font: { size: 11 } },
+        },
+      },
+    },
+  });
 }
 
 function renderPieChart() {
