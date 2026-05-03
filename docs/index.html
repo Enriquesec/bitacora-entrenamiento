@@ -58,6 +58,11 @@
 
     <section class="charts-section">
       <div class="chart-container">
+        <h2>Distribución por disciplina</h2>
+        <canvas id="pieChart"></canvas>
+      </div>
+
+      <div class="chart-container">
         <h2>Historial de entrenamiento</h2>
         <div id="heatmap"></div>
         <div class="chart-legend">
@@ -77,13 +82,23 @@
       </div>
 
       <div class="chart-container">
-        <h2>Distribución por disciplina</h2>
-        <canvas id="pieChart"></canvas>
+        <h2>Tendencia de pasos (Historial completo)</h2>
+        <canvas id="trendChart"></canvas>
       </div>
 
       <div class="chart-container full-width">
-        <h2>Tendencia de pasos (Historial completo)</h2>
-        <canvas id="trendChart"></canvas>
+        <h2>Análisis por día de la semana</h2>
+        <table class="week-table">
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Total registros</th>
+              <th>Con ejercicio</th>
+              <th>Con 10k+ pasos</th>
+            </tr>
+          </thead>
+          <tbody id="weekTable"></tbody>
+        </table>
       </div>
     </section>
 
@@ -99,22 +114,7 @@
       <div id="weeklySummary" class="weekly-grid"></div>
     </section>
 
-    <section class="stats-detail">
-      <h2>Análisis por día de la semana</h2>
-      <table class="week-table">
-        <thead>
-          <tr>
-            <th>Día</th>
-            <th>Total registros</th>
-            <th>Con ejercicio</th>
-            <th>Con 10k+ pasos</th>
-          </tr>
-        </thead>
-        <tbody id="weekTable"></tbody>
-      </table>
-    </section>
-
-    <footer class="footer">
+<footer class="footer">
       <p>Dashboard conectado a Notion • Actualizado automáticamente cada noche</p>
     </footer>
   </div>

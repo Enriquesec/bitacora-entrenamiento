@@ -323,8 +323,8 @@ body {
 
 /* ── CHARTS ── */
 .charts-section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-bottom: 24px;
 }
@@ -340,10 +340,6 @@ body {
   transition: border-color 0.25s ease;
 }
 
-.chart-container:last-child {
-  max-width: none;
-  align-self: auto;
-}
 
 .chart-container.full-width {
   grid-column: 1 / -1;
@@ -875,6 +871,10 @@ canvas {
   }
 
   .racha-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-section {
     grid-template-columns: 1fr;
   }
 
