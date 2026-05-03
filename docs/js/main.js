@@ -388,5 +388,33 @@ function renderInsights() {
     </div>`).join('');
 }
 
+function initSidebar() {
+  const sectionIds = ['kpis', 'insights', 'racha', 'graficas', 'semanas'];
+  const links = {};
+  sectionIds.forEach(id => {
+    const el = document.querySelector(`.sidebar-link[href="#${id}"]`);
+    if (el) links[id] = el;
+  });
+
+  if (!Object.keys(links).length) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        Object.values(links).forEach(l => l.classList.remove('active'));
+        if (links[entry.target.id]) links[entry.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-15% 0px -75% 0px', threshold: 0 });
+
+  sectionIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+}
+
 // Cargar datos al iniciar
-document.addEventListener('DOMContentLoaded', loadData);
+document.addEventListener('DOMContentLoaded', () => {
+  loadData();
+  initSidebar();
+});
