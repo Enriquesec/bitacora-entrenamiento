@@ -44,3 +44,23 @@ jobs:
             git commit -m "chore: update training data from Notion"
             git push
           fi
+
+      - name: Setup Python (backup)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install backup dependencies
+        run: pip install -r scripts/requirements-backup.txt
+
+      - name: Backup Notion → Google Drive
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: |
+          if [ -z "$GOOGLE_CREDENTIALS" ]; then
+            echo "⚠️  Secret GOOGLE_CREDENTIALS no configurado — omitiendo backup"
+            exit 0
+          fi
+          python scripts/backup_notion.py
