@@ -64,13 +64,13 @@ def upload_to_drive(filename):
     )
     service = build('drive', 'v3', credentials=creds)
 
-    q       = "name='Respaldos Notion' and mimeType='application/vnd.google-apps.folder' and trashed=false"
+    q       = "name='Respaldo Notion' and mimeType='application/vnd.google-apps.folder' and trashed=false"
     results = service.files().list(q=q, fields='files(id)').execute()
     if results['files']:
         folder_id = results['files'][0]['id']
     else:
         folder    = service.files().create(
-            body={'name': 'Respaldos Notion', 'mimeType': 'application/vnd.google-apps.folder'},
+            body={'name': 'Respaldo Notion', 'mimeType': 'application/vnd.google-apps.folder'},
             fields='id',
         ).execute()
         folder_id = folder['id']
