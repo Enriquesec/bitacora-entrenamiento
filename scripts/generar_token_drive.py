@@ -30,7 +30,8 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 SCOPES = ['https://www.googleapis.com/auth/drive.file']
 
 flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
-creds = flow.run_local_server(port=0)
+# run_console: imprime URL, tú autorizas en el navegador y pegas el código aquí
+creds = flow.run_console()
 
 token_data = json.loads(creds.to_json())
 with open('token.json', 'w') as f:
