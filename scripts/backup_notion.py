@@ -3,13 +3,27 @@ import json
 import csv
 import requests
 from datetime import datetime
-from google.oauth2 import service_account
+from google.oauth2 import service_account, credentials as oauth2_credentials
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
 NOTION_TOKEN = os.environ['NOTION_TOKEN']
 DATABASE_ID  = os.environ['NOTION_DATABASE_ID']
 SCOPES       = ['https://www.googleapis.com/auth/drive.file']
+
+
+def build_credentials():
+    data = json.loads(os.environ['GOOGLE_CREDENTIALS'])
+    if data.get('type') == 'service_account':
+        return service_account.Credentials.from_service_account_info(data, scopes=SCOPES)
+    # OAuth2 token generado con generar_token_drive.py
+    return oauth2_credentials.Credentials(
+        token=data.get('token'),
+        refresh_token=data['refresh_token'],
+        token_uri=data.get('token_uri', 'https://oauth2.googleapis.com/token'),
+        client_id=data['client_id'],
+        client_secret=data['client_secret'],
+    )
 
 
 def get_notion_records():
@@ -63,14 +77,10 @@ def upload_to_drive(filename):
     if not folder_id:
         raise ValueError(
             'GOOGLE_DRIVE_FOLDER_ID no configurado. '
-            'Crea la carpeta "Respaldo Notion" en tu Google Drive, '
-            'compártela con la cuenta de servicio (Editor) y agrega su ID como secret.'
+            'Agrega el ID de la carpeta "Respaldo Notion" de tu Drive como secret.'
         )
 
-    creds   = service_account.Credentials.from_service_account_info(
-        json.loads(os.environ['GOOGLE_CREDENTIALS']), scopes=SCOPES,
-    )
-    service = build('drive', 'v3', credentials=creds)
+    service = build('drive', 'v3', credentials=build_credentials())
 
     media = MediaFileUpload(filename, mimetype='text/csv')
     service.files().create(
