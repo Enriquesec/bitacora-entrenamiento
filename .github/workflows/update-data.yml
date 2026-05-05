@@ -58,9 +58,10 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
         run: |
-          if [ -z "$GOOGLE_CREDENTIALS" ]; then
-            echo "⚠️  Secret GOOGLE_CREDENTIALS no configurado — omitiendo backup"
+          if [ -z "$GOOGLE_CREDENTIALS" ] || [ -z "$GOOGLE_DRIVE_FOLDER_ID" ]; then
+            echo "⚠️  Secrets GOOGLE_CREDENTIALS / GOOGLE_DRIVE_FOLDER_ID no configurados — omitiendo backup"
             exit 0
           fi
           python scripts/backup_notion.py

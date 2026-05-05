@@ -59,21 +59,18 @@ def save_csv(records):
 
 
 def upload_to_drive(filename):
+    folder_id = os.environ.get('GOOGLE_DRIVE_FOLDER_ID', '').strip()
+    if not folder_id:
+        raise ValueError(
+            'GOOGLE_DRIVE_FOLDER_ID no configurado. '
+            'Crea la carpeta "Respaldo Notion" en tu Google Drive, '
+            'compártela con la cuenta de servicio (Editor) y agrega su ID como secret.'
+        )
+
     creds   = service_account.Credentials.from_service_account_info(
         json.loads(os.environ['GOOGLE_CREDENTIALS']), scopes=SCOPES,
     )
     service = build('drive', 'v3', credentials=creds)
-
-    q       = "name='Respaldo Notion' and mimeType='application/vnd.google-apps.folder' and trashed=false"
-    results = service.files().list(q=q, fields='files(id)').execute()
-    if results['files']:
-        folder_id = results['files'][0]['id']
-    else:
-        folder    = service.files().create(
-            body={'name': 'Respaldo Notion', 'mimeType': 'application/vnd.google-apps.folder'},
-            fields='id',
-        ).execute()
-        folder_id = folder['id']
 
     media = MediaFileUpload(filename, mimetype='text/csv')
     service.files().create(
