@@ -101,17 +101,6 @@
       </section>
 
       <section id="graficas" class="charts-section">
-        <div class="chart-container full-width">
-          <h2>Distribución por disciplina</h2>
-          <div class="pie-row">
-            <canvas id="pieChart"></canvas>
-            <div class="pie-side">
-              <h3 class="side-chart-title">Actividad por día de semana</h3>
-              <canvas id="dayChart"></canvas>
-            </div>
-          </div>
-        </div>
-
         <div class="chart-container">
           <h2>Historial de entrenamiento</h2>
           <div id="heatmap"></div>
@@ -132,6 +121,11 @@
         </div>
 
         <div class="chart-container">
+          <h2>Distribución por disciplina</h2>
+          <canvas id="pieChart"></canvas>
+        </div>
+
+        <div class="chart-container full-width">
           <h2>Tendencia de pasos (Historial completo)</h2>
           <canvas id="trendChart"></canvas>
         </div>
@@ -161,7 +155,6 @@
             <span class="wgl-item wgl-pasos">10k pasos/día</span>
           </div>
         </div>
-        <div id="thisWeekPanel" class="this-week-panel"></div>
         <div id="weeklySummary" class="weekly-grid"></div>
       </section>
 
