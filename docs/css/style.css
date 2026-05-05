@@ -424,8 +424,8 @@ body {
 
 /* ── CHARTS ── */
 .charts-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   margin-bottom: 24px;
 }
@@ -469,34 +469,6 @@ canvas {
   min-height: 300px;
 }
 
-/* ── PIE + SIDE CHART ── */
-.pie-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  align-items: center;
-}
-
-.pie-side {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.side-chart-title {
-  font-size: 0.82em;
-  font-weight: 700;
-  color: #9ca3af;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  border-left: 3px solid #a78bfa;
-  padding-left: 10px;
-  margin: 0;
-}
-
-#dayChart {
-  min-height: 220px;
-}
 
 /* ── HEATMAP ── */
 #heatmap {
@@ -1005,14 +977,6 @@ canvas {
   }
 
   .racha-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .charts-section {
-    grid-template-columns: 1fr;
-  }
-
-  .pie-row {
     grid-template-columns: 1fr;
   }
 
