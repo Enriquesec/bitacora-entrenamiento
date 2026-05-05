@@ -56,6 +56,9 @@ function renderDashboard() {
   // Racha reciente
   renderRachas();
 
+  // Panel "¿Qué falta esta semana?"
+  renderThisWeek();
+
   // Resumen semanal
   renderWeeklySummary();
 
@@ -143,6 +146,68 @@ function renderWeekTable() {
     `;
     tbody.appendChild(row);
   });
+}
+
+function renderThisWeek() {
+  const container = document.getElementById('thisWeekPanel');
+  if (!container || !dashboardData.semanas) return;
+
+  const semana = dashboardData.semanas.find(s => s.esSemanaActual);
+  if (!semana) { container.style.display = 'none'; return; }
+
+  const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const inicio = new Date(semana.inicio + 'T00:00:00');
+  const fin    = new Date(semana.fin    + 'T00:00:00');
+  const fmtD   = d => `${d.getDate()} ${MESES[d.getMonth()]}`;
+
+  // Días restantes en la semana (incluyendo hoy). Lun=7, Mar=6, ... Dom=1
+  const posInWeek = (new Date().getDay() + 6) % 7;
+  const remainingDays = 7 - posInWeek;
+
+  const faltaFuerza = Math.max(0, 5 - semana.sesionesFuerza);
+  const faltaCardio = Math.max(0, 3 - semana.sesionesCardio);
+  const faltaPasos  = Math.max(0, 7 - semana.diasPasos10k);
+
+  function status(falta, remaining) {
+    if (falta === 0) return 'ok';
+    return falta <= remaining ? 'alcanzable' : 'imposible';
+  }
+
+  function goalCard(title, current, goal, falta, remaining, type) {
+    const st = status(falta, remaining);
+    let txt;
+    if (st === 'ok') {
+      txt = 'Meta cumplida';
+    } else if (st === 'imposible') {
+      txt = 'Fuera de alcance';
+    } else if (type === 'pasos') {
+      txt = `Falt${falta === 1 ? 'a' : 'an'} ${falta} día${falta > 1 ? 's' : ''}`;
+    } else {
+      txt = `Falt${falta === 1 ? 'a' : 'an'} ${falta} sesión${falta > 1 ? 'es' : ''}`;
+    }
+
+    return `
+      <div class="goal-card goal-card--${st}">
+        <div class="goal-card-title">${title}</div>
+        <div class="goal-card-progress">
+          <span class="goal-current">${current}</span><span class="goal-sep">/${goal}</span>
+        </div>
+        <div class="goal-card-status">${txt}</div>
+      </div>`;
+  }
+
+  const diasLabel = remainingDays === 1 ? '1 día restante' : `${remainingDays} días restantes`;
+
+  container.innerHTML = `
+    <div class="twp-header">
+      <span class="twp-title">Esta semana &middot; ${fmtD(inicio)} – ${fmtD(fin)}</span>
+      <span class="twp-remaining">${diasLabel}</span>
+    </div>
+    <div class="twp-goals">
+      ${goalCard('Fuerza',   semana.sesionesFuerza, 5, faltaFuerza, remainingDays, 'fuerza')}
+      ${goalCard('Cardio',   semana.sesionesCardio, 3, faltaCardio, remainingDays, 'cardio')}
+      ${goalCard('Pasos 10k', semana.diasPasos10k,  7, faltaPasos,  remainingDays, 'pasos')}
+    </div>`;
 }
 
 function renderWeeklySummary() {
