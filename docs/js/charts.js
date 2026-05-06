@@ -53,16 +53,7 @@ function renderTrendChart() {
       maintainAspectRatio: false,
       interaction: { mode: 'index', intersect: false },
       plugins: {
-        legend: {
-          display: true,
-          position: 'top',
-          labels: {
-            color: '#9ca3af',
-            boxWidth: 20,
-            font: { size: 11 },
-            filter: item => item.datasetIndex === 0,
-          },
-        },
+        legend: { display: false },
         tooltip: {
           backgroundColor: 'rgba(15, 23, 42, 0.9)',
           padding: 12,

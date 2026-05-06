@@ -227,7 +227,7 @@ function renderWeeklySummary() {
 
   // Solo semanas del mes actual, de más nueva a más antigua
   const semanasDelMes = [...dashboardData.semanas]
-    .filter(s => s.fin >= inicioMes && s.inicio <= finMes)
+    .filter(s => s.fin >= inicioMes && s.inicio <= finMes && !s.esSemanaActual)
     .reverse();
 
   // Agrupar días pasados por mes
