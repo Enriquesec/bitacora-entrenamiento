@@ -58,7 +58,6 @@
 
     <section class="charts-section">
       <div class="chart-container">
-        <h2>Historial de entrenamiento</h2>
         <div id="heatmap"></div>
         <div class="chart-legend">
           <div class="legend-item">
@@ -76,18 +75,33 @@
         </div>
       </div>
 
-      <div class="chart-container">
-        <h2>Distribución por disciplina</h2>
-        <canvas id="pieChart"></canvas>
-      </div>
-
       <div class="chart-container full-width">
         <h2>Tendencia de pasos (Historial completo)</h2>
         <canvas id="trendChart"></canvas>
       </div>
-    </section>
 
-    <section class="weekly-summary-section">
+      <div class="charts-row">
+        <div class="chart-container">
+          <h2>Distribución por disciplina</h2>
+          <canvas id="pieChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+          <h2>Análisis por día de la semana</h2>
+          <table class="week-table">
+            <thead>
+              <tr>
+                <th>Día</th>
+                <th>Total registros</th>
+                <th>Con ejercicio</th>
+                <th>Con 10k+ pasos</th>
+              </tr>
+            </thead>
+            <tbody id="weekTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
       <div class="weekly-header">
         <h2>Resumen Semanal</h2>
         <div class="weekly-goals-legend">
@@ -98,21 +112,6 @@
       </div>
       <div id="thisWeekPanel" class="this-week-panel"></div>
       <div id="weeklySummary" class="weekly-grid"></div>
-    </section>
-
-    <section class="stats-detail">
-      <h2>Análisis por día de la semana</h2>
-      <table class="week-table">
-        <thead>
-          <tr>
-            <th>Día</th>
-            <th>Total registros</th>
-            <th>Con ejercicio</th>
-            <th>Con 10k+ pasos</th>
-          </tr>
-        </thead>
-        <tbody id="weekTable"></tbody>
-      </table>
     </section>
 
     <footer class="footer">
