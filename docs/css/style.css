@@ -349,6 +349,16 @@ body {
   grid-column: 1 / -1;
 }
 
+.charts-row {
+  display: flex;
+  gap: 20px;
+}
+
+.charts-row .chart-container {
+  flex: 1;
+  min-width: 0;
+}
+
 .chart-container:hover {
   border-color: rgba(0, 212, 255, 0.18);
 }
@@ -514,6 +524,74 @@ canvas {
 .legend-dot.verde      { background: #26a641; }
 .legend-dot.verde-bajo { background: #006d32; }
 .legend-dot.gris       { background: #374151; border: 1px solid rgba(255,255,255,0.15); }
+
+/* ── THIS WEEK PANEL ── */
+.this-week-panel {
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(17, 24, 39, 0.8));
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.twp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.twp-title {
+  font-weight: 700;
+  font-size: 1em;
+  color: #e2e8f0;
+}
+
+.twp-remaining {
+  font-size: 0.8em;
+  color: #64748b;
+}
+
+.twp-goals {
+  display: flex;
+  gap: 12px;
+}
+
+.goal-card {
+  flex: 1;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.goal-card--ok        { border-color: rgba(52, 211, 153, 0.3); }
+.goal-card--alcanzable { border-color: rgba(251, 191, 36, 0.3); }
+.goal-card--imposible  { border-color: rgba(248, 113, 113, 0.3); }
+
+.goal-card-title {
+  font-size: 0.75em;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.goal-card-progress {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.goal-current { color: #e2e8f0; }
+.goal-sep     { color: #475569; font-weight: 400; }
+
+.goal-card-status { font-size: 0.8em; }
+.goal-card--ok        .goal-card-status { color: #34d399; }
+.goal-card--alcanzable .goal-card-status { color: #fbbf24; }
+.goal-card--imposible  .goal-card-status { color: #f87171; }
 
 /* ── WEEKLY SUMMARY ── */
 .weekly-summary-section {
@@ -898,6 +976,14 @@ canvas {
 
   .week-card--current {
     grid-column: auto;
+  }
+
+  .charts-row {
+    flex-direction: column;
+  }
+
+  .twp-goals {
+    flex-direction: column;
   }
 }
 
