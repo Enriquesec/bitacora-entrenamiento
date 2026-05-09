@@ -71,16 +71,20 @@ function renderRachas() {
   if (!container || !dashboardData.todosDatos) return;
 
   const CARDIO = ['Natación', 'Carrera', 'Bici'];
-  const hoy = new Date().toISOString().split('T')[0];
-  const datos = dashboardData.todosDatos;
+  const MESES  = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const hoyDate = new Date();
+  const hoy     = hoyDate.toISOString().split('T')[0];
+  const datos   = dashboardData.todosDatos;
+  const fmtD    = d => `${d.getDate()} ${MESES[d.getMonth()]}`;
 
   function calcVentana(n) {
     const corte = new Date();
     corte.setDate(corte.getDate() - (n - 1));
     const corteStr = corte.toISOString().split('T')[0];
-    const ventana = datos.filter(d => d.fecha >= corteStr && d.fecha <= hoy);
+    const ventana  = datos.filter(d => d.fecha >= corteStr && d.fecha <= hoy);
     return {
-      dias: n,
+      dias:   n,
+      rango:  `${fmtD(corte)} – ${fmtD(hoyDate)}`,
       pasos:  ventana.filter(d => d.cumplePasos).length,
       fuerza: ventana.filter(d => d.disciplinas.includes('Fuerza') || d.disciplinas.includes('Mixto')).length,
       cardio: ventana.filter(d => d.disciplinas.some(disc => CARDIO.includes(disc)) || d.disciplinas.includes('Mixto')).length,
@@ -112,6 +116,7 @@ function renderRachas() {
     return `
       <div class="racha-card">
         <div class="racha-card-title">${v.dias} días</div>
+        <div class="racha-card-range">${v.rango}</div>
         <div class="racha-metrics">
           ${metrica(v.pasos,  v.dias, pctPasos,  'fill-pasos',  'Pasos 10k')}
           ${metrica(v.fuerza, v.dias, pctFuerza, 'fill-fuerza', 'Fuerza')}
@@ -399,56 +404,58 @@ function computeInsights() {
 }
 
 function renderInsights() {
-  const container = document.getElementById('insightsGrid');
-  if (!container) return;
+  const grid = document.getElementById('statsGrid');
+  if (!grid) return;
+
+  // Remove previously injected insight cards
+  grid.querySelectorAll('.stat-card--insight').forEach(el => el.remove());
 
   const { racha, diasSinCardio, diasSinFuerza, promedioUltimos7, diffPasos } = computeInsights();
-  const insights = [];
 
-  if (racha >= 2) {
-    insights.push({ icon: '🔥', title: `${racha} días seguidos`, desc: `Llevas ${racha} días consecutivos cumpliendo el objetivo.`, type: 'positive' });
+  const cards = [];
+
+  // Racha
+  if (racha >= 1) {
+    cards.push({ num: racha, unit: 'd', label: 'Racha activa', cls: 'verde' });
   } else {
-    insights.push({ icon: '⚠️', title: 'Sin racha activa', desc: 'No hay cumplimiento consecutivo registrado. ¡Momento de retomar!', type: 'warning' });
+    cards.push({ num: '—', unit: '', label: 'Sin racha', cls: 'rojo' });
   }
 
+  // Último cardio
   if (diasSinCardio !== null) {
-    if (diasSinCardio === 0) {
-      insights.push({ icon: '🏊', title: 'Cardio hoy', desc: 'Hiciste cardio hoy.', type: 'positive' });
-    } else if (diasSinCardio > 4) {
-      insights.push({ icon: '🏊', title: `${diasSinCardio} días sin cardio`, desc: `La última sesión de cardio fue hace ${diasSinCardio} días.`, type: 'warning' });
-    } else {
-      insights.push({ icon: '🏊', title: `Cardio hace ${diasSinCardio}d`, desc: `Última sesión de cardio hace ${diasSinCardio} día${diasSinCardio > 1 ? 's' : ''}.`, type: 'neutral' });
-    }
+    const num = diasSinCardio === 0 ? 'Hoy' : diasSinCardio;
+    const unit = diasSinCardio > 0 ? 'd' : '';
+    const cls  = diasSinCardio === 0 ? 'verde' : diasSinCardio > 4 ? 'rojo' : '';
+    cards.push({ num, unit, label: 'Último cardio', cls });
   }
 
+  // Última fuerza
   if (diasSinFuerza !== null) {
-    if (diasSinFuerza === 0) {
-      insights.push({ icon: '💪', title: 'Fuerza hoy', desc: 'Hiciste una sesión de fuerza hoy.', type: 'positive' });
-    } else if (diasSinFuerza > 3) {
-      insights.push({ icon: '💪', title: `${diasSinFuerza} días sin fuerza`, desc: `La última sesión de fuerza fue hace ${diasSinFuerza} días.`, type: 'warning' });
-    } else {
-      insights.push({ icon: '💪', title: `Fuerza hace ${diasSinFuerza}d`, desc: `Última sesión de fuerza hace ${diasSinFuerza} día${diasSinFuerza > 1 ? 's' : ''}.`, type: 'neutral' });
-    }
+    const num = diasSinFuerza === 0 ? 'Hoy' : diasSinFuerza;
+    const unit = diasSinFuerza > 0 ? 'd' : '';
+    const cls  = diasSinFuerza === 0 ? 'verde' : diasSinFuerza > 3 ? 'amarillo' : '';
+    cards.push({ num, unit, label: 'Última fuerza', cls });
   }
 
+  // Pasos promedio 7d
   if (promedioUltimos7 > 0) {
     const signo = diffPasos >= 0 ? '+' : '';
-    insights.push({
-      icon: '👟',
-      title: `${promedioUltimos7.toLocaleString('es-MX')} pasos/día`,
-      desc: `Promedio últimos 7 días: ${signo}${diffPasos}% vs. tu media general (${dashboardData.stats.promedioPasos.toLocaleString('es-MX')}).`,
-      type: diffPasos >= 0 ? 'positive' : 'warning',
+    cards.push({
+      num: promedioUltimos7.toLocaleString('es-MX'),
+      unit: '',
+      label: `Prom. 7 días (${signo}${diffPasos}%)`,
+      cls: diffPasos >= 0 ? 'verde' : 'rojo',
     });
   }
 
-  container.innerHTML = insights.map(ins => `
-    <div class="insight-card insight-${ins.type}">
-      <span class="insight-icon">${ins.icon}</span>
-      <div class="insight-body">
-        <div class="insight-title">${ins.title}</div>
-        <div class="insight-desc">${ins.desc}</div>
-      </div>
-    </div>`).join('');
+  cards.forEach(c => {
+    const div = document.createElement('div');
+    div.className = 'stat-card stat-card--insight';
+    div.innerHTML = `
+      <div class="stat-number ${c.cls}">${c.num}${c.unit ? `<span class="stat-unit">${c.unit}</span>` : ''}</div>
+      <div class="stat-label">${c.label}</div>`;
+    grid.appendChild(div);
+  });
 }
 
 // Cargar datos al iniciar
