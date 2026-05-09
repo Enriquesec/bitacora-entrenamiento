@@ -822,6 +822,12 @@ canvas {
   box-shadow: 0 0 16px rgba(38, 166, 65, 0.1);
 }
 
+.month-card--future {
+  opacity: 0.3;
+  filter: saturate(0.2);
+  pointer-events: none;
+}
+
 .month-record-badge {
   font-size: 0.6em;
   font-weight: 700;

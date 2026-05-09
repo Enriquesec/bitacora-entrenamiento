@@ -56,9 +56,6 @@ function renderDashboard() {
   // Racha reciente
   renderRachas();
 
-  // Panel "¿Qué falta esta semana?"
-  renderThisWeek();
-
   // Resumen semanal
   renderWeeklySummary();
 
@@ -219,38 +216,13 @@ function renderWeeklySummary() {
   const CARDIO_DISC  = ['Natación', 'Carrera', 'Bici'];
   const COLOR_ESTADO = { verde: '#26a641', amarillo: '#006d32', rojo: '#1e293b', gris: '#1e293b' };
 
-  const hoy = new Date();
-  const hoyStr      = hoy.toISOString().split('T')[0];
-  const mesActual   = hoy.getFullYear() + '-' + String(hoy.getMonth() + 1).padStart(2, '0');
-  const inicioMes   = mesActual + '-01';
-  const finMes      = new Date(hoy.getFullYear(), hoy.getMonth() + 1, 0).toISOString().split('T')[0];
+  const hoy       = new Date();
+  const hoyStr    = hoy.toISOString().split('T')[0];
+  const mesActual = hoy.getFullYear() + '-' + String(hoy.getMonth() + 1).padStart(2, '0');
 
-  // Solo semanas del mes actual, de más nueva a más antigua
-  const semanasDelMes = [...dashboardData.semanas]
-    .filter(s => s.fin >= inicioMes && s.inicio <= finMes && !s.esSemanaActual)
-    .reverse();
+  // ── Tarjeta semana actual ─────────────────────────────────
+  const semanaActual = dashboardData.semanas.find(s => s.esSemanaActual);
 
-  // Agrupar días pasados por mes
-  const porMes = {};
-  (dashboardData.todosDatos || []).forEach(dia => {
-    const mes = dia.fecha.substring(0, 7);
-    if (mes >= mesActual) return;
-    if (!porMes[mes]) porMes[mes] = [];
-    porMes[mes].push(dia);
-  });
-
-  const mesesPasados = Object.keys(porMes).sort().reverse().map(mesKey => {
-    const dias = porMes[mesKey];
-    const [y, m] = mesKey.split('-');
-    return {
-      label:        `${MESES_NOMBRE[parseInt(m) - 1]} ${y}`,
-      diasFuerza:   dias.filter(d => d.disciplinas.includes('Fuerza')   || d.disciplinas.includes('Mixto')).length,
-      diasNatacion: dias.filter(d => d.disciplinas.some(disc => CARDIO_DISC.includes(disc)) || d.disciplinas.includes('Mixto')).length,
-      diasPasos:    dias.filter(d => d.cumplePasos).length,
-    };
-  });
-
-  // ── Tarjeta semanal ───────────────────────────────────────
   function weekCard(semana) {
     const inicio = new Date(semana.inicio + 'T00:00:00');
     const fin    = new Date(semana.fin    + 'T00:00:00');
@@ -306,7 +278,7 @@ function renderWeeklySummary() {
     }).join('');
 
     return `
-      <div class="week-card${semana.esSemanaActual ? ' week-card--current' : ''}">
+      <div class="week-card week-card--current">
         <div class="week-card-header">
           <span class="week-range">${label}</span>
           <span class="week-status ${statusClass}">${statusLabel}</span>
@@ -320,16 +292,44 @@ function renderWeeklySummary() {
       </div>`;
   }
 
-  // Mes con mayor actividad total
-  const maxScore = mesesPasados.length
-    ? Math.max(...mesesPasados.map(m => m.diasFuerza + m.diasNatacion + m.diasPasos))
-    : 0;
+  // ── Todos los meses: Dic 2025 → Dic 2026 ─────────────────
+  const porMes = {};
+  (dashboardData.todosDatos || []).forEach(dia => {
+    const mes = dia.fecha.substring(0, 7);
+    if (!porMes[mes]) porMes[mes] = [];
+    porMes[mes].push(dia);
+  });
+
+  const todosLosMeses = [];
+  for (let y = 2025, m = 11; ; ) {
+    const mesKey = `${y}-${String(m + 1).padStart(2, '0')}`;
+    const dias   = porMes[mesKey] || [];
+    const isFuture = mesKey > mesActual;
+    todosLosMeses.push({
+      label:        `${MESES_NOMBRE[m]} ${y}`,
+      mesKey,
+      diasFuerza:   dias.filter(d => d.disciplinas.includes('Fuerza')   || d.disciplinas.includes('Mixto')).length,
+      diasNatacion: dias.filter(d => d.disciplinas.some(disc => CARDIO_DISC.includes(disc)) || d.disciplinas.includes('Mixto')).length,
+      diasPasos:    dias.filter(d => d.cumplePasos).length,
+      isFuture,
+    });
+    if (y === 2026 && m === 11) break;
+    m++;
+    if (m === 12) { m = 0; y++; }
+  }
+  todosLosMeses.reverse(); // más reciente primero
+
+  const maxScore = Math.max(
+    ...todosLosMeses.filter(mes => !mes.isFuture && mes.mesKey < mesActual)
+      .map(mes => mes.diasFuerza + mes.diasNatacion + mes.diasPasos),
+    0
+  );
 
   function monthCard(mes) {
-    const score = mes.diasFuerza + mes.diasNatacion + mes.diasPasos;
-    const esRecord = score === maxScore && maxScore > 0;
+    const score   = mes.diasFuerza + mes.diasNatacion + mes.diasPasos;
+    const esRecord = !mes.isFuture && mes.mesKey < mesActual && score === maxScore && maxScore > 0;
     return `
-      <div class="month-card${esRecord ? ' month-card--record' : ''}">
+      <div class="month-card${esRecord ? ' month-card--record' : ''}${mes.isFuture ? ' month-card--future' : ''}">
         <div class="month-card-title">
           ${mes.label}
           ${esRecord ? '<span class="month-record-badge">Récord</span>' : ''}
@@ -351,13 +351,12 @@ function renderWeeklySummary() {
       </div>`;
   }
 
-  const weeklyHTML  = semanasDelMes.map(weekCard).join('');
-  const monthlyHTML = mesesPasados.length
-    ? `<div class="monthly-section">
-        <div class="monthly-section-title">Meses anteriores</div>
-        <div class="monthly-grid">${mesesPasados.map(monthCard).join('')}</div>
-       </div>`
-    : '';
+  const weeklyHTML  = semanaActual ? weekCard(semanaActual) : '';
+  const monthlyHTML = `
+    <div class="monthly-section">
+      <div class="monthly-section-title">Meses</div>
+      <div class="monthly-grid">${todosLosMeses.map(monthCard).join('')}</div>
+    </div>`;
 
   container.innerHTML = weeklyHTML + monthlyHTML;
 }
