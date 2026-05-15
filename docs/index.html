@@ -8,6 +8,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
 </head>
 <body>
@@ -16,57 +17,65 @@
     <!-- ── HEADER ── -->
     <header class="header">
       <div class="header-brand">
-        <div class="header-logo">📊</div>
+        <div class="header-logo">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
         <div class="header-text">
           <h1>Bitácora de Entrenamiento</h1>
           <p class="subtitle">Dashboard de seguimiento de metas de ejercicio y pasos</p>
         </div>
       </div>
       <div class="header-meta">
-        <div class="period-legend">29 dic 2025 – 25 abr 2026</div>
-        <div class="last-updated">Actualizado: <span id="updated">—</span></div>
+        <div class="period-legend">
+          <i class="fa-regular fa-calendar-range"></i>
+          29 dic 2025 – 25 abr 2026
+        </div>
+        <div class="last-updated">
+          <i class="fa-regular fa-clock"></i>
+          Actualizado: <span id="updated">—</span>
+        </div>
       </div>
     </header>
 
     <!-- ── KPI ROW ── -->
     <section class="kpi-row" id="statsGrid">
       <div class="kpi-card kpi-violet">
-        <div class="kpi-icon">📅</div>
+        <i class="fa-regular fa-calendar-days kpi-icon"></i>
         <div class="kpi-body">
           <div class="kpi-value" id="totalDias">0</div>
           <div class="kpi-label">Días registrados</div>
         </div>
       </div>
       <div class="kpi-card kpi-emerald">
-        <div class="kpi-icon">✅</div>
+        <i class="fa-regular fa-circle-check kpi-icon"></i>
         <div class="kpi-body">
           <div class="kpi-value" id="diasCumplimiento">0</div>
           <div class="kpi-label">Cumplimiento total</div>
         </div>
       </div>
       <div class="kpi-card kpi-blue">
-        <div class="kpi-icon">💪</div>
+        <i class="fa-solid fa-dumbbell kpi-icon"></i>
         <div class="kpi-body">
           <div class="kpi-value" id="diasEjercicio">0</div>
           <div class="kpi-label">Días con ejercicio</div>
         </div>
       </div>
       <div class="kpi-card kpi-rose">
-        <div class="kpi-icon">👟</div>
+        <i class="fa-solid fa-person-walking kpi-icon"></i>
         <div class="kpi-body">
           <div class="kpi-value" id="diasPasos">0</div>
           <div class="kpi-label">Días con 10k+ pasos</div>
         </div>
       </div>
       <div class="kpi-card kpi-orange">
-        <div class="kpi-icon">📈</div>
+        <i class="fa-solid fa-arrow-trend-up kpi-icon"></i>
         <div class="kpi-body">
           <div class="kpi-value" id="promedioPasos">0</div>
           <div class="kpi-label">Promedio de pasos</div>
         </div>
       </div>
       <div class="kpi-card kpi-green">
-        <div class="kpi-icon">🏆</div>
+        <i class="fa-solid fa-trophy kpi-icon"></i>
         <div class="kpi-body">
           <div class="kpi-value" id="recordPasos">0</div>
           <div class="kpi-label">Récord de pasos</div>
@@ -82,7 +91,10 @@
 
         <!-- Heatmap -->
         <div class="panel">
-          <h2 class="panel-title accent-cyan">Actividad Anual</h2>
+          <h2 class="panel-title accent-cyan">
+            <i class="fa-solid fa-table-cells-large panel-icon"></i>
+            Actividad Anual
+          </h2>
           <div id="heatmap"></div>
           <div class="chart-legend">
             <div class="legend-item">
@@ -102,7 +114,10 @@
 
         <!-- Trend chart -->
         <div class="panel">
-          <h2 class="panel-title accent-violet">Tendencia de Pasos (Historial completo)</h2>
+          <h2 class="panel-title accent-violet">
+            <i class="fa-solid fa-chart-column panel-icon"></i>
+            Tendencia de Pasos
+          </h2>
           <div class="trend-wrap">
             <canvas id="trendChart"></canvas>
           </div>
@@ -111,11 +126,17 @@
         <!-- Pie + Week table -->
         <div class="bottom-row">
           <div class="panel">
-            <h2 class="panel-title accent-cyan">Distribución por Disciplina</h2>
+            <h2 class="panel-title accent-cyan">
+              <i class="fa-solid fa-chart-pie panel-icon"></i>
+              Distribución por Disciplina
+            </h2>
             <canvas id="pieChart"></canvas>
           </div>
           <div class="panel">
-            <h2 class="panel-title accent-emerald">Análisis por Día de la Semana</h2>
+            <h2 class="panel-title accent-emerald">
+              <i class="fa-solid fa-table panel-icon"></i>
+              Análisis por Día de la Semana
+            </h2>
             <table class="week-table">
               <thead>
                 <tr>
@@ -135,7 +156,10 @@
       <!-- RIGHT SIDEBAR -->
       <div class="main-right">
         <div class="panel sidebar-panel">
-          <h2 class="panel-title accent-orange">Racha Reciente</h2>
+          <h2 class="panel-title accent-orange">
+            <i class="fa-solid fa-fire panel-icon"></i>
+            Racha Reciente
+          </h2>
           <div class="racha-cards" id="rachaCards"></div>
         </div>
       </div>
@@ -145,18 +169,28 @@
     <!-- ── WEEKLY SUMMARY ── -->
     <section class="panel weekly-panel">
       <div class="weekly-header">
-        <h2 class="panel-title accent-violet">Resumen Semanal</h2>
+        <h2 class="panel-title accent-violet">
+          <i class="fa-solid fa-calendar-week panel-icon"></i>
+          Resumen Semanal
+        </h2>
         <div class="weekly-goals-legend">
-          <span class="wgl-item wgl-fuerza">5 sesiones fuerza</span>
-          <span class="wgl-item wgl-cardio">3 sesiones cardio</span>
-          <span class="wgl-item wgl-pasos">10k pasos/día</span>
+          <span class="wgl-item wgl-fuerza">
+            <i class="fa-solid fa-dumbbell"></i> 5 sesiones fuerza
+          </span>
+          <span class="wgl-item wgl-cardio">
+            <i class="fa-solid fa-heart-pulse"></i> 3 sesiones cardio
+          </span>
+          <span class="wgl-item wgl-pasos">
+            <i class="fa-solid fa-person-walking"></i> 10k pasos/día
+          </span>
         </div>
       </div>
       <div id="weeklySummary" class="weekly-grid"></div>
     </section>
 
     <footer class="footer">
-      <p>Dashboard conectado a Notion • Actualizado automáticamente cada noche</p>
+      <i class="fa-brands fa-notion"></i>
+      Dashboard conectado a Notion &middot; Actualizado automáticamente cada noche
     </footer>
   </div><!-- /dashboard -->
 
