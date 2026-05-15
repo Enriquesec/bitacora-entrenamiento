@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bitacora-v21';
+const CACHE_NAME = 'bitacora-v22';
 
 const STATIC_ASSETS = [
   '/bitacora-entrenamiento/',

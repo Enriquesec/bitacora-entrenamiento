@@ -8,17 +8,73 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
 </head>
 <body>
+
+  <!-- SVG sprite (hidden) -->
+  <div style="display:none" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol id="icon-dashboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"/>
+        </symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"/>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+        </symbol>
+        <symbol id="icon-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/>
+        </symbol>
+        <symbol id="icon-steps" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
+        </symbol>
+        <symbol id="icon-trending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/>
+        </symbol>
+        <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/>
+        </symbol>
+        <symbol id="icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"/>
+        </symbol>
+        <symbol id="icon-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/>
+        </symbol>
+        <symbol id="icon-pie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/>
+        </symbol>
+        <symbol id="icon-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 0 1-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0 1 12 19.5m9.75-9.75c0 .621-.504 1.125-1.125 1.125H12m8.625-8.625c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125M21 5.625v1.5c0 .621-.504 1.125-1.125 1.125m0 0h-2.25m-10.875-1.5c0-.621.504-1.125 1.125-1.125H3.375c.621 0 1.125.504 1.125 1.125V6.75c0 .621-.504 1.125-1.125 1.125H2.25V5.625Z"/>
+        </symbol>
+        <symbol id="icon-fire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/>
+        </symbol>
+        <symbol id="icon-calendar-week" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
+        </symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+        </symbol>
+        <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/>
+        </symbol>
+      </defs>
+    </svg>
+  </div>
+
   <div class="dashboard">
 
     <!-- ── HEADER ── -->
     <header class="header">
       <div class="header-brand">
         <div class="header-logo">
-          <i class="fa-solid fa-chart-line"></i>
+          <svg class="icon"><use href="#icon-dashboard"/></svg>
         </div>
         <div class="header-text">
           <h1>Bitácora de Entrenamiento</h1>
@@ -27,11 +83,11 @@
       </div>
       <div class="header-meta">
         <div class="period-legend">
-          <i class="fa-regular fa-calendar-range"></i>
+          <svg class="icon icon-sm"><use href="#icon-calendar-week"/></svg>
           29 dic 2025 – 25 abr 2026
         </div>
         <div class="last-updated">
-          <i class="fa-regular fa-clock"></i>
+          <svg class="icon icon-sm"><use href="#icon-clock"/></svg>
           Actualizado: <span id="updated">—</span>
         </div>
       </div>
@@ -40,42 +96,42 @@
     <!-- ── KPI ROW ── -->
     <section class="kpi-row" id="statsGrid">
       <div class="kpi-card kpi-violet">
-        <i class="fa-regular fa-calendar-days kpi-icon"></i>
+        <svg class="icon kpi-icon"><use href="#icon-calendar"/></svg>
         <div class="kpi-body">
           <div class="kpi-value" id="totalDias">0</div>
           <div class="kpi-label">Días registrados</div>
         </div>
       </div>
       <div class="kpi-card kpi-emerald">
-        <i class="fa-regular fa-circle-check kpi-icon"></i>
+        <svg class="icon kpi-icon"><use href="#icon-check"/></svg>
         <div class="kpi-body">
           <div class="kpi-value" id="diasCumplimiento">0</div>
           <div class="kpi-label">Cumplimiento total</div>
         </div>
       </div>
       <div class="kpi-card kpi-blue">
-        <i class="fa-solid fa-dumbbell kpi-icon"></i>
+        <svg class="icon kpi-icon"><use href="#icon-bolt"/></svg>
         <div class="kpi-body">
           <div class="kpi-value" id="diasEjercicio">0</div>
           <div class="kpi-label">Días con ejercicio</div>
         </div>
       </div>
       <div class="kpi-card kpi-rose">
-        <i class="fa-solid fa-person-walking kpi-icon"></i>
+        <svg class="icon kpi-icon"><use href="#icon-steps"/></svg>
         <div class="kpi-body">
           <div class="kpi-value" id="diasPasos">0</div>
           <div class="kpi-label">Días con 10k+ pasos</div>
         </div>
       </div>
       <div class="kpi-card kpi-orange">
-        <i class="fa-solid fa-arrow-trend-up kpi-icon"></i>
+        <svg class="icon kpi-icon"><use href="#icon-trending"/></svg>
         <div class="kpi-body">
           <div class="kpi-value" id="promedioPasos">0</div>
           <div class="kpi-label">Promedio de pasos</div>
         </div>
       </div>
       <div class="kpi-card kpi-green">
-        <i class="fa-solid fa-trophy kpi-icon"></i>
+        <svg class="icon kpi-icon"><use href="#icon-star"/></svg>
         <div class="kpi-body">
           <div class="kpi-value" id="recordPasos">0</div>
           <div class="kpi-label">Récord de pasos</div>
@@ -83,16 +139,14 @@
       </div>
     </section>
 
-    <!-- ── MAIN GRID (left content + right sidebar) ── -->
+    <!-- ── MAIN GRID ── -->
     <div class="main-grid">
 
-      <!-- LEFT COLUMN -->
       <div class="main-left">
 
-        <!-- Heatmap -->
         <div class="panel">
           <h2 class="panel-title accent-cyan">
-            <i class="fa-solid fa-table-cells-large panel-icon"></i>
+            <svg class="icon panel-icon"><use href="#icon-grid"/></svg>
             Actividad Anual
           </h2>
           <div id="heatmap"></div>
@@ -112,10 +166,9 @@
           </div>
         </div>
 
-        <!-- Trend chart -->
         <div class="panel">
           <h2 class="panel-title accent-violet">
-            <i class="fa-solid fa-chart-column panel-icon"></i>
+            <svg class="icon panel-icon"><use href="#icon-bars"/></svg>
             Tendencia de Pasos
           </h2>
           <div class="trend-wrap">
@@ -123,18 +176,17 @@
           </div>
         </div>
 
-        <!-- Pie + Week table -->
         <div class="bottom-row">
           <div class="panel">
             <h2 class="panel-title accent-cyan">
-              <i class="fa-solid fa-chart-pie panel-icon"></i>
+              <svg class="icon panel-icon"><use href="#icon-pie"/></svg>
               Distribución por Disciplina
             </h2>
             <canvas id="pieChart"></canvas>
           </div>
           <div class="panel">
             <h2 class="panel-title accent-emerald">
-              <i class="fa-solid fa-table panel-icon"></i>
+              <svg class="icon panel-icon"><use href="#icon-table"/></svg>
               Análisis por Día de la Semana
             </h2>
             <table class="week-table">
@@ -151,37 +203,39 @@
           </div>
         </div>
 
-      </div><!-- /main-left -->
+      </div>
 
-      <!-- RIGHT SIDEBAR -->
       <div class="main-right">
         <div class="panel sidebar-panel">
           <h2 class="panel-title accent-orange">
-            <i class="fa-solid fa-fire panel-icon"></i>
+            <svg class="icon panel-icon"><use href="#icon-fire"/></svg>
             Racha Reciente
           </h2>
           <div class="racha-cards" id="rachaCards"></div>
         </div>
       </div>
 
-    </div><!-- /main-grid -->
+    </div>
 
     <!-- ── WEEKLY SUMMARY ── -->
     <section class="panel weekly-panel">
       <div class="weekly-header">
         <h2 class="panel-title accent-violet">
-          <i class="fa-solid fa-calendar-week panel-icon"></i>
+          <svg class="icon panel-icon"><use href="#icon-calendar-week"/></svg>
           Resumen Semanal
         </h2>
         <div class="weekly-goals-legend">
           <span class="wgl-item wgl-fuerza">
-            <i class="fa-solid fa-dumbbell"></i> 5 sesiones fuerza
+            <svg class="icon icon-sm"><use href="#icon-bolt"/></svg>
+            5 sesiones fuerza
           </span>
           <span class="wgl-item wgl-cardio">
-            <i class="fa-solid fa-heart-pulse"></i> 3 sesiones cardio
+            <svg class="icon icon-sm"><use href="#icon-heart"/></svg>
+            3 sesiones cardio
           </span>
           <span class="wgl-item wgl-pasos">
-            <i class="fa-solid fa-person-walking"></i> 10k pasos/día
+            <svg class="icon icon-sm"><use href="#icon-steps"/></svg>
+            10k pasos/día
           </span>
         </div>
       </div>
@@ -189,10 +243,9 @@
     </section>
 
     <footer class="footer">
-      <i class="fa-brands fa-notion"></i>
       Dashboard conectado a Notion &middot; Actualizado automáticamente cada noche
     </footer>
-  </div><!-- /dashboard -->
+  </div>
 
   <script src="js/main.js"></script>
   <script src="js/charts.js"></script>
