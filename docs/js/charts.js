@@ -19,8 +19,8 @@ function renderTrendChart() {
   const data = todosLosDatos.map(d => d.pasos);
   const maxPasos = Math.max(...data);
   const colores = data.map(v => {
-    if (v === maxPasos && v > 0) return '#4ade80';
-    return v >= 10000 ? 'rgba(34, 211, 238, 0.75)' : 'rgba(251, 113, 133, 0.65)';
+    if (v === maxPasos && v > 0) return '#059669';
+    return v >= 10000 ? 'rgba(37, 99, 235, 0.7)' : 'rgba(157, 23, 77, 0.55)';
   });
 
   new Chart(ctx.getContext('2d'), {
@@ -40,7 +40,7 @@ function renderTrendChart() {
           type: 'line',
           label: 'Meta (10k)',
           data: Array(labels.length).fill(10000),
-          borderColor: 'rgba(74, 222, 128, 0.5)',
+          borderColor: 'rgba(5, 150, 105, 0.5)',
           borderDash: [5, 5],
           fill: false,
           pointRadius: 0,
@@ -212,7 +212,7 @@ function renderPieChart() {
   const disciplinas = dashboardData.distribucionDisciplinas.filter(d => d.nombre !== 'Descanso');
   const labels = disciplinas.map(d => `${d.nombre}: ${d.count} (${d.porcentaje}%)`);
   const data = disciplinas.map(d => d.count);
-  const colores = ['#22d3ee', '#4ade80', '#818cf8', '#fb923c', '#fb7185', '#fbbf24'];
+  const colores = ['#2563eb', '#059669', '#6366f1', '#b45309', '#9d174d', '#92400e'];
 
   new Chart(ctx, {
     type: 'doughnut',
@@ -243,7 +243,7 @@ function renderPieChart() {
         },
         tooltip: {
           backgroundColor: 'rgba(15, 23, 42, 0.95)',
-          titleColor: '#818cf8',
+          titleColor: '#a5b4fc',
           bodyColor: '#cbd5e1',
           borderColor: 'rgba(0, 212, 255, 0.2)',
           borderWidth: 1,
