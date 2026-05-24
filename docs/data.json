@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-05-23T20:03:02.192Z",
+  "actualizado": "2026-05-24T20:01:07.426Z",
   "stats": {
     "totalDias": 138,
     "diasEjercicio": 82,
@@ -21,13 +21,13 @@
     },
     "d15": {
       "dias": 15,
-      "pasos": 7,
-      "fuerza": 5,
-      "cardio": 1
+      "pasos": 6,
+      "fuerza": 4,
+      "cardio": 0
     },
     "d30": {
       "dias": 30,
-      "pasos": 18,
+      "pasos": 17,
       "fuerza": 12,
       "cardio": 7
     }
@@ -65,20 +65,6 @@
     }
   ],
   "ultimos30": [
-    {
-      "fecha": "2026-04-24",
-      "diaSemana": 5,
-      "pasos": 10271,
-      "disciplinas": [
-        "Descanso"
-      ],
-      "disciplinaPrincipal": "Descanso",
-      "duracion": 0,
-      "distancia": 0,
-      "estado": "verde",
-      "cumplePasos": true,
-      "tieneEjercicio": false
-    },
     {
       "fecha": "2026-04-25",
       "diaSemana": 6,
@@ -460,6 +446,18 @@
     {
       "fecha": "2026-05-23",
       "diaSemana": 6,
+      "pasos": 0,
+      "disciplinas": [],
+      "disciplinaPrincipal": "",
+      "duracion": 0,
+      "distancia": 0,
+      "estado": "gris",
+      "cumplePasos": false,
+      "tieneEjercicio": false
+    },
+    {
+      "fecha": "2026-05-24",
+      "diaSemana": 0,
       "pasos": 0,
       "disciplinas": [],
       "disciplinaPrincipal": "",
@@ -2498,6 +2496,18 @@
       "estado": "gris",
       "cumplePasos": false,
       "tieneEjercicio": false
+    },
+    {
+      "fecha": "2026-05-24",
+      "diaSemana": 0,
+      "pasos": 0,
+      "disciplinas": [],
+      "disciplinaPrincipal": "",
+      "duracion": 0,
+      "distancia": 0,
+      "estado": "gris",
+      "cumplePasos": false,
+      "tieneEjercicio": false
     }
   ],
   "porDiaSemana": {
@@ -3892,7 +3902,7 @@
       "sesionesFuerza": 0,
       "sesionesCardio": 0,
       "diasPasos10k": 0,
-      "totalDias": 6,
+      "totalDias": 7,
       "diasResumen": [
         {
           "fecha": "2026-05-18",
@@ -3937,6 +3947,14 @@
         {
           "fecha": "2026-05-23",
           "diaSemana": 6,
+          "estado": "gris",
+          "disciplinaPrincipal": "",
+          "pasos": 0,
+          "cumplePasos": false
+        },
+        {
+          "fecha": "2026-05-24",
+          "diaSemana": 0,
           "estado": "gris",
           "disciplinaPrincipal": "",
           "pasos": 0,
