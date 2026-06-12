@@ -1,10 +1,7 @@
 name: Update Training Data
 
 on:
-  schedule:
-    # Ejecuta todos los días a la 1:00 PM hora México (UTC-6 = 19:00 UTC)
-    - cron: '0 19 * * *'
-  workflow_dispatch:  # Permite ejecución manual
+  workflow_dispatch:  # Solo manual mientras se renueva el token de Drive
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
