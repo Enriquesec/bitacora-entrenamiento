@@ -16,7 +16,7 @@ export default [
     },
   },
   {
-    files: ['docs/js/**/*.js'],
+    files: ['docs/js/**/*.js', 'docs/habitos/js/**/*.js'],
     languageOptions: {
       globals: {
         ...globals.browser,

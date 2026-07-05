@@ -1,0 +1,19 @@
+{
+  "name": "Mis Hábitos",
+  "short_name": "Hábitos",
+  "description": "Bitácora personal de hábitos con seguimiento semanal e insights",
+  "start_url": "/bitacora-entrenamiento/habitos/",
+  "scope": "/bitacora-entrenamiento/habitos/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F3F6F4",
+  "theme_color": "#146B4E",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
